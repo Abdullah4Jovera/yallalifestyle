@@ -1,0 +1,923 @@
+/* Navbar CSS */
+.LinkClass {
+    color: #000;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 17px;
+    letter-spacing: 0.17px;
+    font-weight: 800px;
+    line-height: 100%;
+    font-weight: 500px;
+}
+
+.navHeadClass {
+    /* background: radial-gradient(circle, #4BC6DA, white); */
+    background: linear-gradient(to right, white, rgba(75, 198, 218, 0.5));
+    width: 100%;
+
+}
+
+.vendingText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+
+/* Home Page CSS */
+
+.venderingTech {
+    color: #4BC6DA;
+
+    leading-trim: both;
+
+    text-edge: cap;
+    font-family: Inter;
+    font-size: 120px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 109%;
+    /* 98.209px */
+    letter-spacing: 0.901px;
+}
+
+.newBusinessera {
+    color: #000;
+
+    leading-trim: both;
+
+    text-edge: cap;
+    font-family: Inter;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    /* 34px */
+    letter-spacing: 0.34px;
+}
+
+.discoverContainer {
+    margin-top: 35px;
+}
+
+.discoverbtn {
+    color: #FFF;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: Inter;
+    font-size: 38.045px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0.38px;
+    display: inline-flex;
+    padding: 16.909px 21.136px;
+    justify-content: center;
+    align-items: center;
+    gap: 14.091px;
+    border-radius: 21.136px;
+    background: #74CEDC;
+    text-decoration: none;
+    margin-top: 40px;
+}
+
+.testmonialtext {
+    color: rgba(50, 50, 50, 0.43);
+
+    leading-trim: both;
+
+    text-edge: cap;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    /* 18px */
+    letter-spacing: 0.18px;
+}
+
+
+
+.venderingbusinesscontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    height: 60vh;
+}
+
+.imageClasslogo {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+
+}
+
+.dotClass {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.dotClass h1 {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 51px;
+    line-height: 100%;
+    letter-spacing: 0.51px;
+    width: 100%;
+    max-width: 450px;
+    font-weight: 700px;
+}
+
+.moreaboutbtn {
+    display: inline-flex;
+    padding: 21px 81px;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    border-radius: 21.136px;
+    background: #74CEDC;
+    color: #FFF;
+
+    leading-trim: both;
+
+    text-edge: cap;
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+    margin-top: 8px;
+}
+
+/* HomePage.css */
+
+.dotClass {
+    text-align: center;
+    padding: 20px;
+}
+
+.dotImage {
+    background-image: url('./Assets/HomePageAssets/dots.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.h1Tagyalla {
+    color: #000;
+
+    font-size: 51px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0.51px;
+}
+
+.spanTagyalla {
+    color: #4BC6DA;
+    font-size: 51px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0.51px;
+}
+
+
+
+.loremtext {
+    color: #000;
+
+    leading-trim: both;
+
+    text-edge: cap;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    /* 24px */
+    letter-spacing: 0.24px;
+}
+
+.machineInsllated {
+    color: #61C5D4;
+
+    leading-trim: both;
+
+    text-edge: cap;
+    font-family: Inter;
+    font-size: 73px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 100%;
+    /* 73px */
+    letter-spacing: 4.38px;
+}
+
+.twoCol {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+
+}
+
+.numbrcountclass {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15%;
+}
+
+.productImage {
+    background-image: url('./Assets/HomePageAssets/productbg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: center; */
+    padding: 50px;
+}
+
+.productTag {
+    color: rgba(50, 50, 50, 0.43);
+
+    leading-trim: both;
+
+    text-edge: cap;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    /* 18px */
+    letter-spacing: 0.18px;
+
+}
+
+.yallaproduct {
+    color: #000;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: Inter;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 100%;
+    letter-spacing: 0.34px;
+}
+
+.yallatag {
+    color: #4BC6DA;
+
+    leading-trim: both;
+
+    text-edge: cap;
+    font-family: Inter;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 100%;
+    /* 34px */
+    letter-spacing: 0.34px;
+}
+
+.producttext {
+    color: #000;
+
+    text-align: center;
+    leading-trim: both;
+
+    text-edge: cap;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    /* 12px */
+    letter-spacing: 0.12px;
+}
+
+
+
+.viewAllproducts {
+    display: flex;
+    width: 235px;
+    height: 55px;
+    padding: 7px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 21px;
+    border: 1px solid #4BC6DA;
+    background: #61C5D4;
+
+    color: #FFF;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: Inter;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    /* 19px */
+    letter-spacing: 0.19px;
+    text-decoration: none;
+    margin: 5px;
+
+}
+
+.moreservices {
+    color: #FFF;
+    text-decoration: none;
+    leading-trim: both;
+
+    text-edge: cap;
+    font-family: Inter;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    /* 27px */
+    letter-spacing: 0.27px;
+
+    display: flex;
+    width: 334px;
+    height: 78px;
+    padding: 7px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 21px;
+    border: 1px solid #4BC6DA;
+    margin-bottom: 30px;
+    background: #61C5D4;
+}
+
+.vende_bgImage {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.btnContainerprpduct {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.dotImagecarousal {
+    width: 100%;
+    max-width: 180px;
+    height: 100%;
+    max-height: 250px;
+}
+
+.seeGallery {
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0.34px;
+    margin-top: 2px;
+}
+
+.profitvenue {
+    background-image: url('./Assets/HomePageAssets/profitvenue.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 1px;
+}
+
+.profittext {
+    color: #FFF;
+
+    leading-trim: both;
+
+    text-edge: cap;
+    font-family: Inter;
+    font-size: 41px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 100%;
+    /* 41px */
+    letter-spacing: 0.41px;
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.viewAllservicegetstarted {
+    background-color: black;
+    text-decoration: none;
+    padding: 10px 30px;
+    margin: 10px;
+    color: white;
+    border-radius: 5px;
+}
+
+.serviceCards {
+    width: 85%;
+    height: auto;
+}
+
+.allservicecards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.TestamonialMianContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+    gap: 10px;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.VendingCorp {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.carddatecontainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.peopletrustUs {
+    color: #000;
+    text-align: center;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 100%;
+    letter-spacing: 0.3px;
+}
+
+.partnerContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.img-fluid {
+    width: 100%;
+    height: auto;
+}
+
+.footerContainer {
+    background: radial-gradient(circle, rgba(34, 68, 74, 1) 0%, rgba(21, 21, 22, 1) 50%, rgba(24, 30, 31, 1) 100%);
+    color: white;
+}
+
+.company_div {
+    color: #FFF;
+
+    font-family: Inter;
+    font-size: 12.502px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 21.158px;
+    /* 169.231% */
+    letter-spacing: 2.885px;
+}
+
+.footerText {
+    color: #ADADAD;
+
+    font-size: 15.387px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 25.005px;
+}
+
+.companyHELP {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.carousalImage {
+    margin: 0 auto;
+    padding: 20px;
+    width: 80%;
+    /* Adjust this width as needed */
+}
+
+.slide {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide img {
+    max-width: 100%;
+    max-height: 60%;
+    object-fit: contain;
+}
+
+.subscribeNewletter {
+    color: #FFF;
+    font-size: 12.502px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 21.158px;
+    letter-spacing: 2.885px;
+}
+
+.subscribeBtn {
+    border-radius: 0px 4.809px 4.809px 0px;
+    background: #4BC6DA;
+    width: 137.526px;
+    height: 52.895px;
+    flex-shrink: 0;
+    color: #FFF;
+
+    font-size: 14.426px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    border: none;
+}
+
+.textField {
+    display: flex;
+    align-items: center;
+    gap: 12.502px;
+    align-self: stretch;
+}
+
+.instaText {
+    color: rgba(50, 50, 50, 0.43);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0.18px;
+    text-align: center;
+}
+
+.cardPartnerContainer {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.slider-container {
+    width: 100%;
+}
+
+.slick-slide {
+    display: flex;
+    justify-content: center;
+}
+
+.dotImagecarousal {
+    max-width: 50%;
+    height: auto;
+}
+
+.blognews {
+    color: #000;
+
+    text-align: center;
+    leading-trim: both;
+
+    text-edge: cap;
+    font-family: Inter;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 100%;
+    /* 34px */
+    letter-spacing: 0.34px;
+}
+
+.vendertag {
+    color: #4BC6DA;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: Inter;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 100%;
+    letter-spacing: 0.34px;
+}
+
+.copyright {
+    color: #FFF;
+
+    text-align: center;
+    font-family: Inter;
+    font-size: 13.464px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.234px;
+    /* 142.857% */
+}
+
+.blogtextCard {
+    overflow: hidden;
+    color: var(--main-black, #2C2C2C);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: "Open Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+/* styles.css */
+@keyframes fadeInEaseOut {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in-ease-out {
+    animation: fadeInEaseOut 1s ease-out;
+}
+
+
+
+
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .h1Tagyalla {
+        font-size: 50px !important;
+    }
+
+    .spanTagyalla {
+        font-size: 50px;
+    }
+
+    .loremtext {
+        margin-top: 0rem;
+    }
+
+    .numbrcountclass {
+        margin-top: 10%;
+    }
+
+
+    .companyHELP {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        margin-top: 20px;
+    }
+
+
+    .dotClass,
+    .twoCol {
+        padding: 10px;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .machinenumbercountcontainer {
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .machineInsllated {
+        text-align: center;
+        font-size: 45px;
+    }
+
+    .vende_bgImage {
+        display: flex;
+        justify-content: end;
+        align-items: end;
+    }
+}
+
+@media (min-width: 576px) {
+    .imageClasslogo {
+        width: 80%;
+    }
+}
+
+@media (min-width: 768px) {
+    .imageClasslogo {
+        width: 60%;
+    }
+}
+
+/* @media (min-width: 992px) {
+    .imageClasslogo {
+      width: 50%;
+    }
+  } */
+
+/* @media (min-width: 1200px) {
+    .imageClasslogo {
+      width: 40%;
+    }
+  } */
+
+@media only screen and (max-width: 600px) {
+    .venderingTech {
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .dotImagecarousal {
+        width: 80%;
+        margin: auto;
+    }
+
+    .newBusinessera {
+        text-align: center;
+    }
+
+    .vendingText {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .machinenumbercountcontainer {
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .discoverContainer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .venderingbusinesscontainer {
+        height: 30vh;
+    }
+
+    .machineInsllated {
+        text-align: center;
+        font-size: 45px;
+    }
+
+    .profittext {
+        color: #FFF;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .TestamonialMianContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .VendingCorp {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .imageClasslogo {
+        width: 100%;
+        height: 30%;
+        max-width: 300px;
+        display: flex;
+        justify-content: end;
+        align-items: end;
+    
+    }
+
+    .VendingCorptext {
+        color: #000;
+
+        leading-trim: both;
+
+        text-edge: cap;
+        font-family: Inter;
+        font-size: 19px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 100%;
+        /* 19px */
+        letter-spacing: 0.19px;
+    }
+
+    .yallavenderingtext {
+        color: #000;
+
+        leading-trim: both;
+
+        text-edge: cap;
+        font-family: Inter;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 100%;
+        /* 25px */
+        letter-spacing: 0.25px;
+    }
+
+    .viewAllservicegetstarted {
+        background-color: black;
+        text-decoration: none;
+        padding: 5px 25px;
+        margin: 10px;
+        color: white;
+        border-radius: 5px;
+    }
+
+    .seeGalleryLine {
+        width: 70%;
+    }
+
+    .btnContainerprpduct {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        flex-direction: column;
+    }
+
+    .vende_bgImage{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .yallaproduct {
+        color: '#000';
+        font-size: 25px;
+        line-height: 100%;
+        letter-spacing: 0.34px;
+    }
+
+    .discoverbtn {
+        padding: 6px 16px;
+        width: 100%;
+        font-size: 28px;
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+
+    .moreaboutbtn {
+        padding: 6px 16px;
+        width: 100%;
+        font-size: 28px;
+    }
+
+    .moreservices {
+        width: 250px;
+        height: 50px;
+        padding: 7px 15px;
+        font-size: 28px;
+        font-size: 24px;
+    }
+
+    .h1Tagyalla {
+        font-size: 24px !important;
+        text-align: center;
+    }
+
+    .spanTagyalla {
+        font-size: 30px !important;
+        text-align: center;
+    }
+
+}
