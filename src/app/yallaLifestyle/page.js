@@ -15,7 +15,7 @@ import brandtwo from '../Assets/LifestyleAssets/brandtwo.png'
 import brandthree from '../Assets/LifestyleAssets/brandthree.png'
 import YallaBrandsCarousal from './YallaBrandsCarousal';
 import eatfood from '../Assets/LifestyleAssets/eatfood.png'
-const page = () => {
+const Page = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const YallaLifeStyleData = [
@@ -93,6 +93,6 @@ const page = () => {
     )
 }
 
-export default page
+export default Page
 
 
