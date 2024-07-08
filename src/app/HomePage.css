@@ -10,6 +10,18 @@
     font-weight: 500px;
 }
 
+.LinkClass:focus,
+.LinkClass:active,
+.LinkClass:hover {
+    background-color: #4bc6da;
+    color: white;
+    border-radius: 15px;
+}
+
+.HomePageConatiner {
+    background: linear-gradient(to right, white, #83daf3);
+}
+
 .navHeadClass {
     /* background: radial-gradient(circle, #4BC6DA, white); */
     background: linear-gradient(to right, white, rgba(75, 198, 218, 0.5));
@@ -22,6 +34,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: start;
+}
+
+.cardBlog {
+    background: linear-gradient(to right, #83daf3, white);
 }
 
 
@@ -201,18 +217,19 @@
 
 .loremtext {
     color: #000;
-
     leading-trim: both;
-
     text-edge: cap;
     font-family: Inter;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
     line-height: 100%;
-    /* 24px */
     letter-spacing: 0.24px;
+    text-align: justify;
+
 }
+
+
 
 .machineInsllated {
     color: #61C5D4;
@@ -228,6 +245,8 @@
     /* 73px */
     letter-spacing: 4.38px;
 }
+
+
 
 .twoCol {
     padding: 20px;
@@ -246,13 +265,6 @@
     margin-top: 15%;
 }
 
-.productImage {
-    background-image: url('./Assets/HomePageAssets/productbg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* background-position: center; */
-    padding: 50px;
-}
 
 .productTag {
     color: rgba(50, 50, 50, 0.43);
@@ -553,20 +565,23 @@
 }
 
 .subscribeBtn {
-    border-radius: 0px 4.809px 4.809px 0px;
-    background: #4BC6DA;
     width: 137.526px;
     height: 52.895px;
     flex-shrink: 0;
+    border-radius: 0px 4.809px 4.809px 0px;
+    background: #4BC6DA;
     color: #FFF;
-
+    font-family: Poppins;
     font-size: 14.426px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-
-    border: none;
+    text-decoration: none;
+    text-align: center;
 }
+
+
+
 
 .textField {
     display: flex;
@@ -821,7 +836,7 @@
         display: flex;
         justify-content: end;
         align-items: end;
-    
+
     }
 
     .VendingCorptext {
@@ -875,7 +890,7 @@
         flex-direction: column;
     }
 
-    .vende_bgImage{
+    .vende_bgImage {
         display: flex;
         justify-content: center;
         align-items: center;

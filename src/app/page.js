@@ -3,8 +3,8 @@ import React, { useState, useEffect } from 'react'
 import HomePageNav from './HomePageNav'
 import Image from 'next/image';
 import { Container, Row, Col } from 'react-bootstrap';
-import './HomePage.css'
 import Link from 'next/link';
+import './HomePage.css'
 import machinelogo from './Assets/HomePageAssets/machinelogo.png'
 import YallaMoreAbout from './YallaMoreAbout';
 import YallaProduct from './YallaProduct';
@@ -12,8 +12,8 @@ import YallaGallery from './YallaGallery';
 import YallaServices from './YallaServices';
 import HomePageBlogs from './HomePageBlogs';
 import YallaFooter from './YallaFooter';
-
 const Page = () => {
+
     const [animate, setAnimate] = useState(false);
 
     useEffect(() => {
@@ -23,7 +23,7 @@ const Page = () => {
     return (
         <>
             <HomePageNav />
-            <Container fluid>
+            <Container fluid className='HomePageConatiner' >
                 <Row>
                     <Col
                         xs={12}
@@ -68,3 +68,5 @@ const Page = () => {
 }
 
 export default Page
+
+

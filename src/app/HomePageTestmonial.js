@@ -30,7 +30,7 @@ const HomePageTestmonial = () => {
                     <div className="TestamonialMianContainer mt-5">
                         <Image src={testmonial} alt="TestMonial_Image" />
                         <div>
-                            <h3 style={{ color: '#D9D9D9', fontWeight: '600' }} className="testmonialtext" >TESTAMONIALS</h3>
+                            <h3 style={{ color: 'rgba(0, 0, 0, 0.5)', fontWeight: '600' }} className="testmonialtext" >TESTAMONIALS</h3>
                             <h2 className="yallavenderingtext" >People Says About <span style={{ color: '#74CEDC' }} >YALLA</span> Vending</h2>
 
                             <p style={{ textAlign: 'justify' }} >

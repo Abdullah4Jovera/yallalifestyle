@@ -11,7 +11,9 @@ const YallaProduct = () => {
                             <h4 className='productTag' >PRODUCTS</h4>
                             <h2 className='yallaproduct'> <span className='yallatag' >Yalla</span>  PRODUCTS</h2>
 
-                            <p style={{ fontWeight: '400' }} className='producttext' >Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus</p>
+                            <p style={{ fontWeight: '400' }} className='producttext' >
+                                A wide variety of branded snack products that provide healthier alternatives to traditional snacks.
+                            </p>
                         </div>
                     </div>
                     <div className='btnContainerprpduct' >

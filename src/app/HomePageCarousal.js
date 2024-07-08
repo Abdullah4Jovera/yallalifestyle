@@ -55,7 +55,7 @@ function AutoPlay() {
     const images = [imageone, imagetwo, imagethree, imagefour, imagefive];
 
     return (
-        <Container className="mt-5" fluid >
+        <div className="carousalImage">
             <Slider {...settings}>
                 {images.map((image, index) => (
                     <div key={index}>
@@ -63,7 +63,7 @@ function AutoPlay() {
                     </div>
                 ))}
             </Slider>
-        </Container>
+        </div>
     );
 }
 

@@ -27,7 +27,10 @@ const YallaMoreAbout = () => {
                 </Col>
 
                 <Col xs={12} lg={6} className='twoCol'>
-                    <p className='loremtext' >Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. </p>
+
+                    <p className='loremtext' >
+                        Yalla food and drinks is an Emirati owned company supported by Khalifa fund. we are a company driven by a passionate belief that customer seeking convenience foods should be allowed healthier and balanced choices. This has been our goal from inception. Our team members share the vision of a healthier UAE and are determined to help combat prevailing health issues such as obesity and diabetes. We aim to become a powerful voice for changing the way people think about vending by making healthier products and related information more accessible to people.
+                    </p>
 
                     <div style={{ width: '100%', maxWidth: '500px' }} >
                         <p className='machineInsllated' style={{ fontWeight: '700' }} >Machines Installed</p>

@@ -7,7 +7,7 @@ import Image from 'next/image';
 import hrtag from './Assets/HomePageAssets/hrtag.png'
 const YallaGallery = () => {
     return (
-        <div style={{width:'100%', maxWidth:'1700px', margin:'0 auto'}} >
+        <div style={{ width: '100%', maxWidth: '1700px', margin: '0 auto' }} >
             <Row className='mt-5' >
                 <Col>
 
@@ -15,11 +15,13 @@ const YallaGallery = () => {
                         <h4 className='productTag' >GALLERY</h4>
                         <h2 className='yallaproduct'> <span className='yallatag' >Yalla</span>  GALLERY</h2>
 
-                        <p style={{ fontWeight: '400' }} className='producttext'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus</p>
+                        <p style={{ fontWeight: '400' }} className='producttext'>
+                            A wide gallery with variety of branded snack products that provide healthier alternatives to traditional snacks.
+                        </p>
                     </div>
 
 
-                        <HomePageCarousal />
+                    <HomePageCarousal />
 
                     <div style={{ display: 'flex', justifyContent: 'end', flexDirection: 'column', alignItems: 'end', marginTop: '60px' }} >
                         <Image src={hrtag} alt='See Gallery' className='seeGalleryLine' />

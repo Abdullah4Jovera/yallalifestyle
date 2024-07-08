@@ -18,11 +18,13 @@ const YallaServices = () => {
                 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
                     <h4 className='productTag'>SERVICES</h4>
                     <h2 className='yallaproduct'><span className='yallatag'>Yalla</span> SERVICES</h2>
-                    <p style={{ fontWeight: '400' }} className='producttext'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus</p>
+                    <p style={{ fontWeight: '400' }} className='producttext'>
+                        Services we provide you for the vision of a healthier UAE
+                    </p>
                 </div>
 
                 {isMobile ? (
-                    <ServiceCarousal/>
+                    <ServiceCarousal />
                 ) : (
                     <div className='mt-3 allservicecards'>
                         <Image src={serviceCards} alt='ServiceCards' className='serviceCards' />

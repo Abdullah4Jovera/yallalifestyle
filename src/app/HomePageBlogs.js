@@ -66,11 +66,11 @@ const HomePageBlogs = () => {
 
             <div className='cardPartnerContainer'>
                 <Row className="mt-5">
-                    <h4 className='productTag' style={{ textAlign: 'center' }} >Blogs</h4>
+                    <h4 className='productTag mt-4' style={{ textAlign: 'center' }} >Blogs</h4>
                     <h4 className='blognews' >Blogs & News About <span className='vendertag' >Vending</span>  Industry</h4>
                     {CardData.map((card, index) => (
                         <Col key={index} xs={12} md={6} lg={4} className="mb-4 mt-4">
-                            <Card style={{ border: 'none' }}>
+                            <Card style={{ border: 'none' }} className='cardBlog' >
                                 <Image
                                     variant="top"
                                     src={card.imageUrl}
