@@ -13,7 +13,7 @@ import HomePageBlogs from './HomePageBlogs';
 import YallaFooter from './YallaFooter';
 import VendingMachineCarousal from './VendingMachineCarousal';
 import './HomePage.css'
-const page = () => {
+const Page = () => {
 
     const [animate, setAnimate] = useState(false);
 
@@ -66,6 +66,6 @@ const page = () => {
     )
 }
 
-export default page
+export default Page
 
 
