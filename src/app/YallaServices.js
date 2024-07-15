@@ -8,12 +8,18 @@ import serviceCards from './Assets/HomePageAssets/serviceCards.png';
 import HomePageTestmonial from "./HomePageTestmonial";
 import { useMediaQuery } from 'react-responsive';
 import ServiceCarousal from "./YallaServiceCarousal";
+import servicsone from './Assets/HomePageAssets/servicsone.png'
+import servicestwo from './Assets/HomePageAssets/servicestwo.png'
+import servicesfour from './Assets/HomePageAssets/servicesfour.png'
+import servicesthree from './Assets/HomePageAssets/servicesthree.png'
+import servicesfive from './Assets/HomePageAssets/servicesfive.png'
+import adnoc from './Assets/HomePageAssets/adnoc.png'
 
 const YallaServices = () => {
     const isMobile = useMediaQuery({ query: '(max-width: 600px)' });
 
     return (
-        <Row className='mt-5'>
+        <Row style={{ marginTop: '7%' }}>
             <Col>
                 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
                     <h4 className='productTag'>SERVICES</h4>
@@ -26,21 +32,24 @@ const YallaServices = () => {
                 {isMobile ? (
                     <ServiceCarousal />
                 ) : (
-                    <div className='mt-3 allservicecards'>
-                        <Image src={serviceCards} alt='ServiceCards' className='serviceCards' />
+                    <div className='mt-4 allservicecards'>
+                        <Link href={''} ><Image src={servicesfive} alt="servicesfive" className="service-image service-image-five" /></Link>
+                        <Link href={''} > <Image src={servicesthree} alt="servicesthree" className="service-image service-image-three" /></Link>
+                        <Link href={''} ><Image src={servicsone} alt="servicesone" className="service-image service-image-one" /></Link>
+                        <Link href={''} > <Image src={servicestwo} alt="servicestwo" className="service-image service-image-two" /></Link>
+                        <Link href={''} >   <Image src={servicesfour} alt="servicesfour" className="service-image service-image-four" /></Link>
                     </div>
+
                 )}
 
                 <div className='btnContainerprpduct'>
                     <Link href={'/machines'} className='moreservices'>More Services</Link>
                 </div>
 
-                <div className='profitvenue'>
-                    <h1 className='profittext mt-5'>Profit Your Venue With No Cost Up-Front.</h1>
-                    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', maxWidth: '950px' }}>
-                        <Link href={'/'} className='viewAllservicegetstarted'>Get Started</Link>
-                    </div>
+                <div className="adnoc_bg_image" >
+                    <Image src={adnoc} alt="adnoc" className="img-fluid" />
                 </div>
+
 
                 {/* Testimonials */}
                 <HomePageTestmonial />

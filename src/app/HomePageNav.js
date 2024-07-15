@@ -10,7 +10,7 @@ const HomePageNav = () => {
     return (
         <Navbar expand="lg" className="navHeadClass">
             <Container fluid >
-                <Image src={logo} width={90} height={70} alt='Home Page Navbar Logo' />
+                <Image src={logo} width={90} height={70} alt='Home Page Navbar Logo'  className='logoAnimated'/>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">

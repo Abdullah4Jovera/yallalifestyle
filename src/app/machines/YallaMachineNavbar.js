@@ -11,7 +11,7 @@ const YallaMachineNavbar = () => {
             <Navbar expand="lg" className="navmachineClass">
                 <Container fluid>
                     <Navbar.Brand href="/">
-                        <Image src={logo} width={90} height={70} alt="Home Page Navbar Logo" />
+                    <Image src={logo} width={90} height={70} alt='Home Page Navbar Logo'  className='logoAnimated'/>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">

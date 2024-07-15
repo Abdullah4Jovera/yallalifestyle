@@ -16,7 +16,7 @@ const YallaProducts = () => {
           </h1>
 
           <div>
-            <h1 className='aedvalue'>4,00 AED</h1>
+            {/* <h1 className='aedvalue'>4,00 AED</h1> */}
             <h1 className='almondtext'>TOSI ALMOND SUPER BITES</h1>
           </div>
 

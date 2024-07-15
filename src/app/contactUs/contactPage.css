@@ -33,7 +33,6 @@
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    /* margin-top: 20px; */
 }
 
 .YallaContact {
@@ -157,7 +156,6 @@
 
 .textareafield {
     background-color: transparent;
-    /* border: 1px solid #b7b7b7; */
     border-top: none;
     border-right: none;
     border-left: none;
@@ -189,7 +187,6 @@
     line-height: 26px;
     text-decoration: none;
     border: none;
-
     display: inline-flex;
     padding: 13px 31px;
     justify-content: center;
@@ -241,8 +238,26 @@
 
 .hoverEffect:hover {
     transform: scale(1.05);
-    background-color:#6AE9FE;
+    background-color: #6AE9FE;
     color: black;
+}
+
+@keyframes logoAnimation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.logoAnimated {
+    animation: logoAnimation 2s infinite;
 }
 
 

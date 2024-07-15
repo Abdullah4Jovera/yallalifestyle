@@ -83,7 +83,6 @@
 
 .abtUsyalla {
     color: #000;
-
     font-family: "Playfair Display";
     font-size: 43px;
     font-style: normal;
@@ -113,31 +112,24 @@
 
 .carousel-container {
     max-width: 800px;
-    /* Adjust the max width as needed */
     margin: 0 auto;
-    /* Centers the carousel */
 }
 
 .yallaLifeStylediv {
     padding: 20px;
-    /* Adjust the padding as needed */
     text-align: center;
-    /* Center the text */
 }
 
 .yallaCarousaltxt {
     font-size: 1.2rem;
-    /* Adjust the font size as needed */
 }
 
 .slick-slider {
     margin: 0 auto;
-    /* Centers the slider */
 }
 
 .slick-dots {
     bottom: -30px;
-    /* Adjust the position of the dots */
 }
 
 .brandsTag {
@@ -155,7 +147,6 @@
     margin: 0 auto;
     padding: 20px;
     width: 80%;
-    /* Adjust this width as needed */
 }
 
 .instalsocialLink {
@@ -172,7 +163,7 @@
     margin-top: 10px;
 }
 
-.yallaCarousalImage{
+.yallaCarousalImage {
     width: 150px;
 }
 
@@ -224,7 +215,8 @@
         font-weight: 600;
         margin-top: 15px;
     }
-    .instalsocialLink{
+
+    .instalsocialLink {
         font-size: 18px;
         font-weight: 200;
         text-align: center;

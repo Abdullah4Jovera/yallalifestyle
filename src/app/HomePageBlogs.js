@@ -64,7 +64,7 @@ const HomePageBlogs = () => {
     return (
         <Container fluid>
 
-            <div className='cardPartnerContainer'>
+            <div className='cardPartnerContainer' style={{ marginTop: '7%' }}>
                 <Row className="mt-5">
                     <h4 className='productTag mt-4' style={{ textAlign: 'center' }} >Blogs</h4>
                     <h4 className='blognews' >Blogs & News About <span className='vendertag' >Vending</span>  Industry</h4>
@@ -106,7 +106,7 @@ const HomePageBlogs = () => {
                     </div>
                 </Row>
 
-                <Row className="mt-5">
+                <Row style={{ marginTop: '7%' }}>
                     <h3 className='instaText'>PARTNERS</h3>
                     <h3 className='peopletrustUs'>People Who Trust Us</h3>
 
@@ -127,7 +127,7 @@ const HomePageBlogs = () => {
                 </Row>
             </div>
 
-            <div className='mt-4' >
+            <div style={{ marginTop: '7%' }} >
                 <h3 className='instaText'>INSTAGRAM</h3>
                 <Link href={'/'} >
                     <Image src={instaPhoto} alt='Instagram Click Here...' className="img-fluid" />

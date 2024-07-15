@@ -23,7 +23,7 @@ const HomePageTestmonial = () => {
         afterChange: current => setActiveSlide2(current)
     };
     return (
-        <div className="slider-container">
+        <div className="slider-container" style={{ marginTop: '7%' }}>
 
             <Slider {...settings}>
                 <div>
@@ -49,7 +49,7 @@ const HomePageTestmonial = () => {
                     <div className="TestamonialMianContainer mt-5">
                         <Image src={testmonial} alt="TestMonial_Image" />
                         <div>
-                            <h3 style={{ color: '#D9D9D9', fontWeight: '600' }} >TESTAMONIALS</h3>
+                            <h3 style={{ color: '#D9D9D9', fontWeight: '600' }} className="testmonialtext">TESTAMONIALS</h3>
                             <h2 className="yallavenderingtext" >People Says About <span style={{ color: '#74CEDC' }} >YALLA</span> Vending</h2>
 
                             <p style={{ textAlign: 'justify' }} >
@@ -69,7 +69,7 @@ const HomePageTestmonial = () => {
                     <div className="TestamonialMianContainer mt-5">
                         <Image src={testmonial} alt="TestMonial_Image" />
                         <div>
-                            <h3 style={{ color: '#D9D9D9', fontWeight: '600' }} >TESTAMONIALS</h3>
+                            <h3 style={{ color: '#D9D9D9', fontWeight: '600' }} className="testmonialtext">TESTAMONIALS</h3>
                             <h2 className="yallavenderingtext" >People Says About <span style={{ color: '#74CEDC' }} >YALLA</span> Vending</h2>
 
                             <p style={{ textAlign: 'justify' }} >

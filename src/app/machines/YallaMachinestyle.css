@@ -46,7 +46,6 @@
 
 .textretail {
     color: #000;
-
     text-align: center;
     font-family: "Playfair Display";
     font-size: 34px;
@@ -63,12 +62,29 @@
     margin-top: 5%;
 }
 
+@keyframes logoAnimation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.logoAnimated {
+    animation: logoAnimation 2s infinite;
+}
+
 
 @keyframes fadeIn {
     from {
         opacity: 0;
         transform: translateY(-10px);
-        /* Example translation */
     }
 
     to {
@@ -105,7 +121,6 @@
 
     .textretail {
         color: #000;
-
         text-align: center;
         font-family: "Playfair Display";
         font-size: 22px;

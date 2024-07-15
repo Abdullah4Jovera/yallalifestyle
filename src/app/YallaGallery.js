@@ -8,7 +8,7 @@ import hrtag from './Assets/HomePageAssets/hrtag.png'
 const YallaGallery = () => {
     return (
         <div style={{ width: '100%', maxWidth: '1700px', margin: '0 auto' }} >
-            <Row className='mt-5' >
+            <Row style={{ marginTop: '7%' }} >
                 <Col>
 
                     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }} >

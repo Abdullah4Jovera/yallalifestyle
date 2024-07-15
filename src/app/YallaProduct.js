@@ -1,10 +1,11 @@
 import React from 'react'
 import { Row, Col } from 'react-bootstrap';
 import Link from 'next/link';
+import HomePageCarousal from './HomePageCarousal'
 const YallaProduct = () => {
     return (
         <>
-            <Row className='mt-5' >
+            <Row  style={{ marginTop: '7%' }}>
                 <Col>
                     <div className='productImage' >
                         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }} >
@@ -15,6 +16,9 @@ const YallaProduct = () => {
                                 A wide variety of branded snack products that provide healthier alternatives to traditional snacks.
                             </p>
                         </div>
+                    </div>
+                    <div>
+                    <HomePageCarousal />
                     </div>
                     <div className='btnContainerprpduct' >
                         <Link href={'/products'} className='viewAllproducts' >View All Products</Link>

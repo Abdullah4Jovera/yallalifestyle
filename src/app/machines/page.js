@@ -1,5 +1,5 @@
 "use client"
-import React,{ useEffect, useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import YallaMachineNavbar from './YallaMachineNavbar'
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import Link from 'next/link';
@@ -8,7 +8,7 @@ import './YallaMachinestyle.css'
 import vendeone from '../Assets/MachinePageAssets/vende1.png'
 import vendetwo from '../Assets/MachinePageAssets/vende2.png'
 import YallaFooter from '../YallaFooter';
-const Page = () => {
+const page = () => {
 
     const ref = useRef(null);
 
@@ -53,7 +53,7 @@ const Page = () => {
     )
 }
 
-export default Page
+export default page
 
 
 

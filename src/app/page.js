@@ -4,7 +4,6 @@ import HomePageNav from './HomePageNav'
 import Image from 'next/image';
 import { Container, Row, Col } from 'react-bootstrap';
 import Link from 'next/link';
-import './HomePage.css'
 import machinelogo from './Assets/HomePageAssets/machinelogo.png'
 import YallaMoreAbout from './YallaMoreAbout';
 import YallaProduct from './YallaProduct';
@@ -12,7 +11,9 @@ import YallaGallery from './YallaGallery';
 import YallaServices from './YallaServices';
 import HomePageBlogs from './HomePageBlogs';
 import YallaFooter from './YallaFooter';
-const Page = () => {
+import VendingMachineCarousal from './VendingMachineCarousal';
+import './HomePage.css'
+const page = () => {
 
     const [animate, setAnimate] = useState(false);
 
@@ -28,10 +29,10 @@ const Page = () => {
                     <Col
                         xs={12}
                         sm={12}
-                        md={12}
+                        md={6}
                         lg={6}
                         className={`vendingText ${animate ? 'fade-in-ease-out' : ''}`}
-                        style={{ width: '100%', maxWidth: '450px', margin: '0 auto' }}
+                        style={{ width: '100%', maxWidth: '700px', margin: '0 auto' }}
                     >
                         <h1 className='venderingTech' style={{ color: '#4BC6DA', fontWeight: 600 }}>
                             Vending Technology
@@ -44,10 +45,8 @@ const Page = () => {
                         </Link>
                     </Col>
 
-                    <Col xs={12} sm={12} md={12} lg={6} className={animate ? 'fade-in-ease-out' : ''}>
-                        <div className='vende_bgImage'>
-                            <Image className='imageClasslogo' src={machinelogo} alt='Machine Logo' />
-                        </div>
+                    <Col xs={12} sm={12} md={6} lg={6} className={`landingPageCarousal ${animate ? 'fade-in-ease-out' : ''}`}>
+                        <VendingMachineCarousal />
                     </Col>
 
                     <YallaMoreAbout />
@@ -67,6 +66,6 @@ const Page = () => {
     )
 }
 
-export default Page
+export default page
 
 

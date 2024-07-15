@@ -13,6 +13,7 @@ const YallaFooter = () => {
     const [email, setEmail] = useState('');
     const [status, setStatus] = useState(null);
 
+    const currentYear = new Date().getFullYear(); // Get current year dynamically
     const handleemailsubmit = async (e) => {
         e.preventDefault();
         console.log('Submitting form with email:', email);
@@ -71,19 +72,19 @@ const YallaFooter = () => {
                 <Col xs={12} md={6} lg={4}>
                     <div className='companyHELP'>
                         <div className='company_div'>
-                            <p>COMPANY</p>
-                            <p>About </p>
-                            <p>Features </p>
-                            <p>Works </p>
-                            <p>Career</p>
+                            <Link href={''} style={{ textDecoration: 'none', color: 'white' }}><p>COMPANY</p></Link>
+                            <Link href={''} style={{ textDecoration: 'none', color: 'white' }}><p>About</p></Link>
+                            <Link href={''} style={{ textDecoration: 'none', color: 'white' }}><p>Features</p></Link>
+                            <Link href={''} style={{ textDecoration: 'none', color: 'white' }}><p>Works</p></Link>
+                            <Link href={''} style={{ textDecoration: 'none', color: 'white' }}><p>Career</p></Link>
                         </div>
 
                         <div className='company_div'>
-                            <p>HELP</p>
-                            <p>Customer Support</p>
-                            <p>Delivery Details</p>
-                            <p>Terms & Conditions</p>
-                            <p>Privacy Policy</p>
+                            <Link href={''} style={{ textDecoration: 'none', color: 'white' }}><p>HELP</p></Link>
+                            <Link href={''} style={{ textDecoration: 'none', color: 'white' }}><p>Customer Support</p></Link>
+                            <Link href={''} style={{ textDecoration: 'none', color: 'white' }}><p>Delivery Details</p></Link>
+                            <Link href={''} style={{ textDecoration: 'none', color: 'white' }}><p>Terms & Conditions</p></Link>
+                            <Link href={''} style={{ textDecoration: 'none', color: 'white' }}><p>Privacy Policy</p></Link>
                         </div>
                     </div>
                 </Col>
@@ -108,7 +109,7 @@ const YallaFooter = () => {
                     </Form>
                 </Col>
                 <hr />
-                <p className='copyright'>© Copyright 2024, All Rights Reserved by Yalla lifestyle</p>
+                <p className='copyright'>© Copyright {currentYear}, All Rights Reserved by Yalla lifestyle</p>
             </Row>
         </Container>
     );

@@ -34,6 +34,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: start;
+    margin-top: 4% !important;
+}
+
+.landingPageCarousal {
+    margin-top: 6% !important;
 }
 
 .cardBlog {
@@ -45,33 +50,31 @@
 
 .venderingTech {
     color: #4BC6DA;
-
     leading-trim: both;
-
     text-edge: cap;
     font-family: Inter;
     font-size: 120px;
     font-style: normal;
     font-weight: 700;
     line-height: 109%;
-    /* 98.209px */
     letter-spacing: 0.901px;
 }
 
+
+
 .newBusinessera {
     color: #000;
-
     leading-trim: both;
-
     text-edge: cap;
     font-family: Inter;
     font-size: 34px;
     font-style: normal;
     font-weight: 500;
     line-height: 100%;
-    /* 34px */
     letter-spacing: 0.34px;
 }
+
+
 
 .discoverContainer {
     margin-top: 35px;
@@ -88,7 +91,7 @@
     line-height: 100%;
     letter-spacing: 0.38px;
     display: inline-flex;
-    padding: 16.909px 21.136px;
+    padding: 16px 21px;
     justify-content: center;
     align-items: center;
     gap: 14.091px;
@@ -96,24 +99,26 @@
     background: #74CEDC;
     text-decoration: none;
     margin-top: 40px;
+    transition: background-color 0.3s ease;
+}
+
+.discoverbtn:hover {
+    background: linear-gradient(to right, #052A37, #B7DADC);
+    transform: scale(1.05);
+    border: none;
 }
 
 .testmonialtext {
-    color: rgba(50, 50, 50, 0.43);
-
+    color: rgba(50, 50, 50, 0.43) !important;
     leading-trim: both;
-
     text-edge: cap;
     font-family: Inter;
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
     line-height: 100%;
-    /* 18px */
     letter-spacing: 0.18px;
 }
-
-
 
 .venderingbusinesscontainer {
     display: flex;
@@ -122,6 +127,10 @@
     align-items: start;
     height: 60vh;
 }
+
+
+
+
 
 .imageClasslogo {
     width: 100%;
@@ -155,16 +164,14 @@
 
 .moreaboutbtn {
     display: inline-flex;
-    padding: 21px 81px;
+    padding: 21px 20px;
     justify-content: center;
     align-items: center;
     gap: 14px;
     border-radius: 21.136px;
     background: #74CEDC;
     color: #FFF;
-
     leading-trim: both;
-
     text-edge: cap;
     font-family: Inter;
     font-size: 30px;
@@ -174,7 +181,16 @@
     letter-spacing: 0.3px;
     text-decoration: none;
     margin-top: 8px;
+    transition: background-color 0.3s ease;
 }
+
+.moreaboutbtn:hover {
+    background: linear-gradient(to right, #052A37, #B7DADC);
+    transform: scale(1.05);
+    border: none;
+}
+
+
 
 /* HomePage.css */
 
@@ -183,26 +199,16 @@
     padding: 20px;
 }
 
-.dotImage {
-    background-image: url('./Assets/HomePageAssets/dots.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
 
 .h1Tagyalla {
     color: #000;
-
     font-size: 51px;
     font-style: normal;
     font-weight: 700;
     line-height: 100%;
     letter-spacing: 0.51px;
 }
+
 
 .spanTagyalla {
     color: #4BC6DA;
@@ -217,25 +223,34 @@
 
 .loremtext {
     color: #000;
-    leading-trim: both;
-    text-edge: cap;
-    font-family: Inter;
-    font-size: 24px;
+
+    font-family: "Adobe Devanagari";
+    font-size: 27px;
     font-style: normal;
     font-weight: 400;
     line-height: 100%;
-    letter-spacing: 0.24px;
+    /* 27px */
+    letter-spacing: 0.27px;
     text-align: justify;
-
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-in-out forwards;
 }
+
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 
 
 .machineInsllated {
     color: #61C5D4;
-
     leading-trim: both;
-
     text-edge: cap;
     font-family: Inter;
     font-size: 73px;
@@ -245,6 +260,10 @@
     /* 73px */
     letter-spacing: 4.38px;
 }
+
+
+
+
 
 
 
@@ -260,27 +279,28 @@
 .numbrcountclass {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
     margin-top: 15%;
+    /* width: 100%;
+    max-width: 650px; */
 }
 
 
 .productTag {
     color: rgba(50, 50, 50, 0.43);
-
     leading-trim: both;
-
     text-edge: cap;
     font-family: Inter;
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
     line-height: 100%;
-    /* 18px */
     letter-spacing: 0.18px;
-
 }
+
+
+
 
 .yallaproduct {
     color: #000;
@@ -296,34 +316,32 @@
 
 .yallatag {
     color: #4BC6DA;
-
     leading-trim: both;
-
     text-edge: cap;
     font-family: Inter;
     font-size: 34px;
     font-style: normal;
     font-weight: 800;
     line-height: 100%;
-    /* 34px */
     letter-spacing: 0.34px;
 }
 
+
+
 .producttext {
     color: #000;
-
     text-align: center;
     leading-trim: both;
-
     text-edge: cap;
     font-family: Inter;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 100%;
-    /* 12px */
     letter-spacing: 0.12px;
 }
+
+
 
 
 
@@ -339,7 +357,6 @@
     border-radius: 21px;
     border: 1px solid #4BC6DA;
     background: #61C5D4;
-
     color: #FFF;
     leading-trim: both;
     text-edge: cap;
@@ -348,27 +365,30 @@
     font-style: normal;
     font-weight: 700;
     line-height: 100%;
-    /* 19px */
     letter-spacing: 0.19px;
     text-decoration: none;
     margin: 5px;
-
+    transition: background-color 0.3s ease;
 }
+
+.viewAllproducts:hover {
+    background: linear-gradient(to right, #052A37, #B7DADC);
+    transform: scale(1.05);
+    border: none;
+}
+
 
 .moreservices {
     color: #FFF;
     text-decoration: none;
     leading-trim: both;
-
     text-edge: cap;
     font-family: Inter;
     font-size: 27px;
     font-style: normal;
     font-weight: 700;
     line-height: 100%;
-    /* 27px */
     letter-spacing: 0.27px;
-
     display: flex;
     width: 334px;
     height: 78px;
@@ -381,7 +401,15 @@
     border: 1px solid #4BC6DA;
     margin-bottom: 30px;
     background: #61C5D4;
+    transition: background-color 0.3s ease;
 }
+
+.moreservices:hover {
+    background: linear-gradient(to right, #052A37, #B7DADC);
+    transform: scale(1.05);
+    border: none;
+}
+
 
 .vende_bgImage {
     display: flex;
@@ -421,21 +449,20 @@
 
 .profittext {
     color: #FFF;
-
     leading-trim: both;
-
     text-edge: cap;
     font-family: Inter;
     font-size: 41px;
     font-style: normal;
     font-weight: 800;
     line-height: 100%;
-    /* 41px */
     letter-spacing: 0.41px;
     width: 100%;
     max-width: 1000px;
     text-align: center;
 }
+
+
 
 .viewAllservicegetstarted {
     background-color: black;
@@ -450,12 +477,52 @@
     width: 85%;
     height: auto;
 }
+.service-image {
+    transition: transform 0.3s ease-out;
+  }
+  
+  .service-image:hover {
+    transform: scale(1.2);
+  }
 
 .allservicecards {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    max-width: 1350px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    position: relative;
 }
+
+.service-image-five {
+    rotate: 365deg;
+    margin: -98px !important
+}
+
+.service-image-four {
+    margin: -96px !important;
+}
+
+.service-image-two {
+    margin-left: -30px;
+}
+
+.service-image-three {
+    rotate: 360deg;
+    margin-right: -27px;
+
+}
+
+.service-image-one {
+    rotate: 0deg;
+}
+/* .adnoc_bg_image{
+    background-image: url('./Assets/HomePageAssets/adnoc.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
 
 
 .TestamonialMianContainer {
@@ -511,19 +578,17 @@
 
 .company_div {
     color: #FFF;
-
     font-family: Inter;
     font-size: 12.502px;
     font-style: normal;
     font-weight: 600;
     line-height: 21.158px;
-    /* 169.231% */
     letter-spacing: 2.885px;
 }
 
+
 .footerText {
     color: #ADADAD;
-
     font-size: 15.387px;
     font-style: normal;
     font-weight: 500;
@@ -540,7 +605,6 @@
     margin: 0 auto;
     padding: 20px;
     width: 80%;
-    /* Adjust this width as needed */
 }
 
 .slide {
@@ -622,19 +686,18 @@
 
 .blognews {
     color: #000;
-
     text-align: center;
     leading-trim: both;
-
     text-edge: cap;
     font-family: Inter;
     font-size: 34px;
     font-style: normal;
     font-weight: 800;
     line-height: 100%;
-    /* 34px */
     letter-spacing: 0.34px;
 }
+
+
 
 .vendertag {
     color: #4BC6DA;
@@ -650,15 +713,20 @@
 
 .copyright {
     color: #FFF;
-
     text-align: center;
     font-family: Inter;
     font-size: 13.464px;
     font-style: normal;
     font-weight: 400;
     line-height: 19.234px;
-    /* 142.857% */
 }
+
+.yallaAbouttxt {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 
 .blogtextCard {
     overflow: hidden;
@@ -671,6 +739,17 @@
     font-weight: 700;
     line-height: normal;
 }
+
+.machineInstalledTxt {
+    width: 100%;
+    max-width: 500px;
+}
+
+.machineInstalledCol {
+    display: flex;
+    align-items: end;
+}
+
 
 /* styles.css */
 @keyframes fadeInEaseOut {
@@ -687,9 +766,50 @@
     animation: fadeInEaseOut 1s ease-out;
 }
 
+@keyframes logoAnimation {
+    0% {
+        transform: scale(1);
+    }
 
+    50% {
+        transform: scale(1.1);
+    }
 
+    100% {
+        transform: scale(1);
+    }
+}
 
+.logoAnimated {
+    animation: logoAnimation 2s infinite;
+}
+
+.numbrcountclass img {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.numbrcountclass img:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.numbrcountclass img:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.numbrcountclass img:nth-child(3) {
+    animation-delay: 1s;
+}
+
+.numbrcountclass img:nth-child(4) {
+    animation-delay: 1.5s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
 
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
@@ -755,17 +875,84 @@
     }
 }
 
-/* @media (min-width: 992px) {
-    .imageClasslogo {
-      width: 50%;
+@media (max-width: 1300px) and (min-width: 900px) {
+    .venderingTech {
+        font-size: 45px !important;
     }
-  } */
 
-/* @media (min-width: 1200px) {
-    .imageClasslogo {
-      width: 40%;
+    .discoverbtn {
+        padding: 10px 21px;
+        margin-top: 20px;
     }
-  } */
+
+    .h1Tagyalla {
+        font-size: 35px !important;
+        font-weight: 500 !important
+    }
+
+    .spanTagyalla {
+        font-size: 35px !important;
+        font-weight: 500 !important
+    }
+
+    .moreaboutbtn {
+        padding: 10px 15px;
+        margin-top: 20px;
+        border-radius: 15px;
+    }
+}
+
+@media (max-width: 1000px) and (min-width: 600px) {
+    .venderingTech {
+        font-size: 45px !important;
+    }
+
+    .discoverbtn {
+        padding: 10px 21px;
+        margin-top: 20px;
+    }
+
+    .h1Tagyalla {
+        font-size: 35px !important;
+        font-weight: 500 !important
+    }
+
+    .spanTagyalla {
+        font-size: 35px !important;
+        font-weight: 500 !important
+    }
+
+    .moreaboutbtn {
+        padding: 10px 15px;
+        margin-top: 20px;
+        border-radius: 15px;
+    }
+
+    .loremtext {
+        margin-top: 2%;
+        font-size: 16px;
+    }
+
+    .machineInstalledCount {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .machineInstalledCol {
+        display: flex;
+        justify-content: center;
+    }
+
+    .machineInsllated {
+        display: flex;
+        justify-content: center;
+        font-size: 50px;
+    }
+
+    .numbrcountclass {
+        margin-top: 3%;
+    }
+}
 
 @media only screen and (max-width: 600px) {
     .venderingTech {
@@ -807,8 +994,9 @@
     }
 
     .machineInsllated {
-        text-align: center;
-        font-size: 45px;
+        display: flex;
+        justify-content: center;
+        font-size: 30px;
     }
 
     .profittext {
@@ -935,4 +1123,22 @@
         text-align: center;
     }
 
+    .loremtext {
+        font-size: 14px;
+        margin-top: 2%;
+    }
+
+    .machineInstalledCount {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .machineInstalledCol {
+        display: flex;
+        justify-content: center;
+    }
+
+    .numbrcountclass {
+        margin-top: 3%;
+    }
 }
