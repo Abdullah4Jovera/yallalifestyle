@@ -63,14 +63,13 @@ const PartnerData = [
 const HomePageBlogs = () => {
     return (
         <Container fluid>
-
-            <div className='cardPartnerContainer' style={{ marginTop: '7%' }}>
+            <div className='cardPartnerContainer' style={{ marginTop: '7%' }} data-aos="fade-up">
                 <Row className="mt-5">
                     <h4 className='productTag mt-4' style={{ textAlign: 'center' }} >Blogs</h4>
-                    <h4 className='blognews' >Blogs & News About <span className='vendertag' >Vending</span>  Industry</h4>
+                    <h4 className='blognews' >Blogs & News About <span className='vendertag' >Vending</span> Industry</h4>
                     {CardData.map((card, index) => (
                         <Col key={index} xs={12} md={6} lg={4} className="mb-4 mt-4">
-                            <Card style={{ border: 'none' }} className='cardBlog' >
+                            <Card style={{ border: 'none' }} className='cardBlog'>
                                 <Image
                                     variant="top"
                                     src={card.imageUrl}
@@ -78,40 +77,39 @@ const HomePageBlogs = () => {
                                     style={{ width: '100%' }}
                                 />
                                 <Card.Body>
-                                    <h5 className='blogtextCard' > {card.title} </h5>
-                                    <div className="carddatecontainer">
-                                        <div style={{ display: 'flex', gap: '5px', alignItems: 'start' }}>
-                                            <Image src={card.imagelogo} alt="imagelogo" />
-                                            <p style={{ fontSize: '10px', fontWeight: '400px' }}>
-                                                {card.namePerson}
-                                            </p>
-                                        </div>
-                                        <div style={{ display: 'flex', gap: '5px', alignItems: 'start' }}>
-                                            <p style={{ fontSize: '10px', fontWeight: '400px' }}>
-                                                {card.Datetime}
-                                            </p>
-                                            <p style={{ fontSize: '10px', fontWeight: '400px' }}>
-                                                {card.view}
-                                            </p>
+                                    <h5 className='blogtextCard'>{card.title}</h5>
+                                    <div className="carddatecontainer-wrapper">
+                                        <div className="carddatecontainer">
+                                            <div style={{ display: 'flex', gap: '5px', alignItems: 'start' }}>
+                                                <Image src={card.imagelogo} alt="imagelogo" />
+                                                <p style={{ fontSize: '10px', fontWeight: '400' }}>
+                                                    {card.namePerson}
+                                                </p>
+                                            </div>
+                                            <div style={{ display: 'flex', gap: '5px', alignItems: 'start' }}>
+                                                <p style={{ fontSize: '10px', fontWeight: '400' }}>
+                                                    {card.Datetime}
+                                                </p>
+                                                <p style={{ fontSize: '10px', fontWeight: '400' }}>
+                                                    {card.view}
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </Card.Body>
                             </Card>
                         </Col>
                     ))}
-
-                    <div style={{ display: 'flex', justifyContent: 'end', flexDirection: 'column', alignItems: 'end', marginTop: '60px' }} >
+                    <div style={{ display: 'flex', justifyContent: 'end', flexDirection: 'column', alignItems: 'end', marginTop: '60px' }} data-aos="fade-up" data-aos-delay="300">
                         <Image src={hrtag} alt='See Gallery' className='seeGalleryLine' />
                         <Link href={'/'} className='seeGallery' style={{ color: 'rgba(50, 50, 50, 0.43)', fontWeight: '700' }} >View More</Link>
                     </div>
                 </Row>
 
                 <Row style={{ marginTop: '7%' }}>
-                    <h3 className='instaText'>PARTNERS</h3>
-                    <h3 className='peopletrustUs'>People Who Trust Us</h3>
-
-                    <div className='partnerContainer' >
-
+                    <h3 className='instaText' data-aos="fade-up" >PARTNERS</h3>
+                    <h3 className='peopletrustUs' data-aos="fade-up" >People Who Trust Us</h3>
+                    <div className='partnerContainer' data-aos="fade-up" data-aos-delay="300">
                         {PartnerData.map((partner, index) => (
                             <Col key={index} xs={6} md={4} lg={2} className="mb-4 mt-4">
                                 <Image
@@ -122,12 +120,10 @@ const HomePageBlogs = () => {
                             </Col>
                         ))}
                     </div>
-
-
                 </Row>
             </div>
 
-            <div style={{ marginTop: '7%' }} >
+            <div style={{ marginTop: '7%' }} data-aos="fade-up">
                 <h3 className='instaText'>INSTAGRAM</h3>
                 <Link href={'/'} >
                     <Image src={instaPhoto} alt='Instagram Click Here...' className="img-fluid" />

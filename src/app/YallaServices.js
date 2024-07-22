@@ -1,61 +1,46 @@
 'use client'
 import React from "react";
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Container } from 'react-bootstrap';
 import Link from 'next/link';
 import Image from 'next/image';
-import './HomePage.css';
+import './YallaServices.css';
 import serviceCards from './Assets/HomePageAssets/serviceCards.png';
 import HomePageTestmonial from "./HomePageTestmonial";
 import { useMediaQuery } from 'react-responsive';
 import ServiceCarousal from "./YallaServiceCarousal";
-import servicsone from './Assets/HomePageAssets/servicsone.png'
-import servicestwo from './Assets/HomePageAssets/servicestwo.png'
-import servicesfour from './Assets/HomePageAssets/servicesfour.png'
-import servicesthree from './Assets/HomePageAssets/servicesthree.png'
-import servicesfive from './Assets/HomePageAssets/servicesfive.png'
 import adnoc from './Assets/HomePageAssets/adnoc.png'
+import yasmarina from './Assets/HomePageAssets/yasmarina.png'
+import AdnocYasCarousal from "./AdnocYasCarousal";
+import serviceone from './Assets/HomePageAssets/serviceone.png'
+import servicetwo from './Assets/HomePageAssets/servicetwo.png'
+import servicethree from './Assets/HomePageAssets/servicethree.png'
+import servicefour from './Assets/HomePageAssets/servicefour.png'
+import servicefive from './Assets/HomePageAssets/servicefive.png'
 
 const YallaServices = () => {
     const isMobile = useMediaQuery({ query: '(max-width: 600px)' });
 
     return (
-        <Row style={{ marginTop: '7%' }}>
-            <Col>
-                <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
-                    <h4 className='productTag'>SERVICES</h4>
-                    <h2 className='yallaproduct'><span className='yallatag'>Yalla</span> SERVICES</h2>
-                    <p style={{ fontWeight: '400' }} className='producttext'>
-                        Services we provide you for the vision of a healthier UAE
-                    </p>
+        <>
+            {/* <h1 className='product_title' data-aos="fade-up">Services</h1> */}
+            <h1 className='yalla_titile' data-aos="fade-up" data-aos-delay="300">Yalla <span className='product_title'>Services</span></h1>
+            <div className="services_bg" data-aos="fade-up" data-aos-delay="300">
+                <div className="servicesImages" >
+                    <Image src={serviceone} alt="service_one" className="services_images_class" />
+                    <Image src={servicetwo} alt="service_two" className="services_images_class" />
+                    <Image src={servicethree} alt="servicethree" className="services_images_class" />
+                    <Image src={servicefour} alt="service_four" className="services_images_class" />
+                    <Image src={servicefive} alt="service_one" className="services_images_class" />
                 </div>
-
-                {isMobile ? (
-                    <ServiceCarousal />
-                ) : (
-                    <div className='mt-4 allservicecards'>
-                        <Link href={''} ><Image src={servicesfive} alt="servicesfive" className="service-image service-image-five" /></Link>
-                        <Link href={''} > <Image src={servicesthree} alt="servicesthree" className="service-image service-image-three" /></Link>
-                        <Link href={''} ><Image src={servicsone} alt="servicesone" className="service-image service-image-one" /></Link>
-                        <Link href={''} > <Image src={servicestwo} alt="servicestwo" className="service-image service-image-two" /></Link>
-                        <Link href={''} >   <Image src={servicesfour} alt="servicesfour" className="service-image service-image-four" /></Link>
-                    </div>
-
-                )}
-
-                <div className='btnContainerprpduct'>
-                    <Link href={'/machines'} className='moreservices'>More Services</Link>
-                </div>
-
-                <div className="adnoc_bg_image" >
-                    <Image src={adnoc} alt="adnoc" className="img-fluid" />
-                </div>
-
-
-                {/* Testimonials */}
-                <HomePageTestmonial />
-            </Col>
-        </Row>
+            </div>
+            <AdnocYasCarousal />
+            <HomePageTestmonial />
+        </>
     );
 };
 
 export default YallaServices;
+
+
+
+

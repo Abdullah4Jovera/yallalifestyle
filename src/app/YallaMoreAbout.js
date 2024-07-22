@@ -1,54 +1,50 @@
-'use client';
-
-import React from 'react';
-import { Row, Col } from 'react-bootstrap';
+'use client'
+import React, { useEffect } from 'react';
+import './AboutsectionStyle.css'
 import Image from 'next/image';
-import Link from 'next/link';
-import dotImage from './Assets/HomePageAssets/dots.png';
-import numbercount from './Assets/HomePageAssets/numbercount.png'
-import './HomePage.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // Import AOS styles
+import aboutusPage from '../app/Assets/HomePageAssets/aboutusPage.png'
+import yallaaboutlogo from '../app/assets/HomePageAssets/yallaaboutlogo.png'
 
-const YallaMoreAbout = () => {
+const Page = () => {
+
+    useEffect(() => {
+        AOS.init({
+            duration: 2000,
+        });
+    }, []);
+
     return (
-        <>
-            <Row style={{ marginTop: '7%' }} >
-                <Col xs={12} lg={6} className='dotImage' >
-                    <div style={{ width: '100%', maxWidth: '650px', margin: '0 auto' }} >
-                        <h1 className='h1Tagyalla'><span className='spanTagyalla'>Yalla Vending Machines</span> In Our Business</h1>
-                        <Link href='/' className='moreaboutbtn' >More About</Link>
-                    </div>
-                </Col>
+        
+        <div className="container">
+            <div className="flex-container">
+                <div className="image-container" data-aos="fade-right"
+                    data-aos-anchor-placement="top-bottom">
+                    <Image
+                        src={aboutusPage}
+                        alt='gallerysix'
+                        className='image_yalla_about'
+                        layout="responsive"
+                    />
+                </div>
+                <div className="text-container" data-aos="fade-left"
+                    data-aos-anchor-placement="center-bottom">
+                    <Image src={yallaaboutlogo} alt='yallaaboutlogo' className='yallaaboutlogo' />
+                    <h1 className='about_us_heading mt-3' >About Us</h1>
+                    <p className='yallaaBOUTText'>
+                    Yalla food and drinks is an Emirati owned company supported by khalifa fund. We are a company driven by a passionate belief that customers 
+                    seeking convenience foods should be allowed healthier and balanced choices. This has been our goal from inception. Our team members share 
+                    </p>
+                    <p className='yallaaBOUTText'>
+                    The vision of a healthier UAE and are determined to help combat prevailing health issues such as obesity and diabetes. We aim to become a 
+                    powerful voice for changing the way people think about vending by making healthier products and related information more accessible to people.
+                    </p>
 
-                <Col xs={12} lg={6} >
-                    <div className='yallaAbouttxt'>
-                        <p className='loremtext' >
-                            Yalla food and drinks is an Emirati owned company supported by Khalifa fund. we are a company driven by a passionate belief that customer seeking
-                            convenience foods should be allowed healthier and balanced choices. This has been our goal from inception. Our team members share the vision of a
-                            healthier UAE and are determined to help combat prevailing health issues such as obesity and diabetes. We aim to become a powerful voice for
-                            changing the way people think about vending by making healthier products and related information more accessible to people.
-                        </p>
-                    </div>
-                </Col>
-
-
-                <Row className='machineInstalledCount'>
-                    <Col xs={12} lg={6}>
-                        <div className='numbrcountclass' >
-                            <Image src={numbercount} alt='Number Count' style={{ width: '100%', maxWidth: '120px' }} />
-                            <Image src={numbercount} alt='Number Count' style={{ width: '100%', maxWidth: '120px' }} />
-                            <Image src={numbercount} alt='Number Count' style={{ width: '100%', maxWidth: '120px' }} />
-                            <Image src={numbercount} alt='Number Count' style={{ width: '100%', maxWidth: '120px' }} />
-                        </div>
-                    </Col>
-                    <Col xs={12} lg={6} className='machineInstalledCol' >
-                        <div className='machineInstalledTxt' >
-                            <p className='machineInsllated' style={{ fontWeight: '700' }} >Machines Installed</p>
-                        </div>
-                    </Col>
-                </Row>
-            </Row>
-        </>
-    );
+                </div>
+            </div>
+        </div>
+    )
 }
 
-export default YallaMoreAbout;
+export default Page;
