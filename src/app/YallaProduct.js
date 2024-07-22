@@ -55,7 +55,8 @@ function Page() {
                         key={index}
                         style={{
                             backgroundColor: "#f0f0f0",
-                            // height: "350px",
+                            width: "322px",
+                            height: "366px",
                             cursor: "pointer",
                             margin: "20px",
                             display: "flex",
