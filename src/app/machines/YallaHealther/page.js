@@ -10,7 +10,7 @@ import uppermm from '../../Assets/MachinePageAssets/uppermm.png'
 import lowermm from '../../Assets/MachinePageAssets/lowermm.png'
 import arrowupper from '../../Assets/MachinePageAssets/arrowupper.png'
 import arrowlowerside from '../../Assets/MachinePageAssets/arrowlowerside.png'
-const page = () => {
+const Page = () => {
   return (
     <>
       <YallaMachineNavbar />
@@ -52,4 +52,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
