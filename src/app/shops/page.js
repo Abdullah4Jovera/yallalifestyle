@@ -2,7 +2,7 @@ import React from 'react'
 import HomePageNav from '../HomePageNav'
 import { Container, Row, Col } from 'react-bootstrap';
 import './shopStyle.css'
-const page = () => {
+const Page = () => {
     return (
         <div>
             <HomePageNav />
@@ -13,4 +13,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page
