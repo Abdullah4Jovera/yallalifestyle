@@ -1,7 +1,7 @@
 import React from 'react'
 import YallaMachineNavbar from '../YallaMachineNavbar'
 
-const page = () => {
+const Page = () => {
     return (
         <div>
             <YallaMachineNavbar />
@@ -9,4 +9,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page
