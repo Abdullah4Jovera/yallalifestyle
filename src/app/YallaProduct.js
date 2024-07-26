@@ -1,7 +1,10 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import './YallaProductStyle.css';
-import Card from 'react-animated-3d-card';
+<<<<<<< HEAD
+=======
+
+>>>>>>> ce4ddac524d8bd1424c7af81f92f9578ba420447
 import producttwo from '../app/assets/HomePageAssets/producttwo.png';
 import productone from '../app/Assets/HomePageAssets/productone.png';
 import productthree from '../app/assets/HomePageAssets/productthree.png';
@@ -41,11 +44,10 @@ function Page() {
 
     return (
         <Container fluid>
-            <h1 className='product_title' data-aos="fade-up">PRODUCTS</h1>
-            <h1 className='yalla_title' data-aos="fade-up" data-aos-delay="300">
+            <h1 className='yalla_title' data-aos="fade-up" >
                 Yalla <span className='product_title'>Products</span>
             </h1>
-            <p className='product_des' data-aos="fade-up" data-aos-delay="400">
+            <p className='product_des' data-aos="fade-up" >
                 A wide variety of branded snack products that provide healthier alternatives to traditional snacks.
             </p>
             <div className="card_container_product">

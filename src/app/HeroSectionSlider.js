@@ -13,12 +13,10 @@ function HeroSectionCarousal() {
             duration: 1000,
         });
     }, []);
-    
+
     return (
         <>
-            <div className="heroSectionSlider">
-                <HomePageNav />
-                <div className="video-overlay"></div> {/* Overlay for background color */}
+            <div className="heroSectionSlider"  >
                 <ReactPlayer
                     url='https://res.cloudinary.com/dn1oz4vt9/video/upload/v1721991925/k8b3wgmnrjedhumxbbkl.mp4'
                     controls={false}

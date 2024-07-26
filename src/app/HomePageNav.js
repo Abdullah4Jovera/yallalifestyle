@@ -13,11 +13,12 @@ import navbarlinkdind from './Assets/HomePageAssets/navbarlinkdind.png';
 import navfb from './Assets/HomePageAssets/navfb.png';
 import navinsta from './Assets/HomePageAssets/navinsta.png';
 import navtwitter from './Assets/HomePageAssets/navtwitter.png';
+import './HomePage.css'
 
 const AllComponentNavbar = () => {
     return (
-        <Navbar expand="lg" className='navbar_container_component'>
-            <Container fluid>
+        <Navbar expand="lg" className='navbar_container_component sticky-top' >
+            <Container fluid className='navbar_container_component'>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <div className='d-flex justify-content-between align-items-center w-100'>
