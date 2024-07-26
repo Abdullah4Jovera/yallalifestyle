@@ -15,10 +15,6 @@
     "next": "14.2.4",
     "next-video": "^1.1.1",
     "react": "^18",
-<<<<<<< HEAD
-=======
-   
->>>>>>> ce4ddac524d8bd1424c7af81f92f9578ba420447
     "react-bootstrap": "^2.10.4",
     "react-dom": "^18",
     "react-icons": "^5.2.1",

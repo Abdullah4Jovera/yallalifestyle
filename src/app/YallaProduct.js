@@ -1,10 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import './YallaProductStyle.css';
-<<<<<<< HEAD
-=======
-
->>>>>>> ce4ddac524d8bd1424c7af81f92f9578ba420447
 import producttwo from '../app/assets/HomePageAssets/producttwo.png';
 import productone from '../app/Assets/HomePageAssets/productone.png';
 import productthree from '../app/assets/HomePageAssets/productthree.png';
