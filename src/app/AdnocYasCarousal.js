@@ -18,7 +18,7 @@ const AdnocYasCarousal = () => {
     };
 
     return (
-        <div className="adnocyasContainer" style={{ marginTop: '5%' }}  data-aos="fade-up">
+        <div className="adnocyasContainer" style={{ marginTop: '5%' }} data-aos="fade-up">
             <Slider {...settings}>
                 <div className="slide">
                     <div className="image-container">
@@ -36,7 +36,7 @@ const AdnocYasCarousal = () => {
                     </div>
                     <div className="text-container">
                         <h1 className="adnoctxt">
-                            Taking pole positions on the Yas Marina Circuit, the 5-star Abu Dhabi - Yas Island is a modern and sophisticated destination that offers an exhilarating island getaway. Ignite your senses at the only hotel in the world located on the top of a Formula 1 race track as you live it up and bask in the Arabian sun. Get ready to rev up on or off track amidst the hotel&rsquo;s cutting-edge interiors that depict a desert terrain and reveal the best of Abu Dhabi's history, heritage, and culture. Extend the fun and enjoy exclusive rates when you book one of our Yas Island multi-park experiences. Get ready for some action-packed adventures at our record-breaking theme parks.
+                            Taking pole positions on the Yas Marina Circuit, the 5-star Abu Dhabi - Yas Island is a modern and sophisticated destination that offers an exhilarating island getaway. Ignite your senses at the only hotel in the world located on the top of a Formula 1 race track as you live it up and bask in the Arabian sun. Get ready to rev up on or off track amidst the hotel&apos;s cutting-edge interiors that depict a desert terrain and reveal the best of Abu Dhabi&apos;s history, heritage, and culture. Extend the fun and enjoy exclusive rates when you book one of our Yas Island multi-park experiences. Get ready for some action-packed adventures at our record-breaking theme parks.
                         </h1>
                     </div>
                 </div>
