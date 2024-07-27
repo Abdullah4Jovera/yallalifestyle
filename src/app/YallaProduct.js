@@ -34,7 +34,7 @@ function Page() {
     const [isLoaded, setIsLoaded] = useState(false);
 
     useEffect(() => {
-        AOS.init({ duration: 8000 });
+        AOS.init({ duration: 1000 });
         setIsLoaded(true); // Trigger animation after component is mounted
     }, []);
 

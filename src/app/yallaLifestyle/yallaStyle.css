@@ -85,7 +85,7 @@
     color: #000;
     text-align: center;
     font-family: 'poppins sans-serif';
-    font-size: 33px;
+    font-size: 40px;
     font-style: normal;
     font-weight: 400;
     line-height: 100%;
@@ -96,12 +96,13 @@
     color: #000;
     text-align: center;
     font-family: 'poppins sans-serif';
-    font-size: 33px;
+    font-size: 26px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 100%;
-    letter-spacing: 0.33px;
-    text-align: justify;
+    letter-spacing: 0.23px;
+    margin-top: 5%;
+    margin-bottom: 7%;
 }
 
 .yalla_life_style_text_div {
@@ -109,7 +110,7 @@
     max-width: 800px;
     margin: 0 auto;
     text-align: justify;
-    padding: 5%;
+    padding-top: 7%;
 
 }
 
@@ -125,6 +126,7 @@
     line-height: 100%;
     letter-spacing: 0.23px;
     margin-top: 5%;
+    margin-bottom: 7%;
 }
 
 .yallatextDiv {
@@ -301,10 +303,12 @@
     color: #000;
     font-family: 'poppins sans-serif';
     font-size: 20px;
-    font-style: normal;
     font-weight: 500;
     line-height: 100%;
     letter-spacing: 0.23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 

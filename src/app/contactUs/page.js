@@ -16,14 +16,13 @@ import YallaFooter from '../YallaFooter';
 import arrowhandle from '../Assets/ContactPageAssets/arrowhandle.png';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import contactformman from '../Assets/HomePageAssets/contactformman.png'
 import { CSSTransition } from 'react-transition-group';
 
 
 const Page = () => {
     const [formData, setFormData] = useState({
-        firstName: '',
-        lastName: '',
+        fullname: '',
         email: '',
         phone: '',
         message: ''
@@ -77,7 +76,7 @@ const Page = () => {
                 <ToastContainer />
                 <Container fluid>
                     <div className='contactContainer'>
-                        <h1 className='YallaContact'>YALLA Contact Us</h1>
+                        {/* <h1 className='YallaContact'>YALLA Contact Us</h1> */}
                         <h3 className='questionremarks'>Any question or remarks? Just write us a message!</h3>
                     </div>
 
@@ -125,48 +124,86 @@ const Page = () => {
 
                         <Col xs={12} md={6} className='secondColumn mt-3'>
                             <Form onSubmit={handleSubmit}>
+
                                 <Row>
-                                    <Col xs={12} md={6}>
+
+                                    <Col xs={12} md={8}>
                                         <CSSTransition in={inProp} timeout={300} classNames="fade">
                                             <div>
-                                                <Form.Label className='labelName'>First Name</Form.Label>
-                                                <Form.Control
+                                                {/* <Form.Label className='labelName'>First Name</Form.Label> */}
+                                                {/* <Form.Control
                                                     type="text"
                                                     name="firstName"
                                                     value={formData.firstName}
                                                     onChange={handleChange}
                                                     className='textInputField'
+                                                /> */}
+                                                <input
+                                                    type="text"
+                                                    name="fullname"
+                                                    placeholder='Full Name'
+                                                    value={formData.fullname}
+                                                    onChange={handleChange}
+                                                    className='textInputField w-100'
+
                                                 />
                                             </div>
                                         </CSSTransition>
 
                                     </Col>
-                                </Row>
 
-                                <Row>
-                                    <Col xs={12} md={6}>
+                                    <Col xs={12} md={8}>
                                         <CSSTransition in={inProp} timeout={300} classNames="fade" appear>
                                             <div>
-                                                <Form.Label className='labelName'>Email</Form.Label>
+                                                {/* <Form.Label className='labelName'>Email</Form.Label>
                                                 <Form.Control
                                                     type="email"
                                                     name="email"
                                                     value={formData.email}
                                                     onChange={handleChange}
                                                     className='textInputField'
+                                                /> */}
+                                                <input
+                                                    type="email"
+                                                    name="email"
+                                                    placeholder='Email'
+                                                    value={formData.email}
+                                                    onChange={handleChange}
+                                                    className='textInputField w-100'
+
                                                 />
                                             </div>
                                         </CSSTransition>
                                     </Col>
-                                </Row>
 
+                                    <Col xs={12} md={8}>
+                                        <CSSTransition in={inProp} timeout={300} classNames="fade" appear>
+                                            <div>
+                                                {/* <Form.Label className='labelName'>Email</Form.Label>
+                                                <Form.Control
+                                                    type="email"
+                                                    name="email"
+                                                    value={formData.email}
+                                                    onChange={handleChange}
+                                                    className='textInputField'
+                                                /> */}
+                                                <input
+                                                    type="text"
+                                                    name="phone"
+                                                    placeholder='phone'
+                                                    value={formData.phone}
+                                                    onChange={handleChange}
+                                                    className='textInputField w-100'
 
+                                                />
+                                            </div>
+                                        </CSSTransition>
+                                    </Col>
 
-                                <Row>
-                                    <Col xs={12} md={6}>
+                                    <Col xs={12} md={8}>
                                         <CSSTransition in={inProp} timeout={300} classNames="fade" appear>
                                             <div className='textareadiv'>
-                                                <Form.Label className='labelName'>Message</Form.Label>
+                                                {/* <Form.Label className='labelName'>Message</Form.Label>
                                                 <Form.Control
                                                     as="textarea"
                                                     rows={4}
@@ -175,23 +212,36 @@ const Page = () => {
                                                     onChange={handleChange}
                                                     placeholder='Write your message..'
                                                     className='textareafield'
-                                                />
+                                                /> */}
+
+                                                <textarea 
+                                                className='textareafield w-100'
+                                                rows={4}
+                                                name="message"
+                                                value={formData.message}
+                                                onChange={handleChange}
+                                                placeholder='Write your message..'
+                                                ></textarea>
                                             </div>
                                         </CSSTransition>
                                     </Col>
+
+
+                                    <Col xs={12} md={8}>
+                                        <CSSTransition in={inProp} timeout={300} classNames="fade" appear>
+                                            <div className='linksubmit'>
+                                                <button type="submit" className='submitText hoverEffect'>Submit</button>
+                                            </div>
+                                        </CSSTransition>
+                                    </Col>
+
                                 </Row>
 
-                                <CSSTransition in={inProp} timeout={300} classNames="fade" appear>
-                                    <div className='linksubmit'>
-                                        <button type="submit" className='submitText hoverEffect'>Submit</button>
-                                    </div>
-                                </CSSTransition>
                             </Form>
-                            <Image src={arrowhandle} alt='arrowhandle' className='arrowhandle' />
                         </Col>
                     </Row>
 
-                    <div className='mapDiv mt-5 mb-5'>
+                    <div className='mapDiv mb-5'>
                         <iframe
                             src="https://www.google.com/maps/d/embed?mid=1-rLgZ5K9eiP4kcLV-FyZMtgxIHAnJTUS&ehbc=2E312F"
                             className='iframeclass'
@@ -205,3 +255,5 @@ const Page = () => {
 };
 
 export default Page;
+
+
