@@ -3,16 +3,16 @@ import React, { useEffect, useState } from 'react';
 import './YallaGalleryStyle.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import Image from 'next/image';
-import galleryone from '../app/assets/HomePageAssets/galleryone.png';
-import gallerytwo from '../app/assets/HomePageAssets/gallerytwo.png';
-import gallerythree from '../app/assets/HomePageAssets/gallerythree.png';
-import galleryfour from '../app/assets/HomePageAssets/galleryfour.png';
-import galleryfive from '../app/assets/HomePageAssets/galleryfive.png';
-import gallerysix from '../app/assets/HomePageAssets/gallerysix.png';
-import galleryseven from '../app/assets/HomePageAssets/galleryseven.png';
-import galleryeight from '../app/assets/HomePageAssets/galleryeight.png';
-import eatgoodloog from '../app/Assets/HomePageAssets/eatgoodloog.png'
-import gallerytextlogo from '../app/Assets/HomePageAssets/gallerytextlogo.png'
+import galleryone from './Assets/HomePageAssets/galleryone.png';
+import gallerytwo from './Assets/HomePageAssets/gallerytwo.png';
+import gallerythree from './Assets/HomePageAssets/gallerythree.png';
+import galleryfour from './Assets/HomePageAssets/galleryfour.png';
+import galleryfive from './Assets/HomePageAssets/galleryfive.png';
+import gallerysix from './Assets/HomePageAssets/gallerysix.png';
+import galleryseven from './Assets/HomePageAssets/galleryseven.png';
+import galleryeight from './Assets/HomePageAssets/galleryeight.png';
+import eatgoodloog from './Assets/HomePageAssets/eatgoodloog.png'
+import gallerytextlogo from './Assets/HomePageAssets/gallerytextlogo.png'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
