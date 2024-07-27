@@ -1,10 +1,10 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import './YallaProductStyle.css';
-import producttwo from '../app/assets/HomePageAssets/producttwo.png';
-import productone from '../app/Assets/HomePageAssets/productone.png';
-import productthree from '../app/assets/HomePageAssets/productthree.png';
-import productfour from '../app/assets/HomePageAssets/productfour.png';
+import producttwo from './Assets/HomePageAssets/HomePageAssets/producttwo.png';
+import productone from './Assets/HomePageAssets/productone.png';
+import productthree from './Assets/HomePageAssets/HomePageAssets/productthree.png';
+import productfour from './Assets/HomePageAssets/HomePageAssets/productfour.png';
 import Image from 'next/image';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
