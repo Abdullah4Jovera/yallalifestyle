@@ -11,7 +11,7 @@ import YallaFooter from '@/app/YallaFooter';
 import Link from 'next/link';
 import backlogo from '../../Assets/MachinePageAssets/backlogo.png';
 import { MdOutlineKeyboardBackspace } from "react-icons/md";
-
+import HomePageNav from '../../HomePageNav'
 const Page = () => {
     useEffect(() => {
         AOS.init({
@@ -21,7 +21,7 @@ const Page = () => {
 
     return (
         <>
-            <YallaMachineNavbar />
+              <HomePageNav />
             <div className='machineConatiner_parameter'>
                 <Container >
                     <Link href='/machines'><MdOutlineKeyboardBackspace data-aos="fade-up" className='mt-4' style={{ color: 'black', fontSize: '40px' }} /></Link>

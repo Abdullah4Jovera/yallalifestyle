@@ -125,7 +125,7 @@ const HomePageBlogs = () => {
 
             <div style={{ marginTop: '7%' }} data-aos="fade-up">
                 <h3 className='instaText'>INSTAGRAM</h3>
-                <Link href={'/'} >
+                <Link href={'https://www.instagram.com/yallaLIFESTYLE/'} >
                     <Image src={instaPhoto} alt='Instagram Click Here...' className="img-fluid" />
                 </Link>
             </div>

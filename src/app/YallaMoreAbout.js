@@ -4,8 +4,8 @@ import './AboutsectionStyle.css'
 import Image from 'next/image';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import AOS styles
-import aboutusPage from './Assets/HomePageAssets/aboutusPage.png'
-import yallaaboutlogo from './Assets/HomePageAssets/yallaaboutlogo.png'
+import aboutusPage from '../app/Assets/HomePageAssets/aboutusPage.png'
+import yallaaboutlogo from '../app/assets/HomePageAssets/yallaaboutlogo.png'
 
 const Page = () => {
 

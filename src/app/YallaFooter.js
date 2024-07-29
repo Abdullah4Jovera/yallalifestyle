@@ -64,9 +64,9 @@ const YallaFooter = () => {
                         </h6>
 
                         <div style={{ display: 'flex', gap: '10px' }} className='mt-4'>
-                            <Link href='/'><Image src={twitter} alt='twitter' /></Link>
-                            <Link href='/'><Image src={fb} alt='fb' /></Link>
-                            <Link href='/'><Image src={insta} alt='insta' /></Link>
+                            <Link href={'https://www.instagram.com/yallaLIFESTYLE/'}><Image src={twitter} alt='twitter' /></Link>
+                            <Link href={'https://www.instagram.com/yallaLIFESTYLE/'}><Image src={fb} alt='fb' /></Link>
+                            <Link href={'https://www.instagram.com/yallaLIFESTYLE/'}><Image src={insta} alt='insta' /></Link>
                         </div>
                     </div>
                 </Col>

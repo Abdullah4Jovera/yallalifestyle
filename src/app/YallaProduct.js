@@ -1,14 +1,15 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import './YallaProductStyle.css';
-import producttwo from './Assets/HomePageAssets/producttwo.png';
+import producttwo from './assets/HomePageAssets/producttwo.png';
 import productone from './Assets/HomePageAssets/productone.png';
-import productthree from './Assets/HomePageAssets/productthree.png';
-import productfour from './Assets/HomePageAssets/productfour.png';
+import productthree from './assets/HomePageAssets/productthree.png';
+import productfour from './assets/HomePageAssets/productfour.png';
 import Image from 'next/image';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Container } from 'react-bootstrap';
+import Link from 'next/link';
 
 // Sample JSON data
 const jsonData = [
@@ -60,7 +61,7 @@ function Page() {
                 ))}
             </div>
             <div className='all_btn_product'>
-                <button className="animated-button" data-aos="fade-up" data-aos-delay="100">
+                <Link href={''} className="animated-button" data-aos="fade-up" data-aos-delay="100" style={{ textDecoration: 'none' }} >
                     <svg viewBox="0 0 24 24" className="arr-2" xmlns="http://www.w3.org/2000/svg">
                         <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" />
                     </svg>
@@ -69,7 +70,7 @@ function Page() {
                     <svg viewBox="0 0 24 24" className="arr-1" xmlns="http://www.w3.org/2000/svg">
                         <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" />
                     </svg>
-                </button>
+                </Link>
             </div>
         </Container>
     );

@@ -12,6 +12,7 @@ import chipsone from '../../Assets/HomePageAssets/shopsAssets/chipsone.png'
 import Link from 'next/link'
 import AllShops from '../YallaBar.js'
 import YallaChipsShops from './YallaShopChips'
+import YallaButton from '../YallaButton'
 const Page = () => {
   return (
     <div>
@@ -32,69 +33,25 @@ const Page = () => {
             </div>
           </div>
 
-          {/* <div className="search-container">
+          <div className="search-container">
             <input placeholder="Search product" className="input_tag" />
             <Image src={search_icon} alt="search_icon" className="search-icon" />
-          </div> */}
+          </div>
 
         </div>
 
         <Row>
           <Col xs={12} md={2} className='categories_main_shop'>
             <div className='class_categories_all' >
-            <Link href={'/shops'} style={{ textDecoration: 'none' }} >
-              <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }} >
-                <Form.Check aria-label="option 1" />
-                <p className='m-0 yalla_shop_class' >All</p>
+              
+              <div>
+                <YallaButton />
               </div>
-              </Link>
-              <div> <p className='m-0 yalla_shop_class' >(27)</p> </div>
 
             </div>
 
-            <div className='class_categories_all' >
-              <Link href={'/shops/YallaShopBar'} style={{ textDecoration: 'none' }} >
-                <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }} >
-                  <Form.Check aria-label="option 1" />
-                  <p className='m-0 yalla_shop_class' >Bars</p>
-                </div>
-              </Link>
-              <div> <p className='m-0 yalla_shop_class' >(9)</p> </div>
-
-            </div>
-            <div className='class_categories_all' >
-
-              <Link href={'/shops/YallaShopChips'} style={{ textDecoration: 'none' }} >
-                <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }} >
-                  <Form.Check aria-label="option 1" />
-                  <p className='m-0 yalla_shop_class' >Chips</p>
-                </div>
-              </Link>
-              <div> <p className='m-0 yalla_shop_class' >(9)</p> </div>
-
-            </div>
-
-            <div className='class_categories_all' >
-              <Link href={'/shops/YallaShopNuts'} style={{ textDecoration: 'none' }} >
-                <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }} >
-                  <Form.Check aria-label="option 1" />
-                  <p className='m-0 yalla_shop_class' >Nuts</p>
-                </div>
-              </Link>
-              <div> <p className='m-0 yalla_shop_class' >(9)</p> </div>
-
-            </div>
-            <div className='class_categories_all' >
-            <Link href={'/shops/YallaShopDrink'} style={{ textDecoration: 'none' }} >
-              <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }} >
-                <Form.Check aria-label="option 1" />
-                <p className='m-0 yalla_shop_class' >Drinks</p>
-              </div>
-              </Link>
-              <div> <p className='m-0 yalla_shop_class' >(9)</p> </div>
-
-            </div>
           </Col>
+
           <Col xs={12} md={10}  >
             <YallaChipsShops />
           </Col>

@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import React, { useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 import Image from 'next/image';
@@ -11,7 +11,7 @@ import YallaFooter from '@/app/YallaFooter';
 import Link from 'next/link';
 import backlogo from '../../Assets/MachinePageAssets/backlogo.png';
 import { MdOutlineKeyboardBackspace } from "react-icons/md";
-
+import HomePageNav from '../../HomePageNav'
 const Page = () => {
     useEffect(() => {
         AOS.init({
@@ -21,14 +21,12 @@ const Page = () => {
 
     return (
         <>
-            <YallaMachineNavbar />
+           <HomePageNav />
             <div className='machineConatiner_parameter'>
-                <Container>
-                    <Link href='/machines'>
-                        <MdOutlineKeyboardBackspace data-aos="fade-up" className='mt-4' style={{ color: 'black', fontSize: '50px' }} />
-                    </Link>
-                    <h1 className='gohealthier_parameter' data-aos="fade-up">LIFESTYLE</h1>
-                    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} data-aos="fade-up">
+                <Container >
+                    <Link href='/machines'><MdOutlineKeyboardBackspace data-aos="fade-up" className='mt-4' style={{ color: 'black', fontSize:'50px' }} /></Link>
+                    <h1 className='gohealthier_parameter' data-aos="fade-up" >LIFESTYLE</h1>
+                    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} data-aos="fade-up" >
                         <Image
                             src={yallalifestyleparamter}
                             alt='yallalifestyleparamter'
@@ -37,9 +35,9 @@ const Page = () => {
                         />
                     </div>
 
-                    <div className='h1_conatiner_healthier_tag'>
-                        <h1 className='yallahealtier_h1_tag' data-aos="fade-up">
-                            <span className='go_healthier_H_WORD'>Y</span>alla&apos;s &quot;LIFESTYLE&quot; vending machines: offering curated, wholesome snacks for health-conscious consumers on the go. We prioritize taste and nutrition, ensuring each product meets our high standards. Empower your wellness journey with convenient, quality choices that support a healthier lifestyle.
+                    <div className='h1_conatiner_healthier_tag' >
+                        <h1 className='yallahealtier_h1_tag' data-aos="fade-up"  >
+                            <span className='go_healthier_H_WORD' >Y</span>alla's"LIFESTYLE" Vending machines: offering curated, wholesome snacks for health-conscious consumers on the go. We prioritize taste and nutrition, ensuring each product meets our high standards. Empower your wellness journey with convenient, quality choices that support a healthier lifestyle.
                         </h1>
                     </div>
 

@@ -18,7 +18,7 @@ function HeroSectionCarousal() {
         <>
             <div className="heroSectionSlider"  >
                 <ReactPlayer
-                    url='https://res.cloudinary.com/dn1oz4vt9/video/upload/v1721991925/k8b3wgmnrjedhumxbbkl.mp4'
+                    url='https://res.cloudinary.com/dn1oz4vt9/video/upload/v1722234102/Main_Com_3_gx67yv.mp4'
                     controls={false}
                     playing={true}
                     muted={true}

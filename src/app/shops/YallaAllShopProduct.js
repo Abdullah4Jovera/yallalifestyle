@@ -38,6 +38,8 @@ import AOS from 'aos';
 import Image from 'next/image';
 import './shopStyle.css';
 import { Col, Container, Row } from 'react-bootstrap';
+import { IoMdArrowRoundBack } from "react-icons/io";
+import Link from 'next/link';
 
 
 const YallaAllShopProduct = () => {
@@ -282,9 +284,7 @@ const YallaAllShopProduct = () => {
               <p className='bars_des'>{card.description}</p>
               <div className='overlay'></div>
               <div className="view-details-btn-container">
-                {/* <Button variant="primary" onClick={() => handleShow(card)} className="view-details-btn">View Details</Button> */}
                 <button className="btn-12" onClick={() => handleShow(card)} ><span>View Details</span></button>
-                {/* <Button onClick={() => handleShow(card)} >View Details</Button> */}
               </div>
             </Card.Body>
           </div>
@@ -293,9 +293,10 @@ const YallaAllShopProduct = () => {
 
 
       <Modal show={show} fullscreen={true} onHide={handleClose}>
-        <Modal.Header closeButton className='modal_bg_color'>
-        </Modal.Header>
         <Modal.Body className='modal_bg_color'>
+          <Button onClick={() => handleClose()} style={{ backgroundColor: 'transparent' }} >
+            <IoMdArrowRoundBack style={{ fontSize: '34px', color: 'black' }} />
+          </Button>
           <Row className='mt-3'>
             <Col xs={12} md={6} style={{ display: 'flex', justifyContent: 'end', alignItems: 'center ' }}>
               <div className='YallahealthyBarcontainer'>

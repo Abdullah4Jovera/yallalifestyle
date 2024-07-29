@@ -43,7 +43,7 @@ const Page = () => {
 
     return (
         <div className='HomePageContainer' style={{ backgroundColor: bgColor }}>
-            <HomePageNav/>
+            <HomePageNav />
             <HeroSectionCarousal />
             <YallaMoreAbout />
             <YallaProduct />

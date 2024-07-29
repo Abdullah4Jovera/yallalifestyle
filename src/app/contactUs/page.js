@@ -190,7 +190,7 @@ const Page = () => {
                                                 <input
                                                     type="text"
                                                     name="phone"
-                                                    placeholder='phone'
+                                                    placeholder='Phone'
                                                     value={formData.phone}
                                                     onChange={handleChange}
                                                     className='textInputField w-100'

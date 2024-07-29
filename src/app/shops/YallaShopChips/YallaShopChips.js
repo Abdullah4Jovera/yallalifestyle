@@ -5,13 +5,39 @@ import Card from 'react-bootstrap/Card';
 import chipsone from '../../Assets/HomePageAssets/shopsAssets/chipsone.png';
 import chipstwo from '../../Assets/HomePageAssets/shopsAssets/chipstwo.png';
 import chipsthree from '../../Assets/HomePageAssets/shopsAssets/chipsthree.png';
-import chipsfour from '../../Assets/HomePageAssets/shopsAssets/chipsfour.png'
 import chipsfive from '../../Assets/HomePageAssets/shopsAssets/chipsfive.png'
 import chipssix from '../../Assets/HomePageAssets/shopsAssets/chipssix.png'
+import chipsfour from '../../Assets/HomePageAssets/shopsAssets/chipsfour.png'
+import chipstwodetails from '../../Assets/HomePageAssets/shopsAssets/chipstwodetails.png'
+import chipsdetailsOne from '../../Assets/HomePageAssets/shopsAssets/chipsdetailsOne.png'
+import chipsthreedetails from '../../Assets/HomePageAssets/shopsAssets/chipsthreedetails.png'
+import chipsfourdetails from '../../Assets/HomePageAssets/shopsAssets/chipsfourdetails.png'
+import chipsfivedetails from '../../Assets/HomePageAssets/shopsAssets/chipsfivedetails.png'
+import chipssixdetails from '../../Assets/HomePageAssets/shopsAssets/chipssixdetails.png'
+import chipsseven from '../../Assets/HomePageAssets/shopsAssets/chipsseven.png'
+import chipseight from '../../Assets/HomePageAssets/shopsAssets/chipseight.png'
+import chipssevendetails from '../../Assets/HomePageAssets/shopsAssets/chipssevendetails.png'
+import chipseightdetails from '../../Assets/HomePageAssets/shopsAssets/chipseightdetails.png'
+import chipsnine from '../../Assets/HomePageAssets/shopsAssets/chipsnine.png'
+import chipsten from '../../Assets/HomePageAssets/shopsAssets/chipsten.png'
+import chipsninedetails from '../../Assets/HomePageAssets/shopsAssets/chipsninedetails.png'
+import chipelevens from '../../Assets/HomePageAssets/shopsAssets/chipelevens.png'
+import chipelevensdetails from '../../Assets/HomePageAssets/shopsAssets/chipelevensdetails.png'
+import chiptwelve from '../../Assets/HomePageAssets/shopsAssets/chiptwelve.png'
+import chiptwelvedetails from '../../Assets/HomePageAssets/shopsAssets/chiptwelvedetails.png'
+import chiptwelve_onedetails from '../../Assets/HomePageAssets/shopsAssets/chiptwelve_onedetails.png'
+import chiptwelve_one from '../../Assets/HomePageAssets/shopsAssets/chiptwelve_one.png'
+import chiptwelve_two from '../../Assets/HomePageAssets/shopsAssets/chiptwelve_two.png'
+import chiptwelve_twodetails from '../../Assets/HomePageAssets/shopsAssets/chiptwelve_twodetails.png'
+import chiptwelve_three from '../../Assets/HomePageAssets/shopsAssets/chiptwelve_three.png'
+import chiptwelve_threedetails from '../../Assets/HomePageAssets/shopsAssets/chiptwelve_threedetails.png'
+import chiptwelve_four from '../../Assets/HomePageAssets/shopsAssets/chiptwelve_four.png'
+import chiptwelve_fourdetails from '../../Assets/HomePageAssets/shopsAssets/chiptwelve_fourdetails.png'
 import AOS from 'aos';
 import Image from 'next/image';
 import '../shopStyle.css';
-import { Col, Row } from 'react-bootstrap';
+import { Button, Col, Row } from 'react-bootstrap';
+import { IoMdArrowRoundBack } from "react-icons/io";
 
 const YallaChipsShops = () => {
   const [show, setShow] = useState(false);
@@ -36,46 +62,134 @@ const YallaChipsShops = () => {
 
   const cards = [
     {
-      title: 'TOSI ALMOND SUPER BITES',
-      description: 'A high energy snack bar',
-      image: chipsone
-    },
-    {
-      title: 'TOSI ALMOND SUPER BITES',
-      description: 'A high energy snack bar',
-      image: chipstwo
-    },
-    {
-      title: 'TOSI ALMOND SUPER BITES',
-      description: 'A high energy snack bar',
-      image: chipsthree
-    },
-    {
-      title: 'TOSI ALMOND SUPER BITES',
-      description: 'A high energy snack bar',
-      image: chipsfour
-    },
-    {
-      title: 'TOSI ALMOND SUPER BITES',
-      description: 'A high energy snack bar',
-      image: chipsfive
-    },
-    {
-      title: 'TOSI ALMOND SUPER BITES',
-      description: 'A high energy snack bar',
-      image: chipssix
-    },
-    {
-      title: 'TOSI ALMOND SUPER BITES',
-      description: 'A high energy snack bar',
-      image: chipstwo
-    },
-    {
-      title: 'TOSI ALMOND SUPER BITES',
-      description: 'A high energy snack bar',
-      image: chipsone
-    },
+      title: 'Walkers Ready Salted',
+      description: 'Healthy Crispy Chips',
+      image: chipsone,
+      detaildes:
+        'Produced in the UAE! Vegan friendly Gluten Free MSG Free No Artificial Colours No Artificial Flavours No Cholesterol No Preservatives No Trans Fat Non-GMO',
+      detailsImage: chipstwodetails,
 
+    },
+    {
+      title: 'Kitco Bites Cheese Balls',
+      description: 'Healthy Crispy Chips',
+      image: chipstwo,
+      detaildes:
+        'No artificial colors, baked not fried.',
+      detailsImage: chipsdetailsOne,
+    },
+    {
+      title: 'Walkers Cheese & Onion',
+      description: 'Healthy Crispy Chips',
+      image: chipsthree,
+      detaildes:
+        'Produced in the UAE! Vegan friendly Gluten Free MSG Free No Artificial Colours No Artificial Flavours No Cholesterol No Preservatives No Trans Fat Non-GMO',
+      detailsImage: chipsthreedetails,
+    },
+    {
+      title: 'Hunter Red Rice Bites',
+      description: 'Healthy Crispy Chips',
+      image: chipsfour,
+      detaildes:
+        'Produced in the UAE! Vegan friendly Gluten Free MSG Free No Artificial Colours No Artificial Flavours No Cholesterol No Preservatives No Trans Fat Non-GMO',
+      detailsImage: chipsfourdetails,
+    },
+    {
+      title: 'Hunter Black Rice Bites',
+      description: 'Healthy Crispy Chips',
+      image: chipsfive,
+      detaildes:
+        'Produced in the UAE! Vegan friendly Gluten Free MSG Free No Artificial Colours No Artificial Flavours No Cholesterol No Preservatives No Trans Fat Non-GMO',
+      detailsImage: chipsfivedetails,
+    },
+    {
+      title: 'Walkers Sour Cream & Chive',
+      description: 'Healthy Crispy Chips',
+      image: chipssix,
+      detaildes:
+        'Containing 70% less fat than potato crisps on average, these tasty crisps provide a great alternative to conventional snacks and come in a number of delicious flavors. No preservatives No artificial colors Suitable for Vegetarians No MSG',
+      detailsImage: chipssixdetails,
+    },
+    {
+      title: "Lay's Forno Black Pepper",
+      description: 'Healthy Crispy Chips',
+      image: chipsseven,
+      detaildes:
+        'Dried Potatoes corn starch vegetable oils sunflower and palmolein sugar WHEAT FLOUR emulsifier SOYA LECITHIN black pepper seasoning Salt lactose maltodextrin butter milk powder sugar black pepper powder flavor enhancers E621 E635 onion powder garlic powder acidity regulator anticaking agent natural color.',
+      detailsImage: chipssevendetails,
+    },
+    {
+      title: "Lay's Forno Authentic Cheese",
+      description: 'Healthy Crispy Chips',
+      image: chipseight,
+      detaildes:
+        'Dried Potatoes modified corn starch vegetable oils sunflower and palmolein sugar WHEAT FLOUR emulsifier SOYA LECITHIN authentic cheese seasoning onion powder whey powder salt wheat flour flavor enhancers E621 E635 sugar vegetable oil coconut palm acidity regulator anticaking agentcheese powder natural color.',
+      detailsImage: chipseightdetails,
+    },
+    {
+      title: 'Sunbites Cheese and Herbs',
+      description: 'Healthy Crispy Chips',
+      image: chipsnine,
+      detaildes:
+        'Sunbites Cheese and Herbs Bread Bites are a delicious and satisfying snack option. Made with real cheese and a blend of herbs, these bites are packed with flavour. They are the perfect size for snacking on the go or enjoying a midday treat.',
+      detailsImage: chipseightdetails,
+    },
+    {
+      title: 'Sunbites Olive And Oregano',
+      description: 'Healthy Crispy Chips',
+      image: chipsten,
+      detaildes:
+        'Sunbites Olive and Oregano Bread Bites are a delicious and healthy snack option. Made with whole grain oats and real olive and oregano flavour, these bread bites are packed with flavour and nutrition.',
+      detailsImage: chipsninedetails,
+    },
+    {
+      title: 'Doritos Nacho Cheese',
+      description: 'Healthy Crispy Chips',
+      image: chipelevens,
+      detaildes:
+        'Are you up for a challenge? Yes? Then, grab a bag of intense flavoured, extremely crunchy Doritos Nacho Cheese Tortilla Chips and get ready to make some unforgettable memories. Bring a BOLD change to your snacking experience. Serve Doritos Nacho Cheese Tortilla Chips at your family next get-together, or take it to a picnic with friends. Share your love of Doritos tortilla chips no matter what the occasion. Spark up every moment and live it to the MAX with Doritos!',
+      detailsImage: chipelevensdetails,
+    },
+    {
+      title: 'Doritos flamin hot',
+      description: 'Healthy Crispy Chips',
+      image: chiptwelve,
+      detaildes:
+        'Doritos Flaming Hot Nacho Flavoured Tortilla Chips are a spicy twist on the classic nacho cheese flavour. These crunchy tortilla chips are dusted with a fiery blend of spices that will leave your taste buds tingling. Perfect for those who love a bold and intense snacking experience, these chips pack a punch of heat that will keep you coming back for more.',
+      detailsImage: chiptwelvedetails,
+    },
+    {
+      title: 'Doritos Sweet Chili',
+      description: 'Healthy Crispy Chips',
+      image: chiptwelve_one,
+      detaildes:
+        'Are you up for a challenge? Yes? Then, grab a bag of intense flavoured, extremely crunchy Doritos Sweet Chili Tortilla Chips and get ready to make some unforgettable memories. Bring a BOLD change to your snacking experience. Serve Doritos Sweet Chili Tortilla Chips at your next family get-together, or take it to a picnic with friends. Share your love of Doritos tortilla chips no matter what the occasion. Spark up every moment and live it to the MAX with Doritos!',
+      detailsImage: chiptwelve_onedetails,
+    },
+    {
+      title: 'HOT & SPICY TORTILLA',
+      description: 'Healthy Crispy Chips',
+      image: chiptwelve_two,
+      detaildes:
+        'Quest™ Hot & Spicy Tortilla Style Protein Chips bring the heat you’re looking for, with a satisfying crunch, mouth-watering flavor, and 19g of protein. The big taste of athlete-worthy nutrition has never been hotter than the big heat of Quest Hot & Spicy Protein Chips.',
+      detailsImage: chiptwelve_twodetails,
+    },
+    {
+      title: 'CHILI LIME TORTILLA',
+      description: 'Healthy Crispy Chips',
+      image: chiptwelve_three,
+      detaildes:
+        'Want a tangy, spicy tortilla chip you can enjoy any time? Lucky you! We made Quest Chili Lime Tortilla Style Protein Chips to feed your flavor cravings! Keto-friendly.',
+      detailsImage: chiptwelve_threedetails,
+    },
+    {
+      title: 'CHILI LIME TORTILLA',
+      description: 'Healthy Crispy Chips',
+      image: chiptwelve_four,
+      detaildes:
+        'Want a cheesy, savory tortilla chip you can enjoy any time? Lucky you! We made Quest Nacho Cheese Tortilla Style Protein Chips to feed your flavor cravings. Keto-friendly.',
+      detailsImage: chiptwelve_fourdetails,
+    },
   ];
 
   const relatedProducts = useMemo(() => {
@@ -114,34 +228,36 @@ const YallaChipsShops = () => {
       ))}
 
       <Modal show={show} fullscreen={true} onHide={handleClose}>
-        <Modal.Header closeButton className='modal_bg_color'>
-        </Modal.Header>
-        <Modal.Body className='modal_bg_color'>
-          <Row className='mt-3'>
-            <Col xs={12} md={6} style={{ display: 'flex', justifyContent: 'end', alignItems: 'center ' }}>
-              <div className='YallahealthyBarcontainer'>
-                <h1 className='healthybar'>
+        <Modal.Body className="modal_bg_color">
+          <Button onClick={handleClose} style={{ backgroundColor: 'transparent' }}>
+            <IoMdArrowRoundBack style={{ fontSize: '34px', color: 'black' }} />
+          </Button>
+          <Row className="mt-3">
+            <Col
+              xs={12}
+              md={6}
+              style={{ display: 'flex', justifyContent: 'center', alignItems: 'start', width: '100%', maxWidth: 600, margin: 'auto' }}
+            >
+              <div className="YallahealthyBarcontainer">
+                <h1 className="healthybar">
                   <span style={{ color: '#4BC6DA' }}>YALLA</span> Healthy Bars
                 </h1>
                 <div>
-                  <h1 className='almondtext'>TOSI ALMOND SUPER BITES</h1>
+                  <h1 className="almondtext">{selectedProduct?.title}</h1>
                 </div>
                 <div>
-                  <p className='ptag mt-3'>
-                    {selectedProduct?.detaildes}
+                  <p className="ptag mt-3">{selectedProduct?.detaildes}</p>
 
-                  </p>
-                  <ul className='ptag'>
-                    <li>Gluten free</li>
-                    <li>Organic</li>
-                    <li>Vegan</li>
-                  </ul>
                 </div>
               </div>
             </Col>
             <Col xs={12} md={6}>
-              <div className='YallahealthyBarcontainer mb-3'>
-                <Image src={selectedProduct?.detailsImage || selectedProduct?.image} alt={selectedProduct?.title} className='productImage_modal' />
+              <div className="YallahealthyBarcontainer mb-3">
+                <Image
+                  src={selectedProduct?.detailsImage || selectedProduct?.image}
+                  alt={selectedProduct?.title}
+                  className="productImage_modal"
+                />
               </div>
             </Col>
           </Row>

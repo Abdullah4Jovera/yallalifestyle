@@ -8,10 +8,17 @@ import nutthree from '../../Assets/HomePageAssets/shopsAssets/nutthree.png';
 import nutfour from '../../Assets/HomePageAssets/shopsAssets/nutfour.png'
 import nutfive from '../../Assets/HomePageAssets/shopsAssets/nutfive.png'
 import nutsix from '../../Assets/HomePageAssets/shopsAssets/nutsix.png'
+import nutsdetailsone from '../../Assets/HomePageAssets/shopsAssets/nutsdetailsone.png'
+import nutsdetailstfive from '../../Assets/HomePageAssets/shopsAssets/nutsdetailstfive.png'
+import nutsdetailstfour from '../../Assets/HomePageAssets/shopsAssets/nutsdetailstfour.png'
+import nutsdetails from '../../Assets/HomePageAssets/shopsAssets/nutsdetails.png'
+import nutsdetailsthree from '../../Assets/HomePageAssets/shopsAssets/nutsdetailsthree.png'
+import nutsdetailstwo from '../../Assets/HomePageAssets/shopsAssets/nutsdetailstwo.png'
 import AOS from 'aos';
 import Image from 'next/image';
 import '../shopStyle.css';
-import { Col, Row } from 'react-bootstrap';
+import { Button, Col, Row } from 'react-bootstrap';
+import { IoMdArrowRoundBack } from "react-icons/io";
 
 const YallaShopNuts = () => {
     const [show, setShow] = useState(false);
@@ -36,45 +43,69 @@ const YallaShopNuts = () => {
 
     const cards = [
         {
-            title: 'TOSI ALMOND SUPER BITES',
+            title: 'MANI YUMMY BERRY N’ NUTS',
             description: 'A high energy snack bar',
-            image: nutone
+            image: nutone,
+            detaildes:
+                'Mix of dry roasted almonds and pistachio kernels with raisins, cranberries and roasted pumpkin seeds.',
+            detailsImage: nutsdetailsone,
         },
         {
-            title: 'TOSI ALMOND SUPER BITES',
+            title: 'MANI YUMMY SEA SALT',
             description: 'A high energy snack bar',
-            image: nuttwo
+            image: nuttwo,
+            detaildes:
+                'Carefully selected large, crunchy cashews, cleaned then dry roasted with fresh ground black pepper and sea salt.',
+            detailsImage: nutsdetailstfive,
         },
         {
-            title: 'TOSI ALMOND SUPER BITES',
+            title: 'MANI YUMMY SWEET COCKTAIL',
             description: 'A high energy snack bar',
-            image: nutthree
+            image: nutthree,
+            detaildes:
+                'A nutritious blend of pistachios, almonds, cashew nuts, sultana raisins, pineapple and papaya cubes.',
+            detailsImage: nutsdetailstfour,
         },
         {
-            title: 'TOSI ALMOND SUPER BITES',
+            title: 'MANI YUMMY BARBEQUE',
             description: 'A high energy snack bar',
-            image: nutfour
+            image: nutfour,
+            detaildes:
+                'Heart healthy almonds, dry-roasted with a delicious barbecue flavor.',
+            detailsImage: nutsdetails,
         },
         {
-            title: 'TOSI ALMOND SUPER BITES',
+            title: 'SAHALE POMEGRANATE VANILLA',
             description: 'A high energy snack bar',
-            image: nutfive
+            image: nutfive,
+            detaildes:
+                'Unique combinations of premium nuts, dried fruits, and exotic spices, each reflecting a beautiful location, culture or culinary tradition. Gluten Free MSG Free No Artifical Colours No Artificial Flavours No Cholesterol No Preservatives No Trans Fat Non-GMO',
+            detailsImage: nutsdetailsthree,
         },
         {
-            title: 'TOSI ALMOND SUPER BITES',
+            title: 'SAHALE HONEY ALMONDS',
             description: 'A high energy snack bar',
-            image: nutsix
+            image: nutsix,
+            detaildes:
+                'Unique combinations of premium nuts, dried fruits, and exotic spices, each reflecting a beautiful location, culture or culinary tradition. Gluten Free MSG Free No Artifical Colours No Artificial Flavours No Cholesterol No Preservatives No Trans Fat Non-GMO',
+            detailsImage: nutsdetailstwo,
         },
-        {
-            title: 'TOSI ALMOND SUPER BITES',
-            description: 'A high energy snack bar',
-            image: nutthree
-        },
-        {
-            title: 'TOSI ALMOND SUPER BITES',
-            description: 'A high energy snack bar',
-            image: nutone
-        },
+        // {
+        //     title: 'MANI YUMMY BARBEQUE',
+        //     description: 'A high energy snack bar',
+        //     image: nutthree,
+        //     detaildes:
+        //         'Carefully selected large, crunchy cashews, cleaned then dry roasted with fresh ground black pepper and sea salt.',
+        //     detailsImage: nutsdetailstfour,
+        // },
+        // {
+        //     title: 'MANI YUMMY BERRY N’ NUTS',
+        //     description: 'A high energy snack bar',
+        //     image: nutone,
+        //     detaildes:
+        //         'Carefully selected large, crunchy cashews, cleaned then dry roasted with fresh ground black pepper and sea salt.',
+        //     detailsImage: nutsdetailsone,
+        // },
 
     ];
 
@@ -104,9 +135,7 @@ const YallaShopNuts = () => {
                             <p className='bars_des'>{card.description}</p>
                             <div className='overlay'></div>
                             <div className="view-details-btn-container">
-                                {/* <Button variant="primary" onClick={() => handleShow(card)} className="view-details-btn">View Details</Button> */}
                                 <button className="btn-12" onClick={() => handleShow(card)} ><span>View Details</span></button>
-                                {/* <Button onClick={() => handleShow(card)} >View Details</Button> */}
                             </div>
                         </Card.Body>
                     </div>
@@ -115,34 +144,40 @@ const YallaShopNuts = () => {
 
 
             <Modal show={show} fullscreen={true} onHide={handleClose}>
-                <Modal.Header closeButton className='modal_bg_color'>
-                </Modal.Header>
-                <Modal.Body className='modal_bg_color'>
-                    <Row className='mt-3'>
-                        <Col xs={12} md={6} style={{ display: 'flex', justifyContent: 'end', alignItems: 'center ' }}>
-                            <div className='YallahealthyBarcontainer'>
-                                <h1 className='healthybar'>
+                <Modal.Body className="modal_bg_color">
+                    <Button onClick={handleClose} style={{ backgroundColor: 'transparent' }}>
+                        <IoMdArrowRoundBack style={{ fontSize: '34px', color: 'black' }} />
+                    </Button>
+                    <Row className="mt-3">
+                        <Col
+                            xs={12}
+                            md={6}
+                            style={{ display: 'flex', justifyContent: 'center', alignItems: 'start', width: '100%', maxWidth: 600, margin: 'auto' }}
+                        >
+                            <div className="YallahealthyBarcontainer">
+                                <h1 className="healthybar">
                                     <span style={{ color: '#4BC6DA' }}>YALLA</span> Healthy Bars
                                 </h1>
                                 <div>
-                                    <h1 className='almondtext'>TOSI ALMOND SUPER BITES</h1>
+                                    <h1 className="almondtext">{selectedProduct?.title}</h1>
                                 </div>
                                 <div>
-                                    <p className='ptag mt-3'>
-                                        {selectedProduct?.detaildes}
-
-                                    </p>
-                                    <ul className='ptag'>
+                                    <p className="ptag mt-3">{selectedProduct?.detaildes}</p>
+                                    {/* <ul className="ptag">
                                         <li>Gluten free</li>
                                         <li>Organic</li>
                                         <li>Vegan</li>
-                                    </ul>
+                                    </ul> */}
                                 </div>
                             </div>
                         </Col>
                         <Col xs={12} md={6}>
-                            <div className='YallahealthyBarcontainer mb-3'>
-                                <Image src={selectedProduct?.detailsImage || selectedProduct?.image} alt={selectedProduct?.title} className='productImage_modal' />
+                            <div className="YallahealthyBarcontainer mb-3">
+                                <Image
+                                    src={selectedProduct?.detailsImage || selectedProduct?.image}
+                                    alt={selectedProduct?.title}
+                                    className="productImage_modal"
+                                />
                             </div>
                         </Col>
                     </Row>

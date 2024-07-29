@@ -3,15 +3,14 @@ import React, { useEffect, useState } from 'react';
 import './YallaGalleryStyle.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import Image from 'next/image';
-import galleryone from './Assets/HomePageAssets/galleryone.png';
-import gallerytwo from './Assets/HomePageAssets/gallerytwo.png';
-import gallerythree from './Assets/HomePageAssets/gallerythree.png';
-import galleryfour from './Assets/HomePageAssets/galleryfour.png';
-import galleryfive from './Assets/HomePageAssets/galleryfive.png';
-import gallerysix from './Assets/HomePageAssets/gallerysix.png';
-import galleryseven from './Assets/HomePageAssets/galleryseven.png';
-import galleryeight from './Assets/HomePageAssets/galleryeight.png';
-import eatgoodloog from './Assets/HomePageAssets/eatgoodloog.png'
+import galleryone from './assets/HomePageAssets/galleryone.png';
+import gallerytwo from './assets/HomePageAssets/gallerytwo.png';
+import gallerythree from './assets/HomePageAssets/gallerythree.png';
+import galleryfour from './assets/HomePageAssets/galleryfour.png';
+import galleryfive from './assets/HomePageAssets/galleryfive.png';
+import gallerysix from './assets/HomePageAssets/gallerysix.png';
+import galleryseven from './assets/HomePageAssets/galleryseven.png';
+import galleryeight from './assets/HomePageAssets/galleryeight.png';
 import gallerytextlogo from './Assets/HomePageAssets/gallerytextlogo.png'
 import AOS from 'aos';
 import 'aos/dist/aos.css';

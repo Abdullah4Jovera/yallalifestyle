@@ -1,0 +1,225 @@
+/* .navbar_container_component {
+    background: rgb(102, 205, 221, 0.3);
+    width: '1280px';
+    height: 79px;
+}
+
+.navbar_links_container {
+    display: flex;
+    gap: 18px;
+}
+
+.yalla_navbar_links {
+    color: #FFF;
+    font-family: 'poppins sans-serif';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0.17px;
+    text-decoration: none;
+
+} */
+
+/* HomePageNavbar.css */
+
+/* .navbar_container_component {
+    transition: 0.3s ease, box-shadow 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.8);
+
+
+}
+
+
+.navbar_container_component.bg-black-opacity {
+    background-color: rgba(0, 0, 0, 0.8);
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+
+.navbar_container_component.fade-in {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+    background-color: rgb(102, 205, 221, 0.3);
+}
+
+.navbar_container_component.fade-in.show {
+    opacity: 1;
+    background-color: rgb(102, 205, 221, 0.3);
+}
+
+
+.social_media_links a img {
+    transition: transform 0.3s ease;
+}
+
+.social_media_links a img:hover {
+    transform: scale(1.1);
+}
+
+.navbar_links_container a {
+    transition: color 0.3s ease;
+    display: flex !important;
+    gap: 18px !important;
+}
+
+.yalla_navbar_links {
+    color: #FFF;
+    font-family: 'poppins sans-serif';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0.17px;
+    text-decoration: none;
+    display: flex !important;
+    gap: 18px !important;
+}
+
+@media (max-width: 992px) {
+    .navbar_logo {
+        display: none;
+    }
+
+    .social_media_links {
+        display: none !important;
+    }
+} */
+
+nav {
+    position: sticky;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    top: 0;
+    font-family: 'poppins sans-serif';
+    padding: 0 5%;
+    height: 70px;
+    background: rgb(102, 205, 221, 0.3);
+}
+
+nav .logo {
+    float: left;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    justify-content: center;
+    color: #fff;
+}
+
+nav .links {
+    float: right;
+    padding: 0;
+    margin: 0;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav .links li {
+    list-style: none;
+}
+
+nav .links a {
+    display: block;
+    padding: 1em;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav .links a:hover {
+    color: rgb(20, 220, 220);
+}
+
+#nav-toggle {
+    position: absolute;
+    top: -100px;
+}
+
+nav .icon-burger {
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+nav .icon-burger .line {
+    width: 30px;
+    height: 5px;
+    background-color: #fff;
+    margin: 5px;
+    border-radius: 3px;
+    transition: all .3s ease-in-out;
+}
+
+
+
+
+/* Services Working End */
+
+
+@media screen and (max-width: 768px) {
+
+    /* NavBar Working Start  */
+
+    nav .logo {
+        float: none;
+        width: auto;
+        justify-content: start;
+    }
+
+    nav .links {
+        float: none;
+        position: fixed;
+        z-index: 9;
+        left: 0;
+        right: 0;
+        top: 70px;
+        bottom: 100%;
+        width: auto;
+        height: auto;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: rgba(0, 0, 0, .8);
+        /* background: rgb(102, 205, 221, 0.3); */
+        overflow: hidden;
+        box-sizing: border-box;
+        transition: all 1.05s ease-in-out;
+
+    }
+
+    nav .links a {
+        font-size: 20px;
+        /* color: black; */
+    }
+
+    nav :checked~.links {
+        bottom: 0;
+        /* color: black; */
+    }
+
+    nav .icon-burger {
+        display: block;
+    }
+
+    nav :checked~.icon-burger .line:nth-child(1) {
+        transform: translateY(10px) rotate(225deg);
+    }
+
+    nav :checked~.icon-burger .line:nth-child(3) {
+        transform: translateY(-10px) rotate(-225deg);
+    }
+
+    nav :checked~.icon-burger .line:nth-child(2) {
+        opacity: 0;
+    }
+}

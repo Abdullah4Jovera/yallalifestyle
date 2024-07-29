@@ -10,10 +10,11 @@ import lowermm from '../../Assets/MachinePageAssets/lowermm.png';
 import lifestylepaarmetrvende from '../../Assets/MachinePageAssets/lifestylepaarmetrvende.png'
 import YallaFooter from '@/app/YallaFooter'
 import { MdOutlineKeyboardBackspace } from "react-icons/md";
-const page = () => {
+import HomePageNav from '../../HomePageNav'
+const Page = () => {
     return (
         <div>
-            <YallaMachineNavbar />
+        <HomePageNav />
             <div className='machineConatiner_parameter'>
                 <Container>
                     <Link href='/machines'><MdOutlineKeyboardBackspace data-aos="fade-up" className='mt-4' style={{ color: 'black', fontSize: '50px' }} /></Link>
@@ -103,4 +104,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page
