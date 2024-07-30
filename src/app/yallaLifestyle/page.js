@@ -109,7 +109,7 @@ const Page = () => {
                         <h3 className='yalla_text_operation' data-aos="fade-up" >At Yalla Lifestyle we have three main areas of operation</h3>
                     </div>
 
-                    <div className="slider-container" >
+                    <div className="slider-container yalla_life_style_carousal" >
 
                         <Slider {...settings}>
 

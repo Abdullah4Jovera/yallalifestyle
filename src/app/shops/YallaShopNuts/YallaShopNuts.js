@@ -1,45 +1,44 @@
-'use client'
-import React, { useState, useEffect, useMemo } from 'react';
-import Modal from 'react-bootstrap/Modal';
+'use client';
+import React, { useState, useEffect } from 'react';
 import Card from 'react-bootstrap/Card';
+import Image from 'next/image';
+import AOS from 'aos';
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
+import { Button } from 'react-bootstrap';
+import { IoMdArrowRoundBack } from "react-icons/io";
+import '../shopStyle.css';
+import '../shopButton.css';
 import nutone from '../../Assets/HomePageAssets/shopsAssets/nutone.png';
 import nuttwo from '../../Assets/HomePageAssets/shopsAssets/nuttwo.png';
 import nutthree from '../../Assets/HomePageAssets/shopsAssets/nutthree.png';
-import nutfour from '../../Assets/HomePageAssets/shopsAssets/nutfour.png'
-import nutfive from '../../Assets/HomePageAssets/shopsAssets/nutfive.png'
-import nutsix from '../../Assets/HomePageAssets/shopsAssets/nutsix.png'
-import nutsdetailsone from '../../Assets/HomePageAssets/shopsAssets/nutsdetailsone.png'
-import nutsdetailstfive from '../../Assets/HomePageAssets/shopsAssets/nutsdetailstfive.png'
-import nutsdetailstfour from '../../Assets/HomePageAssets/shopsAssets/nutsdetailstfour.png'
-import nutsdetails from '../../Assets/HomePageAssets/shopsAssets/nutsdetails.png'
-import nutsdetailsthree from '../../Assets/HomePageAssets/shopsAssets/nutsdetailsthree.png'
-import nutsdetailstwo from '../../Assets/HomePageAssets/shopsAssets/nutsdetailstwo.png'
-import AOS from 'aos';
-import Image from 'next/image';
-import '../shopStyle.css';
-import { Button, Col, Row } from 'react-bootstrap';
-import { IoMdArrowRoundBack } from "react-icons/io";
+import nutfour from '../../Assets/HomePageAssets/shopsAssets/nutfour.png';
+import nutfive from '../../Assets/HomePageAssets/shopsAssets/nutfive.png';
+import nutsix from '../../Assets/HomePageAssets/shopsAssets/nutsix.png';
+import nutsdetailsone from '../../Assets/HomePageAssets/shopsAssets/nutsdetailsone.png';
+import nutsdetailstfive from '../../Assets/HomePageAssets/shopsAssets/nutsdetailstfive.png';
+import nutsdetailstfour from '../../Assets/HomePageAssets/shopsAssets/nutsdetailstfour.png';
+import nutsdetails from '../../Assets/HomePageAssets/shopsAssets/nutsdetails.png';
+import nutsdetailsthree from '../../Assets/HomePageAssets/shopsAssets/nutsdetailsthree.png';
+import nutsdetailstwo from '../../Assets/HomePageAssets/shopsAssets/nutsdetailstwo.png';
 
 const YallaShopNuts = () => {
     const [show, setShow] = useState(false);
     const [selectedProduct, setSelectedProduct] = useState(null);
-    const values = [true, 'sm-down', 'md-down', 'lg-down', 'xl-down', 'xxl-down'];
-    const [fullscreen, setFullscreen] = useState(true);
-
 
     useEffect(() => {
         AOS.init({ duration: 1000 });
     }, []);
 
-    const handleClose = () => setShow(false);
-
-
-
-    function handleShow(product) {
-        setFullscreen(product);
+    const handleShow = (product) => {
         setSelectedProduct(product);
         setShow(true);
-    }
+    };
+
+    const handleClose = () => {
+        setShow(false);
+        setSelectedProduct(null);
+    };
 
     const cards = [
         {
@@ -90,101 +89,60 @@ const YallaShopNuts = () => {
                 'Unique combinations of premium nuts, dried fruits, and exotic spices, each reflecting a beautiful location, culture or culinary tradition. Gluten Free MSG Free No Artifical Colours No Artificial Flavours No Cholesterol No Preservatives No Trans Fat Non-GMO',
             detailsImage: nutsdetailstwo,
         },
-        // {
-        //     title: 'MANI YUMMY BARBEQUE',
-        //     description: 'A high energy snack bar',
-        //     image: nutthree,
-        //     detaildes:
-        //         'Carefully selected large, crunchy cashews, cleaned then dry roasted with fresh ground black pepper and sea salt.',
-        //     detailsImage: nutsdetailstfour,
-        // },
-        // {
-        //     title: 'MANI YUMMY BERRY N’ NUTS',
-        //     description: 'A high energy snack bar',
-        //     image: nutone,
-        //     detaildes:
-        //         'Carefully selected large, crunchy cashews, cleaned then dry roasted with fresh ground black pepper and sea salt.',
-        //     detailsImage: nutsdetailsone,
-        // },
-
     ];
-
-    const relatedProducts = useMemo(() => {
-        if (!selectedProduct) return [];
-        return cards
-            .filter(
-                (product) => product.category === selectedProduct.category
-            )
-            .slice(0, 3);
-    }, [selectedProduct]);
 
     return (
         <div className="shop-container">
             {cards.map((card, index) => (
-                <Card key={index} className='mt-3 All_shop_card_class'
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                    onClick={() => handleShow(card)}
-                >
-                    <div className='card-content'>
-                        <div className='image_bars' >
+                <Card key={index} className="mt-3 All_shop_card_class" data-aos="fade-up" data-aos-duration="1000" onClick={() => handleShow(card)}>
+                    <div className="card-content">
+                        <div className="image_bars">
                             <Image src={card.image} alt={card.title} />
                         </div>
-                        <Card.Body className='text-center card-body'>
-                            <h1 className='bars_title'>{card.title}</h1>
-                            <p className='bars_des'>{card.description}</p>
-                            <div className='overlay'></div>
+                        <Card.Body className="text-center card-body">
+                            <h1 className="bars_title">{card.title}</h1>
+                            <p className="bars_des">{card.description}</p>
+                            <div className="overlay"></div>
                             <div className="view-details-btn-container">
-                                <button className="btn-12" onClick={() => handleShow(card)} ><span>View Details</span></button>
+                                <button className="btn-12" onClick={() => handleShow(card)}>
+                                    <span>View Details</span>
+                                </button>
                             </div>
                         </Card.Body>
                     </div>
                 </Card>
             ))}
 
+            {selectedProduct && (
+                <Popup open={show} closeOnDocumentClick onClose={handleClose} >
+                    <div className="modal-content">
 
-            <Modal show={show} fullscreen={true} onHide={handleClose}>
-                <Modal.Body className="modal_bg_color">
-                    <Button onClick={handleClose} style={{ backgroundColor: 'transparent' }}>
-                        <IoMdArrowRoundBack style={{ fontSize: '34px', color: 'black' }} />
-                    </Button>
-                    <Row className="mt-3">
-                        <Col
-                            xs={12}
-                            md={6}
-                            style={{ display: 'flex', justifyContent: 'center', alignItems: 'start', width: '100%', maxWidth: 600, margin: 'auto' }}
-                        >
-                            <div className="YallahealthyBarcontainer">
-                                <h1 className="healthybar">
-                                    <span style={{ color: '#4BC6DA' }}>YALLA</span> Healthy Bars
-                                </h1>
-                                <div>
-                                    <h1 className="almondtext">{selectedProduct?.title}</h1>
-                                </div>
-                                <div>
-                                    <p className="ptag mt-3">{selectedProduct?.detaildes}</p>
-                                    {/* <ul className="ptag">
-                                        <li>Gluten free</li>
-                                        <li>Organic</li>
-                                        <li>Vegan</li>
-                                    </ul> */}
-                                </div>
+                        <div className='close_btn' >
+                            <button onClick={handleClose} className="noselect">
+                                <span className="text">Close</span>
+                                <span className="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path>
+                                    </svg>
+                                </span>
+                            </button>
+                        </div>
+                        <div className="text-center">
+                            <div className='detailsImage_selected_container' >
+                                <Image src={selectedProduct.detailsImage} alt={selectedProduct.title} className='detailsImage_selected' />
                             </div>
-                        </Col>
-                        <Col xs={12} md={6}>
-                            <div className="YallahealthyBarcontainer mb-3">
-                                <Image
-                                    src={selectedProduct?.detailsImage || selectedProduct?.image}
-                                    alt={selectedProduct?.title}
-                                    className="productImage_modal"
-                                />
+
+                            <h2 className='selected_title' >{selectedProduct.title}</h2>
+
+                            <div className='selected_des_container' >
+                                <p className='selected_des' >{selectedProduct.detaildes}</p>
                             </div>
-                        </Col>
-                    </Row>
-                </Modal.Body>
-            </Modal>
+                        </div>
+                    </div>
+                </Popup>
+            )}
         </div>
     );
-}
+};
 
 export default YallaShopNuts;

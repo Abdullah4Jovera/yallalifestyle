@@ -15,19 +15,23 @@ import Link from 'next/link';
 const jsonData = [
     {
         title: "BARS",
-        image: productthree
+        image: productthree,
+        link: "/shops/YallaShopBar"
     },
     {
         title: "drinks",
-        image: productfour
+        image: productfour,
+        link: "/shops/YallaShopDrink" // Update link as needed
     },
     {
         title: "crisps",
-        image: productone
+        image: productone,
+        link: "/shops/YallaShopChips" // Update link as needed
     },
     {
         title: "nuts",
-        image: producttwo
+        image: producttwo,
+        link: "/shops/YallaShopNuts" // Update link as needed
     },
 ];
 
@@ -36,7 +40,7 @@ function Page() {
 
     useEffect(() => {
         AOS.init({ duration: 1000 });
-        setIsLoaded(true); // Trigger animation after component is mounted
+        setIsLoaded(true);
     }, []);
 
     return (
@@ -49,27 +53,22 @@ function Page() {
             </p>
             <div className="card_container_product">
                 {jsonData.map((item, index) => (
-                    <div
-                        key={index}
-                        className={`product_card_yalla ${isLoaded ? 'show' : ''}`}
-                        data-aos="fade-up"
-                        data-aos-delay={index * 200}
-                    >
-                        <Image src={item.image} alt={`product ${index + 1}`} className='yalla_product_image' width={250} height={180} />
-                        <h3 className='product_product_name'>{item.title}</h3>
-                    </div>
+                    <Link href={item.link} key={index} style={{ textDecoration: 'none' }} >
+                        <div
+                            className={`product_card_yalla ${isLoaded ? 'show' : ''}`}
+                            data-aos="fade-up"
+                            data-aos-delay={index * 200}
+                        >
+                            <Image src={item.image} alt={`product ${index + 1}`} className='yalla_product_image' width={250} height={180} />
+                            <h3 className='product_product_name'>{item.title}</h3>
+                        </div>
+                    </Link>
                 ))}
             </div>
-            <div className='all_btn_product'>
-                <Link href={''} className="animated-button" data-aos="fade-up" data-aos-delay="100" style={{ textDecoration: 'none' }} >
-                    <svg viewBox="0 0 24 24" className="arr-2" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" />
-                    </svg>
-                    <span className="text">Products</span>
-                    <span className="circle" />
-                    <svg viewBox="0 0 24 24" className="arr-1" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" />
-                    </svg>
+
+            <div className="buttons_mutual_class">
+                <Link href={'/shops'}>
+                    <button className="nested_btn"><span></span><p data-start="good luck!" data-text="View Product" data-title="Product"></p></button>
                 </Link>
             </div>
         </Container>

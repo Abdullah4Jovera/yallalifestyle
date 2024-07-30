@@ -39,7 +39,9 @@ import Image from 'next/image';
 import './shopStyle.css';
 import { Col, Container, Row } from 'react-bootstrap';
 import { IoMdArrowRoundBack } from "react-icons/io";
-import Link from 'next/link';
+import Popup from 'reactjs-popup';
+import './shopButton.css';
+import 'reactjs-popup/dist/index.css';
 
 
 const YallaAllShopProduct = () => {
@@ -292,70 +294,35 @@ const YallaAllShopProduct = () => {
       ))}
 
 
-      <Modal show={show} fullscreen={true} onHide={handleClose}>
-        <Modal.Body className='modal_bg_color'>
-          <Button onClick={() => handleClose()} style={{ backgroundColor: 'transparent' }} >
-            <IoMdArrowRoundBack style={{ fontSize: '34px', color: 'black' }} />
-          </Button>
-          <Row className='mt-3'>
-            <Col xs={12} md={6} style={{ display: 'flex', justifyContent: 'end', alignItems: 'center ' }}>
-              <div className='YallahealthyBarcontainer'>
-                <h1 className='healthybar'>
-                  <span style={{ color: '#4BC6DA' }}>YALLA</span> Healthy Bars
-                </h1>
-                <div>
-                  <h1 className='almondtext'>TOSI ALMOND SUPER BITES</h1>
-                </div>
-                <div>
-                  <p className='ptag mt-3'>
-                    That is an excellent source of protein, omega 3s, and fiber. Contains chia seeds and flax seeds
-                  </p>
-                  <ul className='ptag'>
-                    <li>Gluten free</li>
-                    <li>Organic</li>
-                    <li>Vegan</li>
-                  </ul>
-                </div>
+      {selectedProduct && (
+        <Popup open={show} closeOnDocumentClick onClose={handleClose} >
+          <div className="modal-content">
+
+            <div className='close_btn' >
+              <button onClick={handleClose} className="noselect">
+                <span className="text">Close</span>
+                <span className="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path>
+                  </svg>
+                </span>
+              </button>
+            </div>
+            <div className="text-center">
+              <div className='detailsImage_selected_container' >
+                <Image src={selectedProduct.detailsImage} alt={selectedProduct.title} className='detailsImage_selected' />
               </div>
-            </Col>
-            <Col xs={12} md={6}>
-              <div className='YallahealthyBarcontainer mb-3'>
-                <Image src={selectedProduct?.detailsImage || selectedProduct?.image} alt={selectedProduct?.title} className='productImage_modal' />
+
+              <h2 className='selected_title' >{selectedProduct.title}</h2>
+
+              <div className='selected_des_container' >
+                <p className='selected_des' >{selectedProduct.detaildes}</p>
               </div>
-            </Col>
-          </Row>
+            </div>
+          </div>
+        </Popup>
+      )}
 
-          <Container>
-            <Row>
-              <h1 className='related_product_title' >Related Products</h1>
-              {relatedProducts.map((product, index) => (
-                <Col xs={12} md={4} key={index} className='mb-3'>
-                  <Card
-                    key={index}
-                    className='mt-3 all-shop-card'
-                    data-aos="fade-up"
-                  >
-                    <div className='card-content'>
-                      <div className='image_container_modal'>
-                        <Image
-                          src={product.image}
-                          alt={product.title}
-                          className='Yalla_product_images'
-
-                        />
-                      </div>
-                      <Card.Body className='text-center card-body'>
-                        <h1 className='card-title'>{product.title}</h1>
-
-                      </Card.Body>
-                    </div>
-                  </Card>
-                </Col>
-              ))}
-            </Row>
-          </Container>
-        </Modal.Body>
-      </Modal>
     </div>
 
   );

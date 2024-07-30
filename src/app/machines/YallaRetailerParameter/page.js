@@ -27,7 +27,7 @@ const Page = () => {
                         <MdOutlineKeyboardBackspace 
                             data-aos="fade-up" 
                             className='mt-4' 
-                            style={{ color: 'black', fontSize:'50px' }} 
+                            style={{ color: 'black', fontSize:'40px' }} 
                         />
                     </Link>
                     <h1 className='gohealthier_parameter' data-aos="fade-up">

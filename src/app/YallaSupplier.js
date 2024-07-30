@@ -57,10 +57,12 @@ const suppliers = [
 const YallaSupplier = () => {
     return (
         <Container className='Supplier_container'>
-            <h1 className='yalla_titile' data-aos="fade-up">Yalla <span className='product_title'>Supplier</span></h1>
+            <h1 className='yalla_title mb-5' data-aos="fade-up" >
+                Yalla <span className='product_title'>Consumer</span>
+            </h1>
             <Row>
                 {suppliers.map((supplier, index) => (
-                    <Col key={index} xs={3} md={4} lg={3} className="mb-4 yallaSupplierRow" >
+                    <Col key={index} xs={3} md={4} lg={3} className="yallaSupplierRow" >
                         <div className="supplier-card" data-aos="fade-up">
                             <Image src={supplier.src} alt={supplier.alt} layout="responsive" />
                         </div>

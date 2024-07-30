@@ -23,14 +23,14 @@ const Page = () => {
       <HomePageNav />
       <div className='machineConatiner_parameter'>
         <Container>
-          <Link href='/machines'><MdOutlineKeyboardBackspace data-aos="fade-up" className='mt-4' style={{ color: 'black', fontSize:'50px' }} /></Link>
+          <Link href='/machines'><MdOutlineKeyboardBackspace className='mt-4' style={{ color: 'black', fontSize: '40px' }} /></Link>
 
-          <h1 className='productParameter' data-aos="fade-up">PRODUCT PARAMETERS</h1>
-          <p className='fuselarge mt-3' data-aos="fade-up">Sophisticated fuselage, just cover an area of 1 m²</p>
+          <h1 className='productParameter' >PRODUCT PARAMETERS</h1>
+          <p className='fuselarge mt-3' >Sophisticated fuselage, just cover an area of 1 m²</p>
 
           <div className='Yallahealthercontainer'>
             <div className='healthierClassContainer'>
-              <div className='upperlowerdiv' data-aos="fade-up">
+              <div className='upperlowerdiv' >
                 <div>
                   <Image src={uppermm} alt='UpperMm' />
                   <h2 className='mmtag'>190mm</h2>
@@ -39,12 +39,12 @@ const Page = () => {
               </div>
 
               <div>
-                <Image src={yallacoffee} alt='yallacoffee' className='vendehealthier' data-aos="fade-up" />
+                <Image src={yallacoffee} alt='yallacoffee' className='vendehealthier' />
               </div>
             </div>
 
             {/* Responsive Table */}
-            <div className='table-container mt-5 pb-5' data-aos="fade-up" >
+            <div className='table-container mt-5 pb-5'  >
               <Table responsive striped bordered hover className='animated-table' >
                 <thead >
                   <tr className='table_tr_two'>

@@ -78,7 +78,7 @@ const AllComponentNavbar = () => {
                 <Link href={'/yallaLifestyle'} className='yalla_navbar_links'>Yalla Lifestyle</Link>
                 <Link href={'/shops'} className='yalla_navbar_links'>Products</Link>
                 <Link href={'/machines'} className='yalla_navbar_links'>Machines</Link>
-                <Link href={'/contactUs'} className='yalla_navbar_links'>Contact Us</Link>
+                <Link href={'/contactUs'} className='yalla_navbar_links'>Contact</Link>
             </ul>
             <label htmlFor="nav-toggle" className="icon-burger">
                 <div className="line" />

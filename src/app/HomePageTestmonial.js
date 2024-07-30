@@ -22,10 +22,10 @@ const HomePageTestmonial = () => {
         },
         afterChange: current => setActiveSlide2(current)
     };
-    
+
     return (
         <>
-      
+
             <div className="slider-container" style={{ marginTop: '7%' }} data-aos="fade-up">
 
                 <Slider {...settings}>

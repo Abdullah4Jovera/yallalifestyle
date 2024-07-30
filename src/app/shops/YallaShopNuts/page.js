@@ -32,10 +32,10 @@ const Page = () => {
                         </div>
                     </div>
 
-                    <div className="search-container">
+                    {/* <div className="search-container">
                         <input placeholder="Search product" className="input_tag" />
                         <Image src={search_icon} alt="search_icon" className="search-icon" />
-                    </div>
+                    </div> */}
 
                 </div>
 

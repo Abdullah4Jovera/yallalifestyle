@@ -175,8 +175,8 @@
 
 .All_shop_card_class {
     width: 100%;
-    max-width: 320px;
-    height: 430px;
+    max-width: 320px !important;
+    height: 430px !important;
     display: flex;
     justify-content: center;
     align-items: center;

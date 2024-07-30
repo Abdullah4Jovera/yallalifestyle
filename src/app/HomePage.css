@@ -2,7 +2,7 @@
 
 /* Navbar CSS */
 body{
-    background: rgb(102, 205, 221, 0.3);
+    background: linear-gradient(to right, rgba(75, 198, 218, 0.3), rgba(255, 255, 255, 0.3));
     font-family: 'poppins sans-serif';
 }
 .LinkClass {
@@ -378,25 +378,6 @@ body{
     margin: 0 auto;
 }
 
-.adnoctxt {
-    color: #000;
-    font-family: 'Poppins', sans-serif;
-    font-size: 24px;
-    font-style: normal;
-    /* font-weight: 400; */
-    line-height: 100%;
-    /* margin-top: 5%; */
-    letter-spacing: 0.27px;
-    text-align: justify;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 1s ease-in-out forwards;
-}
-
-/* .yasmarina_image{
-    width: 100%;
-    height: auto;
-} */
 .adnoc_bg_image {
     width: 100%;
     margin-left: 12px;
@@ -500,10 +481,10 @@ body{
 }
 
 .adnoctxt {
-    font-family: 'Poppins', sans-serif;
-    font-size: 20px;
+    font-size: 1.2rem;
     line-height: 1.5;
     text-align: justify;
+    font-family: 'poppins sans-serif';
 }
 
 .company_div {
@@ -519,10 +500,10 @@ body{
 
 .footerText {
     color: #ADADAD;
-    font-size: 15.387px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 25.005px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: justify;
+    font-family: 'poppins sans-serif';
 }
 
 .companyHELP {
@@ -634,11 +615,17 @@ body{
 .copyright {
     color: #FFF;
     text-align: center;
+    font-size: 1.0rem;
+    line-height: 1.5;
     font-family: 'poppins sans-serif';
-    font-size: 13.464px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 19.234px;
+}
+.footer_text_details{
+    font-size: 1.0rem;
+    line-height: 1.5;
+    text-align: justify;
+    font-family: 'poppins sans-serif';
+    text-decoration: none;
+    color: #FFF;
 }
 
 
@@ -1163,7 +1150,10 @@ body{
         width: 60%;
     }
 
-
+    .TestamonialMianContainer {
+        display: flex !important;
+        flex-direction: column !important;
+    }
 
     .companyHELP {
         display: flex;
@@ -1288,8 +1278,8 @@ body{
     }
 
     .TestamonialMianContainer {
-        display: flex;
-        flex-direction: column;
+        display: flex !important;
+        flex-direction: column !important;
     }
 
     .VendingCorp {

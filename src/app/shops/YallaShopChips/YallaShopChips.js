@@ -38,6 +38,9 @@ import Image from 'next/image';
 import '../shopStyle.css';
 import { Button, Col, Row } from 'react-bootstrap';
 import { IoMdArrowRoundBack } from "react-icons/io";
+import Popup from 'reactjs-popup';
+import '../shopButton.css';
+import 'reactjs-popup/dist/index.css';
 
 const YallaChipsShops = () => {
   const [show, setShow] = useState(false);
@@ -227,42 +230,34 @@ const YallaChipsShops = () => {
         </Card>
       ))}
 
-      <Modal show={show} fullscreen={true} onHide={handleClose}>
-        <Modal.Body className="modal_bg_color">
-          <Button onClick={handleClose} style={{ backgroundColor: 'transparent' }}>
-            <IoMdArrowRoundBack style={{ fontSize: '34px', color: 'black' }} />
-          </Button>
-          <Row className="mt-3">
-            <Col
-              xs={12}
-              md={6}
-              style={{ display: 'flex', justifyContent: 'center', alignItems: 'start', width: '100%', maxWidth: 600, margin: 'auto' }}
-            >
-              <div className="YallahealthyBarcontainer">
-                <h1 className="healthybar">
-                  <span style={{ color: '#4BC6DA' }}>YALLA</span> Healthy Bars
-                </h1>
-                <div>
-                  <h1 className="almondtext">{selectedProduct?.title}</h1>
-                </div>
-                <div>
-                  <p className="ptag mt-3">{selectedProduct?.detaildes}</p>
+      {selectedProduct && (
+        <Popup open={show} closeOnDocumentClick onClose={handleClose} >
+          <div className="modal-content">
 
-                </div>
+            <div className='close_btn' >
+              <button onClick={handleClose} className="noselect">
+                <span className="text">Close</span>
+                <span className="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path>
+                  </svg>
+                </span>
+              </button>
+            </div>
+            <div className="text-center">
+              <div className='detailsImage_selected_container' >
+                <Image src={selectedProduct.detailsImage} alt={selectedProduct.title} className='detailsImage_selected' />
               </div>
-            </Col>
-            <Col xs={12} md={6}>
-              <div className="YallahealthyBarcontainer mb-3">
-                <Image
-                  src={selectedProduct?.detailsImage || selectedProduct?.image}
-                  alt={selectedProduct?.title}
-                  className="productImage_modal"
-                />
+
+              <h2 className='selected_title' >{selectedProduct.title}</h2>
+
+              <div className='selected_des_container' >
+                <p className='selected_des' >{selectedProduct.detaildes}</p>
               </div>
-            </Col>
-          </Row>
-        </Modal.Body>
-      </Modal>
+            </div>
+          </div>
+        </Popup>
+      )}
     </div>
   );
 }

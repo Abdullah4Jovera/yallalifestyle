@@ -6,8 +6,6 @@
     font-style: normal;
     font-weight: 900;
     line-height: 86%;
-    /* margin-top: 40px; */
-    /* 29.378px */
 }
 
 .machineConatiner_parameter {
@@ -117,12 +115,10 @@
     border-bottom: 1px solid #FFF;
     background-color: #bfdde3 !important;
     color: #000;
+    font-size: 1.2rem;
+    line-height: 1.5;
     text-align: center;
-    font-family: "poppins sans-serif";
-    font-size: 18px;
-    font-weight: 800;
-    line-height: 100%;
-    letter-spacing: 0.22px;
+    font-family: 'poppins sans-serif';
 }
 
 .table_tr_two {
@@ -132,12 +128,10 @@
     border-bottom: 1px solid #FFF;
     background-color: #73c5d3 !important;
     color: #000;
+    font-size: 1.2rem;
+    line-height: 1.5;
     text-align: center;
-    font-family: "poppins sans-serif";
-    font-size: 18px;
-    font-weight: 800;
-    line-height: 100%;
-    letter-spacing: 0.22px;
+    font-family: 'poppins sans-serif';
 }
 
 
@@ -172,13 +166,10 @@
 
 .yallahealtier_h1_tag {
     color: #333;
-    font-family: "poppins sans-serif";
-    font-size: 21px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    text-transform: capitalize;
+    font-size: 1.2rem;
+    line-height: 1.5;
     text-align: justify;
+    font-family: 'poppins sans-serif';
 }
 
 .go_healthier_H_WORD {

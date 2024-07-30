@@ -73,19 +73,19 @@ const YallaFooter = () => {
                 <Col xs={12} md={6} lg={4}>
                     <div className='companyHELP'>
                         <div className='company_div'>
-                            <Link href={''} style={{ textDecoration: 'none', color: 'white' }}><p>COMPANY</p></Link>
-                            <Link href={''} style={{ textDecoration: 'none', color: 'white' }}><p>About</p></Link>
-                            <Link href={''} style={{ textDecoration: 'none', color: 'white' }}><p>Features</p></Link>
-                            <Link href={''} style={{ textDecoration: 'none', color: 'white' }}><p>Works</p></Link>
-                            <Link href={''} style={{ textDecoration: 'none', color: 'white' }}><p>Career</p></Link>
+                            <Link href={''} style={{textDecoration:'none'}} ><p className='footer_text_details' >COMPANY</p></Link>
+                            <Link href={''} style={{textDecoration:'none'}} ><p className='footer_text_details' >About</p></Link>
+                            <Link href={''} style={{textDecoration:'none'}} ><p className='footer_text_details' >Features</p></Link>
+                            <Link href={''} style={{textDecoration:'none'}} ><p className='footer_text_details' >Works</p></Link>
+                            <Link href={''} style={{textDecoration:'none'}} ><p className='footer_text_details' >Career</p></Link>
                         </div>
 
                         <div className='company_div'>
-                            <Link href={''} style={{ textDecoration: 'none', color: 'white' }}><p>HELP</p></Link>
-                            <Link href={''} style={{ textDecoration: 'none', color: 'white' }}><p>Customer Support</p></Link>
-                            <Link href={''} style={{ textDecoration: 'none', color: 'white' }}><p>Delivery Details</p></Link>
-                            <Link href={''} style={{ textDecoration: 'none', color: 'white' }}><p>Terms & Conditions</p></Link>
-                            <Link href={''} style={{ textDecoration: 'none', color: 'white' }}><p>Privacy Policy</p></Link>
+                            <Link href={''} style={{textDecoration:'none'}} ><p className='footer_text_details' >HELP</p></Link>
+                            <Link href={''} style={{textDecoration:'none'}} ><p className='footer_text_details' >Customer Support</p></Link>
+                            <Link href={''} style={{textDecoration:'none'}} ><p className='footer_text_details' >Delivery Details</p></Link>
+                            <Link href={''} style={{textDecoration:'none'}} ><p className='footer_text_details' >Terms & Conditions</p></Link>
+                            <Link href={''} style={{textDecoration:'none'}} ><p className='footer_text_details' >Privacy Policy</p></Link>
                         </div>
                     </div>
                 </Col>

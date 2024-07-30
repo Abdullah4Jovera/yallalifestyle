@@ -16,17 +16,17 @@
 
 
 /* Container */
-.machineConatiner {
+/* .machineConatiner {
     background: linear-gradient(to right, white, #83daf3);
     height: 100vh;
-}
+} */
 
 .chooseMachine {
     color: #000;
-    font-family: "Playfair Display";
+    font-family: "poppins sans-serif";
     font-size: 43px;
     font-style: normal;
-    font-weight: 900;
+    font-weight: 600;
     line-height: 86.405%;
     text-align: center;
     padding-top: 4%;
@@ -53,7 +53,7 @@
 .textretail {
     color: #000;
     text-align: center;
-    font-family: Poppins;
+    font-family: "poppins sans-serif";
     font-size: 21px;
     font-style: normal;
     font-weight: 600;
@@ -65,7 +65,8 @@
     justify-content: center;
     align-items: center;
     gap: 15px;
-    padding-top: 5%;
+    padding-top: 2%;
+    margin-bottom: 10%;
 }
 
 @keyframes logoAnimation {
@@ -104,6 +105,13 @@
     animation: fadeIn 0.5s ease-in-out forwards;
 }
 
+
+@media (max-width:1000px) {
+    .chooseMachine {
+        font-size: 30px;
+    }
+}
+
 @media only screen and (max-width: 600px) {
     .retailmainContainer {
         display: flex;
@@ -116,7 +124,7 @@
 
     .chooseMachine {
         color: #000;
-        font-family: "Playfair Display";
+        font-family: "poppins sans-serif";
         font-size: 22px;
         font-style: normal;
         font-weight: 900;
@@ -128,7 +136,7 @@
     .textretail {
         color: #000;
         text-align: center;
-        font-family: "Playfair Display";
+        font-family: "poppins sans-serif";
         font-size: 22px;
         font-style: normal;
         font-weight: 900;

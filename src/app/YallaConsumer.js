@@ -31,7 +31,9 @@ const Page = () => {
 
     return (
         <div>
-            <h1 className='yalla_titile' data-aos="fade-up" >Yalla <span className='product_title'>Consumer</span></h1>
+            <h1 className='yalla_title' data-aos="fade-up" >
+                Yalla <span className='product_title'>Supplier</span>
+            </h1>
             <Container className='Consumer_container'>
                 <Row>
                     {images.map((image, index) => (

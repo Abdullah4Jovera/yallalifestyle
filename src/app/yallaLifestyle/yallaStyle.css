@@ -83,36 +83,27 @@
 
 .yalla_life_style_tag {
     color: #000;
-    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    text-align: justify;
     font-family: 'poppins sans-serif';
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 100%;
-    letter-spacing: 0.23px;
-    margin-top: 5%;
 }
 
 
 
 .yalla_look_text {
     color: #000;
+    font-size: 1.4rem;
+    line-height: 1.5;
     text-align: center;
     font-family: 'poppins sans-serif';
-    font-size: 26px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 100%;
-    letter-spacing: 0.23px;
-    margin-top: 5%;
-    margin-bottom: 7%;
 }
 
 .yalla_life_style_text_div {
     width: 100%;
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 auto;
-    text-align: justify;
+    /* text-align: justify; */
     padding-top: 7%;
 
 }
@@ -122,13 +113,11 @@
 .yalla_text_operation {
     color: #000;
     text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    text-align: center;
     font-family: 'poppins sans-serif';
-    font-size: 23px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 100%;
-    letter-spacing: 0.23px;
-    margin-top: 7%;
+    margin-top: 4%;
     margin-bottom: 7%;
 }
 
@@ -302,16 +291,11 @@
 }
 
 .lifestyle_p_tag {
-    text-align: justify;
     color: #000;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: justify;
     font-family: 'poppins sans-serif';
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 100%;
-    letter-spacing: 0.23px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
 }
 
@@ -365,6 +349,10 @@
     .yalla_look_text {
         font-size: 24px;
     }
+    .yalla_life_style_carousal{
+        margin-top: 5% !important;
+        margin-bottom: 4% !important;
+    }
 }
 
 
@@ -373,6 +361,11 @@
     .yallatext {
         font-size: 25px;
         padding-top: 0px;
+    }
+
+    .yalla_life_style_carousal{
+        margin-top: 5% !important;
+        margin-bottom: 4% !important;
     }
 
     .lifestyle_p_tag {

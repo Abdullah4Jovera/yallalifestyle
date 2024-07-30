@@ -175,7 +175,7 @@
     background: linear-gradient(135deg,
             rgba(255, 255, 255, 0) 0%,
             rgba(75, 198, 218, 0));
-    margin: 10% 0 0;
+    margin: 2% 0 0;
 }
 .container__marquee_below{
     display: flex;
@@ -204,6 +204,8 @@
     display: flex;
     overflow: hidden;
     user-select: none;
+    margin-top: 2%;
+    margin-bottom: 4%;
 }
 
 .main-container__marquee-items {

@@ -77,11 +77,11 @@ const Page = () => {
                 <Container fluid>
                     <div className='contactContainer'>
                         {/* <h1 className='YallaContact'>YALLA Contact Us</h1> */}
-                        <h3 className='questionremarks'>Any question or remarks? Just write us a message!</h3>
+                        <h3 className='questionremarks'>Any Question or Remarks? Just write us a Message!</h3>
                     </div>
 
                     <Row>
-                        <Col xs={12} md={6} className='contactInformation mt-4'>
+                        <Col xs={12} md={12} lg={6} className='contactInformation mt-4'>
                             <div className='contactInformationDiv'>
                                 <h1 className='contacttext'>Contact Information</h1>
                                 <p className='saysomethingtext'>Say something to start a live chat!</p>
@@ -122,10 +122,10 @@ const Page = () => {
                             </div>
                         </Col>
 
-                        <Col xs={12} md={6} className='secondColumn mt-3'>
+                        <Col xs={12} md={12} lg={6} className='secondColumn mt-3'>
                             <Form onSubmit={handleSubmit}>
 
-                                <Row>
+                                <Row className='input_row' >
 
                                     <Col xs={12} md={8}>
                                         <CSSTransition in={inProp} timeout={300} classNames="fade">
@@ -144,7 +144,7 @@ const Page = () => {
                                                     placeholder='Full Name'
                                                     value={formData.fullname}
                                                     onChange={handleChange}
-                                                    className='textInputField w-100'
+                                                    className='textInputField '
 
                                                 />
                                             </div>
@@ -169,7 +169,7 @@ const Page = () => {
                                                     placeholder='Email'
                                                     value={formData.email}
                                                     onChange={handleChange}
-                                                    className='textInputField w-100'
+                                                    className='textInputField '
 
                                                 />
                                             </div>
@@ -193,7 +193,7 @@ const Page = () => {
                                                     placeholder='Phone'
                                                     value={formData.phone}
                                                     onChange={handleChange}
-                                                    className='textInputField w-100'
+                                                    className='textInputField '
 
                                                 />
                                             </div>
@@ -215,7 +215,7 @@ const Page = () => {
                                                 /> */}
 
                                                 <textarea 
-                                                className='textareafield w-100'
+                                                className='textareafield '
                                                 rows={4}
                                                 name="message"
                                                 value={formData.message}

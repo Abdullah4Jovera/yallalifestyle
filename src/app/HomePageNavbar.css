@@ -97,7 +97,8 @@ nav {
     font-family: 'poppins sans-serif';
     padding: 0 5%;
     height: 70px;
-    background: rgb(102, 205, 221, 0.3);
+    /* background: rgb(102, 205, 221, 0.3); */
+    background: rgb(37,183,207);
 }
 
 nav .logo {
@@ -107,7 +108,7 @@ nav .logo {
     display: flex;
     align-items: center;
     font-size: 24px;
-    justify-content: center;
+    justify-content: start;
     color: #fff;
 }
 
@@ -167,7 +168,7 @@ nav .icon-burger .line {
 /* Services Working End */
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1410px) {
 
     /* NavBar Working Start  */
 
