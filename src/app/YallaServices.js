@@ -28,7 +28,7 @@ const YallaServices = () => {
 
     return (
         <>
-            <h1 className='yalla_title mb-4' data-aos="fade-up" >
+            <h1 className='yalla_title_service mb-4' data-aos="fade-up" >
                 Yalla <span className='product_title'>Services</span>
             </h1>
             <div className="services_bg" data-aos="fade-up">
