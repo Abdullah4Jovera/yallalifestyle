@@ -620,8 +620,7 @@ body{
     font-family: 'poppins sans-serif';
 }
 .footer_text_details{
-    font-size: 1.0rem;
-    line-height: 1.5;
+    font-size: 15px;
     text-align: justify;
     font-family: 'poppins sans-serif';
     text-decoration: none;
@@ -1134,6 +1133,7 @@ body{
     .yallalogocontainer {
         margin-top: 3%;
     }
+ 
 }
 
 @media (max-width: 768px) {
@@ -1244,6 +1244,16 @@ body{
         justify-content: center;
         align-items: center;
         margin: auto;
+    }
+    .footer_text_details{
+        font-size: 10px;
+    }
+
+    .footerText {
+        font-size: 15px;
+    }
+    .copyright {
+        font-size: 15px;
     }
 
     .discoverContainer {

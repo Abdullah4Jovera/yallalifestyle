@@ -47,16 +47,11 @@ const Page = () => {
                         </h1>
                     </div>
 
-                    <div className='all_btn_product'>
-                        <Link href={'/machines/YallaHealther'} className="animated-button" data-aos="fade-up" data-aos-delay="100">
-                            <svg viewBox="0 0 24 24" className="arr-2" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" />
-                            </svg>
-                            <span className="text">VIEW PRODUCT PARAMETERS</span>
-                            <span className="circle" />
-                            <svg viewBox="0 0 24 24" className="arr-1" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" />
-                            </svg>
+                    <div className='all_btn_product_machine'>
+                        <Link href={'/machines/YallaHealther'} data-aos="fade-up" data-aos-delay="100">
+                            <button className='view_more_product' >
+                                <span> View Product Parameter </span>
+                            </button>
                         </Link>
                     </div>
                 </Container>
