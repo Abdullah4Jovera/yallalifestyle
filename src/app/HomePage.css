@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 /* Navbar CSS */
-body{
+body {
     background: linear-gradient(to right, rgba(75, 198, 218, 0.3), rgba(255, 255, 255, 0.3));
     font-family: 'poppins sans-serif';
 }
+
 .LinkClass {
     color: #000;
     padding: 10px 15px;
@@ -449,6 +450,8 @@ body{
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    width: 20%;
+    max-width: 200px;
 }
 
 .adnocyasContainer {
@@ -619,7 +622,8 @@ body{
     line-height: 1.5;
     font-family: 'poppins sans-serif';
 }
-.footer_text_details{
+
+.footer_text_details {
     font-size: 15px;
     text-align: justify;
     font-family: 'poppins sans-serif';
@@ -1133,7 +1137,7 @@ body{
     .yallalogocontainer {
         margin-top: 3%;
     }
- 
+
 }
 
 @media (max-width: 768px) {
@@ -1245,13 +1249,15 @@ body{
         align-items: center;
         margin: auto;
     }
-    .footer_text_details{
+
+    .footer_text_details {
         font-size: 10px;
     }
 
     .footerText {
         font-size: 15px;
     }
+
     .copyright {
         font-size: 15px;
     }

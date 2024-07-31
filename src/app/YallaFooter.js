@@ -7,14 +7,22 @@ import footerlogo from './Assets/HomePageAssets/footerlogo.png';
 import twitter from './Assets/HomePageAssets/twitter.png';
 import fb from './Assets/HomePageAssets/fb.png';
 import insta from './Assets/HomePageAssets/insta.png';
-import footercircle from './Assets/HomePageAssets/footercircle.png'
+import footercircle from './Assets/HomePageAssets/footercircle.png';
+import vending from './Assets/MachinePageAssets/vending.png';
+import vendingone from './Assets/MachinePageAssets/vendingone.png';
+import vendingtwo from './Assets/MachinePageAssets/vendingtwo.png';
+import vendingthree from './Assets/MachinePageAssets/vendingthree.png';
+
 import './HomePage.css';
 
 const YallaFooter = () => {
     const [email, setEmail] = useState('');
     const [status, setStatus] = useState(null);
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-    const currentYear = new Date().getFullYear(); // Get current year dynamically
+    const images = [vending, vendingone, vendingtwo, vendingthree];
+    const currentYear = new Date().getFullYear();
+
     const handleemailsubmit = async (e) => {
         e.preventDefault();
         console.log('Submitting form with email:', email);
@@ -52,6 +60,13 @@ const YallaFooter = () => {
         }
     }, [status]);
 
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+        }, 3000);
+
+        return () => clearInterval(interval);
+    }, [images.length]);
 
     return (
         <Container fluid>
@@ -73,29 +88,32 @@ const YallaFooter = () => {
                 <Col xs={12} md={6} lg={4}>
                     <div className='companyHELP'>
                         <div className='company_div'>
-                            <Link href={''} style={{textDecoration:'none'}} ><p className='footer_text_details' >COMPANY</p></Link>
-                            <Link href={''} style={{textDecoration:'none'}} ><p className='footer_text_details' >About</p></Link>
-                            <Link href={''} style={{textDecoration:'none'}} ><p className='footer_text_details' >Features</p></Link>
-                            <Link href={''} style={{textDecoration:'none'}} ><p className='footer_text_details' >Works</p></Link>
-                            <Link href={''} style={{textDecoration:'none'}} ><p className='footer_text_details' >Career</p></Link>
+                            <Link href={''} style={{ textDecoration: 'none' }} ><p className='footer_text_details' >COMPANY</p></Link>
+                            <Link href={''} style={{ textDecoration: 'none' }} ><p className='footer_text_details' >About</p></Link>
+                            <Link href={''} style={{ textDecoration: 'none' }} ><p className='footer_text_details' >Features</p></Link>
+                            <Link href={''} style={{ textDecoration: 'none' }} ><p className='footer_text_details' >Works</p></Link>
+                            <Link href={''} style={{ textDecoration: 'none' }} ><p className='footer_text_details' >Career</p></Link>
                         </div>
 
                         <div className='company_div'>
-                            <Link href={''} style={{textDecoration:'none'}} ><p className='footer_text_details' >HELP</p></Link>
-                            <Link href={''} style={{textDecoration:'none'}} ><p className='footer_text_details' >Customer Support</p></Link>
-                            <Link href={''} style={{textDecoration:'none'}} ><p className='footer_text_details' >Delivery Details</p></Link>
-                            <Link href={''} style={{textDecoration:'none'}} ><p className='footer_text_details' >Terms & Conditions</p></Link>
-                            <Link href={''} style={{textDecoration:'none'}} ><p className='footer_text_details' >Privacy Policy</p></Link>
+                            <Link href={''} style={{ textDecoration: 'none' }} ><p className='footer_text_details' >HELP</p></Link>
+                            <Link href={''} style={{ textDecoration: 'none' }} ><p className='footer_text_details' >Customer Support</p></Link>
+                            <Link href={''} style={{ textDecoration: 'none' }} ><p className='footer_text_details' >Delivery Details</p></Link>
+                            <Link href={''} style={{ textDecoration: 'none' }} ><p className='footer_text_details' >Terms & Conditions</p></Link>
+                            <Link href={''} style={{ textDecoration: 'none' }} ><p className='footer_text_details' >Privacy Policy</p></Link>
                         </div>
                     </div>
                 </Col>
                 <Col xs={12} md={6} lg={4}>
-
-                    <div className='footer_circle_image' >
+                    <div className='footer_circle_image'>
                         <Image src={footercircle} alt='footercircle' />
-                        <Image src={footerlogo} alt='YallaLifestyle' className='image_nested_footer' />
+                        <Image
+                            src={images[currentImageIndex]}
+                            alt={`vending${currentImageIndex}`}
+                            className='image_nested_footer'
+                            key={currentImageIndex}
+                        />
                     </div>
-
                 </Col>
                 <hr />
                 <p className='copyright'>© Copyright {currentYear}, All Rights Reserved by Yalla lifestyle</p>
