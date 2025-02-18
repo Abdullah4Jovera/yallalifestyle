@@ -14,12 +14,23 @@
     font-weight: 500px;
 }
 
+.image_drink {
+    height: 100%;
+    max-height: 350px;
+    width: 100%;
+    max-width: 400px;
+}
 
-/* Container */
-/* .machineConatiner {
-    background: linear-gradient(to right, white, #83daf3);
-    height: 100vh;
-} */
+.yalla_machine_cards {
+    background: linear-gradient(to bottom, #c6eef9, #edfafe) !important;
+}
+
+.machine_images {
+    width: 100%;
+    max-width: 400px !important;
+    height: 100%;
+    max-height: 400px !important;
+}
 
 .chooseMachine {
     color: #000;
@@ -29,7 +40,7 @@
     font-weight: 600;
     line-height: 86.405%;
     text-align: center;
-    padding-top: 4%;
+    margin-top: 3%;
 }
 
 .retail_div {

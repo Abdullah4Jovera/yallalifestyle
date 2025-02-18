@@ -1,69 +1,44 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import './YallaGalleryStyle.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import Image from 'next/image';
-import galleryone from './Assets/HomePageAssets/galleryone.png';
-import gallerytwo from './Assets/HomePageAssets/gallerytwo.png';
 import gallerythree from './Assets/HomePageAssets/gallerythree.png';
-import galleryfour from './Assets/HomePageAssets/galleryfour.png';
 import galleryfive from './Assets/HomePageAssets/galleryfive.png';
 import gallerysix from './Assets/HomePageAssets/gallerysix.png';
 import galleryseven from './Assets/HomePageAssets/galleryseven.png';
-import galleryeight from './Assets/HomePageAssets/galleryeight.png';
 import gallerytextlogo from './Assets/HomePageAssets/gallerytextlogo.png'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Link from 'next/link';
 
 const cardData = [
     {
-        id: 1,
-        title: "Animated Card 1",
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-        image: galleryone
-    },
-    {
-        id: 2,
-        title: "Animated Card 2",
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-        image: gallerytwo
-    },
-    {
-        id: 3,
+        id: 0,
         title: "Animated Card 3",
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
         image: gallerythree
     },
+
     {
-        id: 4,
-        title: "Animated Card 4",
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-        image: galleryfour
-    },
-    {
-        id: 5,
+        id: 1,
         title: "Animated Card 4",
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
         image: galleryfive
     },
     {
-        id: 6,
+        id: 2,
         title: "Animated Card 4",
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
         image: gallerysix
     },
     {
-        id: 7,
+        id: 3,
         title: "Animated Card 4",
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
         image: galleryseven
     },
-    {
-        id: 8,
-        title: "Animated Card 4",
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-        image: galleryeight
-    },
+
 ];
 
 const Page = () => {
@@ -120,7 +95,8 @@ const Page = () => {
                 <Row className='gallery_row' >
                     {cardData.map((card) => (
                         <Col key={card.id} md={3} sm={6} xs={12} className="yalla_gallery_column">
-                            <div className="yalla_card_gallery"
+                            <div
+                                className="yalla_card_gallery"
                                 data-aos-offset="200"
                                 data-aos-easing="linear"
                                 data-aos-duration="1500"
@@ -172,7 +148,9 @@ const Page = () => {
                 </article>
 
                 <div className="buttons_mutual_class">
-                    <button className="nested_btn"><span></span><p data-start="View More" data-text="View More" data-title="Gallery"></p></button>
+                    <Link href={'/machines'}>
+                        <button className="nested_btn"><span></span><p data-start="View More" data-text="View More" data-title="Gallery"></p></button>
+                    </Link>
                 </div>
             </Container>
         </>

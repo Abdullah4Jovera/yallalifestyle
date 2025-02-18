@@ -8,9 +8,9 @@
 }
 
 .product_card_yalla {
-  background-color: #f0f0f0;
-  width: 322px;
-  height: 366px;
+  background: linear-gradient(to bottom, #c6eef9, #edfafe) !important;
+  max-width: 322px;
+  max-height: 350px;
   cursor: pointer;
   margin: 20px;
   display: flex;

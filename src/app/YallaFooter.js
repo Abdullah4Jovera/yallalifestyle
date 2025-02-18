@@ -8,20 +8,40 @@ import twitter from './Assets/HomePageAssets/twitter.png';
 import fb from './Assets/HomePageAssets/fb.png';
 import insta from './Assets/HomePageAssets/insta.png';
 import footercircle from './Assets/HomePageAssets/footercircle.png';
-import vending from './Assets/MachinePageAssets/vending.png';
-import vendingone from './Assets/MachinePageAssets/vendingone.png';
-import vendingtwo from './Assets/MachinePageAssets/vendingtwo.png';
-import vendingthree from './Assets/MachinePageAssets/vendingthree.png';
-
+import productfour from './Assets/HomePageAssets/productfour.png';
+import productone from './Assets/HomePageAssets/productone.png';
+import producttwo from './Assets/HomePageAssets/producttwo.png';
+import productthree from './Assets/HomePageAssets/productthree.png';
 import './HomePage.css';
+// import whatsapp from './Assets/HomePageAssets/whatsapp.png'
+
+import { Widget } from 'react-chat-widget';
+import 'react-chat-widget/lib/styles.css';
 
 const YallaFooter = () => {
     const [email, setEmail] = useState('');
     const [status, setStatus] = useState(null);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const [messages, setMessages] = useState([]);
 
-    const images = [vending, vendingone, vendingtwo, vendingthree];
+
+    const images = [productfour, productone, producttwo, productthree];
     const currentYear = new Date().getFullYear();
+
+    const handleNewUserMessage = (newMessage) => {
+        setMessages((prevMessages) => [...prevMessages, newMessage]);
+    };
+
+    useEffect(() => {
+        if (messages.length > 0) {
+            const lastMessage = messages[messages.length - 1];
+            setTimeout(() => {
+                // Example bot response
+                handleNewUserMessage("How can I assist you?");
+            }, 1000);
+        }
+    }, [messages]);
+
 
     const handleemailsubmit = async (e) => {
         e.preventDefault();
@@ -117,7 +137,16 @@ const YallaFooter = () => {
                 </Col>
                 <hr />
                 <p className='copyright'>© Copyright {currentYear}, All Rights Reserved by Yalla lifestyle</p>
+
+                <div className="App">
+                    <Widget
+                        handleNewUserMessage={handleNewUserMessage}
+                        title="Chat With Us"
+
+                    />
+                </div>
             </Row>
+
         </Container>
     );
 };

@@ -223,14 +223,12 @@
     font-weight: 700;
     line-height: 100%;
     letter-spacing: 2.66px;
-
 }
 
 .main-container__marquee-item {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 18px;
     width: auto;
     transition: all 0.1s ease-in-out;
     color: #4BC6DA;
@@ -238,7 +236,7 @@
     font-family: 'poppins sans-serif';
     font-size: 100px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 100%;
     letter-spacing: 2.66px;
 }

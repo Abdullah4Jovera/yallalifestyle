@@ -3,11 +3,10 @@ import React from "react";
 import './yallaStyle.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import Image from 'next/image';
-import socialbrandone from '../Assets/LifestyleAssets/socialbrandone.png';
-import eatgoodfeelgoodsocial from '../Assets/LifestyleAssets/eatgoodfeelgoodsocial.png';
-import yallasocial from '../Assets/LifestyleAssets/yallasocial.png';
-import yallasociallink from '../Assets/LifestyleAssets/yallasociallink.png';
-import yallasociallinks from '../Assets/LifestyleAssets/yallasociallinks.png';
+import socialbrandone from '../Assets/socialmedia/s1.png'
+import eatgoodfeelgoodsocial from '../Assets/socialmedia/s2.png';
+import yallasocial from '../Assets/socialmedia/s3.png';
+import yallasociallink from '../Assets/socialmedia/s4.png';
 import Link from 'next/link';
 import YallaSocialMediaCarousal from './YallaSocialMediaCarousal';
 import { useMediaQuery } from 'react-responsive';
@@ -32,11 +31,11 @@ const YallaSocialMedia = () => {
                                     <Col>
                                         <div>
                                             <Link href={'https://www.instagram.com/yallaLIFESTYLE/'} style={{ textDecoration: 'none' }} data-aos="fade-up" >
-                                                <Image src={socialbrandone} alt='socialbrandone' style={{ width: '100%' }} />
+                                                <Image src={socialbrandone} alt='socialbrandone'className="social_mdia_images" />
                                             </Link>
 
                                             <Link href={'https://www.instagram.com/yallaLIFESTYLE/'} style={{ textDecoration: 'none' }}>
-                                                <Image src={eatgoodfeelgoodsocial} alt='eatgoodfeelgoodsocial' className='mt-3' style={{ width: '100%' }} data-aos="fade-up" />
+                                                <Image src={eatgoodfeelgoodsocial} alt='eatgoodfeelgoodsocial' className=' mt-2 social_mdia_images'  data-aos="fade-up" />
                                             </Link>
                                         </div>
                                     </Col>
@@ -44,22 +43,12 @@ const YallaSocialMedia = () => {
                                     <Col>
                                         <div>
                                             <Link href={'https://www.instagram.com/yallaLIFESTYLE/'} style={{ textDecoration: 'none' }} data-aos="fade-up">
-                                                <Image src={yallasocial} alt='yallasocial' style={{ width: '100%' }} />
+                                                <Image src={yallasocial} alt='yallasocial' className="social_mdia_images" />
                                             </Link>
                                         </div>
                                         <div>
                                             <Link href={'https://www.instagram.com/yallaLIFESTYLE/'} style={{ textDecoration: 'none' }} data-aos="fade-up">
-                                                <Image src={yallasociallink} alt='yallasociallink' className='mt-2' style={{ width: '100%' }} />
-                                            </Link>
-                                        </div>
-                                    </Col>
-                                </Row>
-
-                                <Row>
-                                    <Col xs={12} lg={12}>
-                                        <div>
-                                            <Link href={'https://www.instagram.com/yallaLIFESTYLE/'} style={{ textDecoration: 'none' }} data-aos="fade-up">
-                                                <Image src={yallasociallinks} alt='yallasociallinks' className='mt-2' style={{ width: '100%' }} />
+                                                <Image src={yallasociallink} alt='yallasociallink' className='mt-2 social_mdia_images'  />
                                             </Link>
                                         </div>
                                     </Col>
@@ -67,49 +56,6 @@ const YallaSocialMedia = () => {
                             </div>
                         </>
                 }
-
-                {/* {!isMobile && (
-                    <div className="desktop_screen">
-                        <Row>
-                            <Col>
-                                <div>
-                                    <Link href={'https://www.instagram.com/yallaLIFESTYLE/'} style={{ textDecoration: 'none' }}>
-                                        <Image src={socialbrandone} alt='socialbrandone' style={{ width: '100%' }} />
-                                    </Link>
-
-                                    <Link href={'https://www.instagram.com/yallaLIFESTYLE/'} style={{ textDecoration: 'none' }}>
-                                        <Image src={eatgoodfeelgoodsocial} alt='eatgoodfeelgoodsocial' className='mt-3' style={{ width: '100%' }} />
-                                    </Link>
-                                </div>
-                            </Col>
-
-                            <Col>
-                                <div>
-                                    <Link href={'https://www.instagram.com/yallaLIFESTYLE/'} style={{ textDecoration: 'none' }}>
-                                        <Image src={yallasocial} alt='yallasocial' style={{ width: '100%' }} />
-                                    </Link>
-                                </div>
-                                <div>
-                                    <Link href={'https://www.instagram.com/yallaLIFESTYLE/'} style={{ textDecoration: 'none' }}>
-                                        <Image src={yallasociallink} alt='yallasociallink' className='mt-2' style={{ width: '100%' }} />
-                                    </Link>
-                                </div>
-                            </Col>
-                        </Row>
-
-                        <Row>
-                            <Col xs={12} lg={12}>
-                                <div>
-                                    <Link href={'https://www.instagram.com/yallaLIFESTYLE/'} style={{ textDecoration: 'none' }}>
-                                        <Image src={yallasociallinks} alt='yallasociallinks' className='mt-2' style={{ width: '100%' }} />
-                                    </Link>
-                                </div>
-                            </Col>
-                        </Row>
-                    </div>
-                )}
-
-                {isMobile && <YallaSocialMediaCarousal />} */}
             </Container>
         </div>
     );

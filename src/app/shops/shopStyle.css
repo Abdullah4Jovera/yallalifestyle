@@ -8,18 +8,6 @@
     background: linear-gradient(to right, white, #a6dae9);
 }
 
-.productImage_modal {
-    /* width: 100%;
-    max-width: 400px;
-    height: 100%; */
-    /* max-height: 350px; */
-}
-
-/* .productImage_modal_bars{
-    width: 100%;
-     max-width: 150px;
-    height: 100%;
-} */
 .image_container_modal {
     display: flex;
     justify-content: center;
@@ -129,10 +117,6 @@
     align-items: center;
 }
 
-.categories_main_shop {
-    padding: 0px 10px 0px 20px;
-}
-
 .yalla_shop_class {
     color: #000;
     text-align: center;
@@ -147,54 +131,48 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(to bottom, #c6eef9, #edfafe);
 }
 
-
+.image_drink {
+    height: 100%;
+    max-height: 500px;
+    width: 100%;
+    max-width: 500px;
+}
 
 .bars_title {
     color: #000;
-    font-family: 'poppins sans-serif';
-    font-size: 15px;
+    font-size: 16px;
     font-style: normal;
-    font-weight: 600;
-    line-height: normal;
+    font-weight: 500;
     text-align: center;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 .bars_des {
     color: #000;
-    font-family: 'poppins sans-serif';
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-    text-transform: capitalize;
+    font-size: 16px;
     text-align: center;
 }
 
 .All_shop_card_class {
     width: 100%;
     max-width: 320px !important;
-    height: 430px !important;
+    max-height: 370px !important;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 5px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
     position: relative;
     overflow: hidden;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    background: linear-gradient(to bottom, #c6eef9, #edfafe) !important;
 }
 
-.All_shop_card_class {
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
 
 .All_shop_card_class:hover .overlay {
     opacity: 0.7;
@@ -310,6 +288,61 @@
     position: relative;
 }
 
+.category-buttons {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: linear-gradient(90deg, #e8f8fd, #96e0f5);
+    border: none;
+    padding: 12px 20px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(150, 224, 245, 0.5);
+}
+
+.btn_subcategory {
+    background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+    border: 1px solid #96e0f5;
+    color: #000;
+    text-transform: capitalize !important;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    text-align: center;
+}
+
+.btn_subcategory:hover {
+    background: #96e0f5;
+    border-color: #96e0f5;
+    color: #000;
+    transform: scale(1.05);
+    box-shadow: 0 6px 14px rgba(150, 224, 245, 0.5);
+}
+
+.btn_subcategory:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(150, 224, 245, 0.3);
+}
+
+
+.category-buttons:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(150, 224, 245, 0.7);
+}
+
+.category-buttons:active {
+    transform: scale(0.95);
+}
+
 .btn-12 span {
     mix-blend-mode: difference;
 }
@@ -348,7 +381,10 @@
     --progress: 0;
 }
 
-
+.nuts_seperate_class {
+    margin-top: 30px;
+    margin-bottom: 4%;
+}
 
 @media (max-width:1050px) and (min-width:600px) {
     .productImage_modal {
@@ -356,6 +392,19 @@
         height: 50%;
     }
 }
+
+@media (max-width:1412px) {
+    .categories_main_shop {
+        display: none;
+    }
+
+    .yalla_product_row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 
 
 @media (max-width:600px) {
@@ -369,7 +418,9 @@
     }
 
     .All_shop_card_class {
-        height: 385px;
+        width: 100%;
+        max-width: 300px !important;
+        max-height: 320px !important;
     }
 
     .productcategories_container {
@@ -388,5 +439,23 @@
     .productImage_modal {
         width: 100%;
         height: 50%;
+    }
+
+    .category-buttons {
+        display: none;
+    }
+
+    .yalla_shop_iamge {
+        display: none;
+    }
+
+    .ios-button {
+        padding: 8px 14px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .nuts_seperate_class {
+        margin-top: 0px !important;
+        margin-bottom: 0px !important;
     }
 }

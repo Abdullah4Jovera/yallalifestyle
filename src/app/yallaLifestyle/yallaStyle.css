@@ -8,12 +8,12 @@
     perspective: 1000px;
 }
 
-.social_media_container {
-    /* background: linear-gradient(to right, #dce5ee, #d2edf8, #e2f4fa); */
+.social_mdia_images{
+    width: 100%;
+    max-width: 800px;
+    height: 100%;
+    max-height: 800px;
 }
-/* .brands_container_{
-    background: linear-gradient(to right, white, #d1ebf5);
-} */
 
 .yallalifestyle_main_image {
     width: 100%;

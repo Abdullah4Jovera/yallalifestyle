@@ -1,256 +1,477 @@
 'use client'
-import React, { useState, useEffect, useMemo } from 'react';
-import Modal from 'react-bootstrap/Modal';
-import Card from 'react-bootstrap/Card';
-import chipsone from '../../Assets/HomePageAssets/shopsAssets/chipsone.png';
-import chipstwo from '../../Assets/HomePageAssets/shopsAssets/chipstwo.png';
-import chipsthree from '../../Assets/HomePageAssets/shopsAssets/chipsthree.png';
-import chipsfive from '../../Assets/HomePageAssets/shopsAssets/chipsfive.png'
-import chipssix from '../../Assets/HomePageAssets/shopsAssets/chipssix.png'
-import chipsfour from '../../Assets/HomePageAssets/shopsAssets/chipsfour.png'
-import chipstwodetails from '../../Assets/HomePageAssets/shopsAssets/chipstwodetails.png'
-import chipsdetailsOne from '../../Assets/HomePageAssets/shopsAssets/chipsdetailsOne.png'
-import chipsthreedetails from '../../Assets/HomePageAssets/shopsAssets/chipsthreedetails.png'
-import chipsfourdetails from '../../Assets/HomePageAssets/shopsAssets/chipsfourdetails.png'
-import chipsfivedetails from '../../Assets/HomePageAssets/shopsAssets/chipsfivedetails.png'
-import chipssixdetails from '../../Assets/HomePageAssets/shopsAssets/chipssixdetails.png'
-import chipsseven from '../../Assets/HomePageAssets/shopsAssets/chipsseven.png'
-import chipseight from '../../Assets/HomePageAssets/shopsAssets/chipseight.png'
-import chipssevendetails from '../../Assets/HomePageAssets/shopsAssets/chipssevendetails.png'
-import chipseightdetails from '../../Assets/HomePageAssets/shopsAssets/chipseightdetails.png'
-import chipsnine from '../../Assets/HomePageAssets/shopsAssets/chipsnine.png'
-import chipsten from '../../Assets/HomePageAssets/shopsAssets/chipsten.png'
-import chipsninedetails from '../../Assets/HomePageAssets/shopsAssets/chipsninedetails.png'
-import chipelevens from '../../Assets/HomePageAssets/shopsAssets/chipelevens.png'
-import chipelevensdetails from '../../Assets/HomePageAssets/shopsAssets/chipelevensdetails.png'
-import chiptwelve from '../../Assets/HomePageAssets/shopsAssets/chiptwelve.png'
-import chiptwelvedetails from '../../Assets/HomePageAssets/shopsAssets/chiptwelvedetails.png'
-import chiptwelve_onedetails from '../../Assets/HomePageAssets/shopsAssets/chiptwelve_onedetails.png'
-import chiptwelve_one from '../../Assets/HomePageAssets/shopsAssets/chiptwelve_one.png'
-import chiptwelve_two from '../../Assets/HomePageAssets/shopsAssets/chiptwelve_two.png'
-import chiptwelve_twodetails from '../../Assets/HomePageAssets/shopsAssets/chiptwelve_twodetails.png'
-import chiptwelve_three from '../../Assets/HomePageAssets/shopsAssets/chiptwelve_three.png'
-import chiptwelve_threedetails from '../../Assets/HomePageAssets/shopsAssets/chiptwelve_threedetails.png'
-import chiptwelve_four from '../../Assets/HomePageAssets/shopsAssets/chiptwelve_four.png'
-import chiptwelve_fourdetails from '../../Assets/HomePageAssets/shopsAssets/chiptwelve_fourdetails.png'
+import React, { useState, useEffect } from 'react';
+import { Card, Table, Modal, Button } from 'react-bootstrap';
+
+import quinoasundriedtomatostd from '../../Assets/Yallachips/quinoasundriedtomatostd.png'
+import quinoasourcreamchive from '../../Assets/Yallachips/quinoasourcreamchive.png'
+import quinoachillifreshlime from '../../Assets/Yallachips/quinoachillifreshlime.png'
+import lentilchipscreamydil from '../../Assets/Yallachips/lentilchipscreamydil.png'
+import lentilchipschillilemon from '../../Assets/Yallachips/lentilchipschillilemon.png'
+import hummuschipsseasalt from '../../Assets/Yallachips/hummuschipsseasalt.png'
+import hummuschipschillilemon from '../../Assets/Yallachips/hummuschipschillilemon.png'
+
+import cheese from '../../Assets/Yallachips/cheese.png'
+import pepper from '../../Assets/Yallachips/pepper.png'
+import tomatoket from '../../Assets/Yallachips/tomatoket.png'
+import normalchilli from '../../Assets/Yallachips/normalchilli.png'
+import normalketchup from '../../Assets/Yallachips/normalketchup.png'
+import normalsaltvinegar from '../../Assets/Yallachips/normalsaltvinegar.png'
+import normalcheese from '../../Assets/Yallachips/normalcheese.png'
+import normalsalt from '../../Assets/Yallachips/normalsalt.png'
+
+import Doritonachocheese from '../../Assets/Yallachips/Doritonachocheese.png'
+import Doritosweetchilli from '../../Assets/Yallachips/Doritosweetchilli.png'
+import Sunbitebitescheeseherbs from '../../Assets/Yallachips/Sunbitebitescheeseherbs.png'
+import Sunbiteoliveoregano from '../../Assets/Yallachips/Sunbiteoliveoregano.png'
+import RealCrispssweetchilli from '../../Assets/Yallachips/RealCrispssweetchilli.png'
+import RealCrispsstrongcheeseonion from '../../Assets/Yallachips/RealCrispsstrongcheeseonion.png'
+import RealCrispsjalapenopepper from '../../Assets/Yallachips/RealCrispsjalapenopepper.png'
+import RealCrispsseasalt from '../../Assets/Yallachips/RealCrispsseasalt.png'
+import RealCrispsseasaltmaltvinegar from '../../Assets/Yallachips/RealCrispsseasaltmaltvinegar.png'
+
+import BurstSweetChilli from '../../Assets/Yallachips/BurstSweetChilli.png'
+import BurstSeaSalt from '../../Assets/Yallachips/BurstSeaSalt.png'
+import BurstSaltBlackPepper from '../../Assets/Yallachips/BurstSaltBlackPepper.png'
+import BurstMatureChed from '../../Assets/Yallachips/BurstMatureChed.png'
+
+import Pringlesoriginal from '../../Assets/Yallachips/Pringlesoriginal.png'
+import Pringlessourcreamonion from '../../Assets/Yallachips/Pringlessourcreamonion.png'
+import Pringleshotspicy from '../../Assets/Yallachips/Pringleshotspicy.png'
+import Pringlessaltvinegar from '../../Assets/Yallachips/Pringlessaltvinegar.png'
+import Pringlesketchup from '../../Assets/Yallachips/Pringlesketchup.png'
+
 import AOS from 'aos';
 import Image from 'next/image';
 import '../shopStyle.css';
-import { Button, Col, Row } from 'react-bootstrap';
-import { IoMdArrowRoundBack } from "react-icons/io";
-import Popup from 'reactjs-popup';
 import '../shopButton.css';
 import 'reactjs-popup/dist/index.css';
-import { ImCross } from "react-icons/im";
 
 const YallaChipsShops = () => {
   const [show, setShow] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
-  const values = [true, 'sm-down', 'md-down', 'lg-down', 'xl-down', 'xxl-down'];
-  const [fullscreen, setFullscreen] = useState(true);
-
+  const [category, setCategory] = useState('All');
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
 
   const handleClose = () => setShow(false);
-
-
-
-  function handleShow(product) {
-    setFullscreen(product);
+  const handleShow = (product) => {
     setSelectedProduct(product);
     setShow(true);
-  }
+  };
 
   const cards = [
     {
-      title: 'Walkers Ready Salted',
-      description: 'Healthy Crispy Chips',
-      image: chipsone,
-      detaildes:
-        'Produced in the UAE! Vegan friendly Gluten Free MSG Free No Artificial Colours No Artificial Flavours No Cholesterol No Preservatives No Trans Fat Non-GMO',
-      detailsImage: chipstwodetails,
+      title: 'EAT REAL CHIPS (quinoa sundried tomato & rstd)',
+      description: 'Gluten Free',
+      image: quinoasundriedtomatostd,
+      detaildes: "Gluten Free",
+      detailsImage: quinoasundriedtomatostd,
+      Weight_gram: '30g',
+      Packing_Case: '12',
+      Category: 'Vegan Chips',
+    },
+    {
+      title: 'EAT REAL CHIPS (quinoa sour cream & chive)',
+      description: 'Gluten Free',
+      image: quinoasourcreamchive,
+      detaildes: "Gluten Free",
+      detailsImage: quinoasourcreamchive,
+      Weight_gram: '30g',
+      Packing_Case: '12',
+      Category: 'Vegan Chips',
+    },
+    {
+      title: 'EAT REAL CHIPS (quinoa chilli & fresh lime)',
+      description: 'Gluten Free',
+      image: quinoachillifreshlime,
+      detaildes: "Gluten Free",
+      detailsImage: quinoachillifreshlime,
+      Weight_gram: '30g',
+      Packing_Case: '12',
+      Category: 'Vegan Chips',
+    },
+    {
+      title: 'EAT REAL CHIPS (lentil chips creamy dil)',
+      description: 'Gluten Free',
+      image: lentilchipscreamydil,
+      detaildes: "Gluten Free",
+      detailsImage: lentilchipscreamydil,
+      Weight_gram: '40g',
+      Packing_Case: '12',
+      Category: 'Vegan Chips',
+    },
 
+    {
+      title: 'EAT REAL CHIPS (hummus chips chilli & lemon)',
+      description: 'Gluten Free',
+      image: lentilchipschillilemon,
+      detaildes: "Gluten Free",
+      detailsImage: lentilchipschillilemon,
+      Weight_gram: '45g',
+      Packing_Case: '12',
+      Category: 'Vegan Chips',
+    },
+
+    {
+      title: 'EAT REAL CHIPS (hummus chips sea salt)',
+      description: 'Gluten Free',
+      image: hummuschipsseasalt,
+      detaildes: "Gluten Free",
+      detailsImage: hummuschipsseasalt,
+      Weight_gram: '45g',
+      Packing_Case: '12',
+      Category: 'Vegan Chips',
+    },
+
+    {
+      title: 'EAT REAL CHIPS (hummus chips chilli& lemon)',
+      description: 'Gluten Free',
+      image: hummuschipschillilemon,
+      detaildes: "Gluten Free",
+      detailsImage: hummuschipschillilemon,
+      Weight_gram: '45g',
+      Packing_Case: '12',
+      Category: 'Vegan Chips',
+    },
+
+    {
+      title: 'LAYS FORNO (cheese)',
+      description: 'FORNO CHIPS',
+      image: cheese,
+      detaildes: "FORNO CHIPS",
+      detailsImage: cheese,
+      Weight_gram: '43g',
+      Packing_Case: '21',
+      Category: 'Baked Chips',
     },
     {
-      title: 'Kitco Bites Cheese Balls',
-      description: 'Healthy Crispy Chips',
-      image: chipstwo,
-      detaildes:
-        'No artificial colors, baked not fried.',
-      detailsImage: chipsdetailsOne,
+      title: 'LAYS FORNO (pepper)',
+      description: 'FORNO (pepper)',
+      image: pepper,
+      detaildes: "FORNO (pepper)",
+      detailsImage: pepper,
+      Weight_gram: '43g',
+      Packing_Case: '21',
+      Category: 'Baked Chips',
     },
     {
-      title: 'Walkers Cheese & Onion',
-      description: 'Healthy Crispy Chips',
-      image: chipsthree,
-      detaildes:
-        'Produced in the UAE! Vegan friendly Gluten Free MSG Free No Artificial Colours No Artificial Flavours No Cholesterol No Preservatives No Trans Fat Non-GMO',
-      detailsImage: chipsthreedetails,
+      title: 'LAYS FORNO (tomato ket)',
+      description: 'FORNO (tomato ket)',
+      image: tomatoket,
+      detaildes: "FORNO (tomato ket)",
+      detailsImage: tomatoket,
+      Weight_gram: '40g',
+      Packing_Case: '21',
+      Category: 'Baked Chips',
     },
     {
-      title: 'Hunter Red Rice Bites',
-      description: 'Healthy Crispy Chips',
-      image: chipsfour,
-      detaildes:
-        'Produced in the UAE! Vegan friendly Gluten Free MSG Free No Artificial Colours No Artificial Flavours No Cholesterol No Preservatives No Trans Fat Non-GMO',
-      detailsImage: chipsfourdetails,
+      title: 'LAYS NORMAL (chilli)',
+      description: 'NORMAL (chilli)',
+      image: normalchilli,
+      detaildes: "NORMAL (chilli)",
+      detailsImage: normalchilli,
+      Weight_gram: '40g',
+      Packing_Case: '50',
+      Category: 'Baked Chips',
     },
     {
-      title: 'Hunter Black Rice Bites',
-      description: 'Healthy Crispy Chips',
-      image: chipsfive,
-      detaildes:
-        'Produced in the UAE! Vegan friendly Gluten Free MSG Free No Artificial Colours No Artificial Flavours No Cholesterol No Preservatives No Trans Fat Non-GMO',
-      detailsImage: chipsfivedetails,
+      title: 'LAYS NORMAL (ketchup)',
+      description: 'NORMAL (ketchup)',
+      image: normalketchup,
+      detaildes: "NORMAL (ketchup)",
+      detailsImage: normalketchup,
+      Weight_gram: '40g',
+      Packing_Case: '50',
+      Category: 'Baked Chips',
     },
     {
-      title: 'Walkers Sour Cream & Chive',
-      description: 'Healthy Crispy Chips',
-      image: chipssix,
-      detaildes:
-        'Containing 70% less fat than potato crisps on average, these tasty crisps provide a great alternative to conventional snacks and come in a number of delicious flavors. No preservatives No artificial colors Suitable for Vegetarians No MSG',
-      detailsImage: chipssixdetails,
+      title: 'LAYS NORMAL (salt & vinegar)',
+      description: 'NORMAL (salt & vinegar)',
+      image: normalsaltvinegar,
+      detaildes: "NORMAL (salt & vinegar)",
+      detailsImage: normalsaltvinegar,
+      Weight_gram: '40g',
+      Packing_Case: '50',
+      Category: 'Baked Chips',
     },
     {
-      title: "Lay's Forno Black Pepper",
-      description: 'Healthy Crispy Chips',
-      image: chipsseven,
-      detaildes:
-        'Dried Potatoes corn starch vegetable oils sunflower and palmolein sugar WHEAT FLOUR emulsifier SOYA LECITHIN black pepper seasoning Salt lactose maltodextrin butter milk powder sugar black pepper powder flavor enhancers E621 E635 onion powder garlic powder acidity regulator anticaking agent natural color.',
-      detailsImage: chipssevendetails,
+      title: 'LAYS NORMAL (cheese)',
+      description: 'NORMAL (cheese)',
+      image: normalcheese,
+      detaildes: "NORMAL (cheese)",
+      detailsImage: normalcheese,
+      Weight_gram: '40g',
+      Packing_Case: '50',
+      Category: 'Baked Chips',
     },
     {
-      title: "Lay's Forno Authentic Cheese",
-      description: 'Healthy Crispy Chips',
-      image: chipseight,
-      detaildes:
-        'Dried Potatoes modified corn starch vegetable oils sunflower and palmolein sugar WHEAT FLOUR emulsifier SOYA LECITHIN authentic cheese seasoning onion powder whey powder salt wheat flour flavor enhancers E621 E635 sugar vegetable oil coconut palm acidity regulator anticaking agentcheese powder natural color.',
-      detailsImage: chipseightdetails,
+      title: 'LAYS NORMAL (Salt)',
+      description: 'NORMAL (Salt)',
+      image: normalsalt,
+      detaildes: "NORMAL (Salt)",
+      detailsImage: normalsalt,
+      Weight_gram: '40g',
+      Packing_Case: '50',
+      Category: 'Baked Chips',
+    },
+
+    {
+      title: 'Doritos (nacho cheese)',
+      description: 'HANDCOOKED CRISPS',
+      image: Doritonachocheese,
+      detaildes: "HANDCOOKED CRISPS",
+      detailsImage: Doritonachocheese,
+      Weight_gram: '48g',
+      Packing_Case: '20',
+      Category: 'Bread Chips',
     },
     {
-      title: 'Sunbites Cheese and Herbs',
-      description: 'Healthy Crispy Chips',
-      image: chipsnine,
-      detaildes:
-        'Sunbites Cheese and Herbs Bread Bites are a delicious and satisfying snack option. Made with real cheese and a blend of herbs, these bites are packed with flavour. They are the perfect size for snacking on the go or enjoying a midday treat.',
-      detailsImage: chipseightdetails,
+      title: 'Doritos (sweet chilli)',
+      description: 'HANDCOOKED CRISPS',
+      image: Doritosweetchilli,
+      detaildes: "HANDCOOKED CRISPS",
+      detailsImage: Doritosweetchilli,
+      Weight_gram: '48g',
+      Packing_Case: '20',
+      Category: 'Bread Chips',
     },
     {
-      title: 'Sunbites Olive And Oregano',
-      description: 'Healthy Crispy Chips',
-      image: chipsten,
-      detaildes:
-        'Sunbites Olive and Oregano Bread Bites are a delicious and healthy snack option. Made with whole grain oats and real olive and oregano flavour, these bread bites are packed with flavour and nutrition.',
-      detailsImage: chipsninedetails,
+      title: 'Sunbitebread bites (cheese & herbs)',
+      description: 'HANDCOOKED CRISPS',
+      image: Sunbitebitescheeseherbs,
+      detaildes: "HANDCOOKED CRISPS",
+      detailsImage: Sunbitebitescheeseherbs,
+      Weight_gram: '50g',
+      Packing_Case: '20',
+      Category: 'Bread Chips',
     },
     {
-      title: 'Doritos Nacho Cheese',
-      description: 'Healthy Crispy Chips',
-      image: chipelevens,
-      detaildes:
-        'Are you up for a challenge? Yes? Then, grab a bag of intense flavoured, extremely crunchy Doritos Nacho Cheese Tortilla Chips and get ready to make some unforgettable memories. Bring a BOLD change to your snacking experience. Serve Doritos Nacho Cheese Tortilla Chips at your family next get-together, or take it to a picnic with friends. Share your love of Doritos tortilla chips no matter what the occasion. Spark up every moment and live it to the MAX with Doritos!',
-      detailsImage: chipelevensdetails,
+      title: 'Sunbitebread bites (olive & oregano)',
+      description: 'HANDCOOKED CRISPS',
+      image: Sunbiteoliveoregano,
+      detaildes: "HANDCOOKED CRISPS",
+      detailsImage: Sunbiteoliveoregano,
+      Weight_gram: '50g',
+      Packing_Case: '20',
+      Category: 'Bread Chips',
     },
     {
-      title: 'Doritos flamin hot',
-      description: 'Healthy Crispy Chips',
-      image: chiptwelve,
-      detaildes:
-        'Doritos Flaming Hot Nacho Flavoured Tortilla Chips are a spicy twist on the classic nacho cheese flavour. These crunchy tortilla chips are dusted with a fiery blend of spices that will leave your taste buds tingling. Perfect for those who love a bold and intense snacking experience, these chips pack a punch of heat that will keep you coming back for more.',
-      detailsImage: chiptwelvedetails,
+      title: 'Real Crisps (sweet chilli)',
+      description: 'HANDCOOKED CRISPS',
+      image: RealCrispssweetchilli,
+      detaildes: "HANDCOOKED CRISPS",
+      detailsImage: RealCrispssweetchilli,
+      Weight_gram: '35g',
+      Packing_Case: '24',
+      Category: 'Bread Chips',
     },
     {
-      title: 'Doritos Sweet Chili',
-      description: 'Healthy Crispy Chips',
-      image: chiptwelve_one,
-      detaildes:
-        'Are you up for a challenge? Yes? Then, grab a bag of intense flavoured, extremely crunchy Doritos Sweet Chili Tortilla Chips and get ready to make some unforgettable memories. Bring a BOLD change to your snacking experience. Serve Doritos Sweet Chili Tortilla Chips at your next family get-together, or take it to a picnic with friends. Share your love of Doritos tortilla chips no matter what the occasion. Spark up every moment and live it to the MAX with Doritos!',
-      detailsImage: chiptwelve_onedetails,
+      title: 'Real Crisps (strong cheese & onion)',
+      description: 'HANDCOOKED CRISPS',
+      image: RealCrispsstrongcheeseonion,
+      detaildes: "HANDCOOKED CRISPS",
+      detailsImage: RealCrispsstrongcheeseonion,
+      Weight_gram: '35g',
+      Packing_Case: '24',
+      Category: 'Bread Chips',
     },
     {
-      title: 'HOT & SPICY TORTILLA',
-      description: 'Healthy Crispy Chips',
-      image: chiptwelve_two,
-      detaildes:
-        'Quest™ Hot & Spicy Tortilla Style Protein Chips bring the heat you’re looking for, with a satisfying crunch, mouth-watering flavor, and 19g of protein. The big taste of athlete-worthy nutrition has never been hotter than the big heat of Quest Hot & Spicy Protein Chips.',
-      detailsImage: chiptwelve_twodetails,
+      title: 'Real Crisps (jalapeno pepper)',
+      description: 'HANDCOOKED CRISPS',
+      image: RealCrispsjalapenopepper,
+      detaildes: "HANDCOOKED CRISPS",
+      detailsImage: RealCrispsjalapenopepper,
+      Weight_gram: '35g',
+      Packing_Case: '24',
+      Category: 'Bread Chips',
     },
     {
-      title: 'CHILI LIME TORTILLA',
-      description: 'Healthy Crispy Chips',
-      image: chiptwelve_three,
-      detaildes:
-        'Want a tangy, spicy tortilla chip you can enjoy any time? Lucky you! We made Quest Chili Lime Tortilla Style Protein Chips to feed your flavor cravings! Keto-friendly.',
-      detailsImage: chiptwelve_threedetails,
+      title: 'Real Crisps ( sea salt)',
+      description: 'HANDCOOKED CRISPS',
+      image: RealCrispsseasalt,
+      detaildes: "HANDCOOKED CRISPS",
+      detailsImage: RealCrispsseasalt,
+      Weight_gram: '35g',
+      Packing_Case: '24',
+      Category: 'Bread Chips',
     },
     {
-      title: 'CHILI LIME TORTILLA',
-      description: 'Healthy Crispy Chips',
-      image: chiptwelve_four,
-      detaildes:
-        'Want a cheesy, savory tortilla chip you can enjoy any time? Lucky you! We made Quest Nacho Cheese Tortilla Style Protein Chips to feed your flavor cravings. Keto-friendly.',
-      detailsImage: chiptwelve_fourdetails,
+      title: 'Real Crisps ( sea salt & malt vinegar)',
+      description: 'HANDCOOKED CRISPS',
+      image: RealCrispsseasaltmaltvinegar,
+      detaildes: "HANDCOOKED CRISPS",
+      detailsImage: RealCrispsseasaltmaltvinegar,
+      Weight_gram: '35g',
+      Packing_Case: '24',
+      Category: 'Bread Chips',
+    },
+
+    {
+      title: 'Burst Crisps Sweet Chilli',
+      description: 'Burst Crisps',
+      image: BurstSweetChilli,
+      detaildes: "Burst Crisps",
+      detailsImage: BurstSweetChilli,
+      Weight_gram: '40g',
+      Packing_Case: '20',
+      Category: 'HandCooked Chips',
+    },
+    {
+      title: 'Burst Crisps Sea Salt',
+      description: 'Burst Crisps',
+      image: BurstSeaSalt,
+      detaildes: "Burst Crisps",
+      detailsImage: BurstSeaSalt,
+      Weight_gram: '40g',
+      Packing_Case: '20',
+      Category: 'HandCooked Chips',
+    },
+
+    {
+      title: 'Burst Crisps Salt & Black Pepper',
+      description: 'Burst Crisps',
+      image: BurstSaltBlackPepper,
+      detaildes: "Burst Crisps",
+      detailsImage: BurstSaltBlackPepper,
+      Weight_gram: '40g',
+      Packing_Case: '20',
+      Category: 'HandCooked Chips',
+    },
+
+    {
+      title: 'Burst Crisps Mature Ched',
+      description: 'Burst Crisps',
+      image: BurstMatureChed,
+      detaildes: "Burst Crisps",
+      detailsImage: BurstMatureChed,
+      Weight_gram: '40g',
+      Packing_Case: '20',
+      Category: 'HandCooked Chips',
+    },
+
+
+    {
+      title: 'Pringles Chips (original)',
+      description: 'Pringles Chips',
+      image: Pringlesoriginal,
+      detaildes: "Pringles Chips",
+      detailsImage: Pringlesoriginal,
+      Weight_gram: '40g',
+      Packing_Case: '12',
+      Category: 'Stix Chips',
+    },
+
+    {
+      title: 'Pringles Chips (sour cream onion)',
+      description: 'Pringles Chips',
+      image: Pringlessourcreamonion,
+      detaildes: "Pringles Chips",
+      detailsImage: Pringlessourcreamonion,
+      Weight_gram: '40g',
+      Packing_Case: '12',
+      Category: 'Stix Chips',
+    },
+
+    {
+      title: 'Pringles Chips (hot & spicy)',
+      description: 'Pringles Chips',
+      image: Pringleshotspicy,
+      detaildes: "Pringles Chips",
+      detailsImage: Pringleshotspicy,
+      Weight_gram: '40g',
+      Packing_Case: '12',
+      Category: 'Stix Chips',
+    },
+
+    {
+      title: 'Pringles Chips (salt & vinegar)',
+      description: 'Pringles Chips',
+      image: Pringlessaltvinegar,
+      detaildes: "Pringles Chips",
+      detailsImage: Pringlessaltvinegar,
+      Weight_gram: '40g',
+      Packing_Case: '12',
+      Category: 'Stix Chips',
+    },
+
+    {
+      title: 'Pringles Chips (ketchup)',
+      description: 'Pringles Chips',
+      image: Pringlesketchup,
+      detaildes: "Pringles Chips",
+      detailsImage: Pringlesketchup,
+      Weight_gram: '40g',
+      Packing_Case: '12',
+      Category: 'Stix Chips',
     },
   ];
 
-  const relatedProducts = useMemo(() => {
-    if (!selectedProduct) return [];
-    return cards
-      .filter(
-        (product) => product.category === selectedProduct.category
-      )
-      .slice(0, 3);
-  }, [selectedProduct]);
+  const categories = ['All', ...new Set(cards.map(item => item.Category))];
+  const filteredChips = category === 'All' ? cards : cards.filter(item => item.Category === category);
 
   return (
     <div className="shop-container">
-      {cards.map((card, index) => (
-        <Card key={index} className='mt-3 All_shop_card_class'
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          onClick={() => handleShow(card)}
-        >
-          <div className='card-content'>
-            <div className='image_bars' >
-              <Image src={card.image} alt={card.title} />
-            </div>
-            <Card.Body className='text-center card-body'>
-              <h1 className='bars_title'>{card.title}</h1>
-              <p className='bars_des'>{card.description}</p>
-              <div className='overlay'></div>
-              <div className="view-details-btn-container">
-                {/* <Button variant="primary" onClick={() => handleShow(card)} className="view-details-btn">View Details</Button> */}
-                <button className="btn-12" onClick={() => handleShow(card)} ><span>View Details</span></button>
-                {/* <Button onClick={() => handleShow(card)} >View Details</Button> */}
+      <div className="category-buttons text-center mt-3">
+        {categories.map((cat, index) => (
+          <button key={index} className="mx-1 btn_subcategory" onClick={() => setCategory(cat)}>
+            <span style={{ fontSize: '14px', fontWeight: '500' }} >{cat}</span>
+          </button>
+        ))}
+      </div>
+
+      <div className="shop-container">
+        {filteredChips.map((card, index) => (
+          <Card key={index} className='All_shop_card_class'
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            onClick={() => handleShow(card)}
+          >
+            <div className='card-content'>
+              <div className='image_bars' >
+                <Image src={card.image} alt={card.title} className='image_drink' />
               </div>
-            </Card.Body>
-          </div>
-        </Card>
-      ))}
+              <Card.Body className='text-center card-body'>
+                <h1 className='bars_title'>{card.title}</h1>
+                <p className='bars_des'>{card.description}</p>
+                <div className='overlay'></div>
+                <div className="view-details-btn-container">
+                  <button className="btn-12" onClick={() => handleShow(card)} ><span>View Details</span></button>
+                </div>
+              </Card.Body>
+            </div>
+          </Card>
+        ))}
+      </div>
 
       {selectedProduct && (
-        <Popup open={show} closeOnDocumentClick onClose={handleClose} >
-          <div className="modal-content">
-
-            <div className='close_btn' >
-            <ImCross onClick={handleClose} style={{ cursor: 'pointer', color:'red' }} />
+        <Modal show={show} onHide={handleClose} centered size='lg'>
+          <Modal.Header closeButton>
+            <Modal.Title>{selectedProduct.title}</Modal.Title>
+          </Modal.Header>
+          <Modal.Body className="text-center">
+            <div className="detailsImage_selected_container">
+              <Image src={selectedProduct.detailsImage} alt={selectedProduct.title} className="detailsImage_selected" />
             </div>
-            <div className="text-center">
-              <div className='detailsImage_selected_container' >
-                <Image src={selectedProduct.detailsImage} alt={selectedProduct.title} className='detailsImage_selected' />
-              </div>
-
-              <h2 className='selected_title' >{selectedProduct.title}</h2>
-
-              <div className='selected_des_container' >
-                <p className='selected_des' >{selectedProduct.detaildes}</p>
-              </div>
-            </div>
-          </div>
-        </Popup>
+            <Table striped bordered hover responsive>
+              <thead>
+                <tr>
+                  <th style={{ backgroundColor: '#abe6f6' }}>Brand</th>
+                  <th style={{ backgroundColor: '#abe6f6' }}>Weight (grams)</th>
+                  <th style={{ backgroundColor: '#abe6f6' }}>Packing / Case</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{selectedProduct.description}</td>
+                  <td>{selectedProduct.Weight_gram}</td>
+                  <td>{selectedProduct.Packing_Case}</td>
+                </tr>
+              </tbody>
+            </Table>
+          </Modal.Body>
+        </Modal>
       )}
     </div>
   );

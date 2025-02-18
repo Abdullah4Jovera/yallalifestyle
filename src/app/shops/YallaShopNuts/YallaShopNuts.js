@@ -1,27 +1,16 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import Card from 'react-bootstrap/Card';
+import { Card, Modal ,Table } from 'react-bootstrap';
 import Image from 'next/image';
 import AOS from 'aos';
-import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
-import { Button } from 'react-bootstrap';
-import { IoMdArrowRoundBack } from "react-icons/io";
 import '../shopStyle.css';
 import '../shopButton.css';
-import nutone from '../../Assets/HomePageAssets/shopsAssets/nutone.png';
-import nuttwo from '../../Assets/HomePageAssets/shopsAssets/nuttwo.png';
-import nutthree from '../../Assets/HomePageAssets/shopsAssets/nutthree.png';
-import nutfour from '../../Assets/HomePageAssets/shopsAssets/nutfour.png';
-import nutfive from '../../Assets/HomePageAssets/shopsAssets/nutfive.png';
-import nutsix from '../../Assets/HomePageAssets/shopsAssets/nutsix.png';
-import nutsdetailsone from '../../Assets/HomePageAssets/shopsAssets/nutsdetailsone.png';
-import nutsdetailstfive from '../../Assets/HomePageAssets/shopsAssets/nutsdetailstfive.png';
-import nutsdetailstfour from '../../Assets/HomePageAssets/shopsAssets/nutsdetailstfour.png';
-import nutsdetails from '../../Assets/HomePageAssets/shopsAssets/nutsdetails.png';
-import nutsdetailsthree from '../../Assets/HomePageAssets/shopsAssets/nutsdetailsthree.png';
-import nutsdetailstwo from '../../Assets/HomePageAssets/shopsAssets/nutsdetailstwo.png';
-import { ImCross } from "react-icons/im";
+
+import RawNuts from '../../Assets/YallaNuts/RawNuts.png'
+import dryfruits from '../../Assets/YallaNuts/dryfruits.png'
+import cocktailnuts from '../../Assets/YallaNuts/cocktailnuts.png'
+import cashewnuts from '../../Assets/YallaNuts/cashewnuts.png'
 
 const YallaShopNuts = () => {
     const [show, setShow] = useState(false);
@@ -31,74 +20,61 @@ const YallaShopNuts = () => {
         AOS.init({ duration: 1000 });
     }, []);
 
+    const handleClose = () => setShow(false);
     const handleShow = (product) => {
         setSelectedProduct(product);
         setShow(true);
-    };
-
-    const handleClose = () => {
-        setShow(false);
-        setSelectedProduct(null);
-    };
+    }
 
     const cards = [
         {
-            title: 'MANI YUMMY BERRY N’ NUTS',
-            description: 'A high energy snack bar',
-            image: nutone,
-            detaildes:
-                'Mix of dry roasted almonds and pistachio kernels with raisins, cranberries and roasted pumpkin seeds.',
-            detailsImage: nutsdetailsone,
+            title: 'Tong Garden (cashew nuts)',
+            description: 'Raw Nuts',
+            image: RawNuts,
+            detaildes: "HEALTHY NUTS",
+            detailsImage: RawNuts,
+            Weight_gram: '150ml',
+            Packing_Case: '12',
+            Weight_gram: '330ml',
+            Packing_Case: '12',
         },
         {
-            title: 'MANI YUMMY SEA SALT',
-            description: 'A high energy snack bar',
-            image: nuttwo,
-            detaildes:
-                'Carefully selected large, crunchy cashews, cleaned then dry roasted with fresh ground black pepper and sea salt.',
-            detailsImage: nutsdetailstfive,
+            title: 'Tong Garden (cocktail nuts)',
+            description: 'Cocktail Nuts',
+            image: dryfruits,
+            detaildes: "Cocktail Nuts",
+            detailsImage: dryfruits,
+            Weight_gram: '150ml',
+            Packing_Case: '12',
         },
         {
-            title: 'MANI YUMMY SWEET COCKTAIL',
-            description: 'A high energy snack bar',
-            image: nutthree,
-            detaildes:
-                'A nutritious blend of pistachios, almonds, cashew nuts, sultana raisins, pineapple and papaya cubes.',
-            detailsImage: nutsdetailstfour,
+            title: 'Healthy Raw Nuts w/ dry fruits',
+            description: 'Dry Fruits',
+            image: cocktailnuts,
+            detaildes: "Cocktail Nuts",
+            detailsImage: cocktailnuts,
+            Weight_gram: '180ml',
+            Packing_Case: '12',
         },
         {
-            title: 'MANI YUMMY BARBEQUE',
-            description: 'A high energy snack bar',
-            image: nutfour,
-            detaildes:
-                'Heart healthy almonds, dry-roasted with a delicious barbecue flavor.',
-            detailsImage: nutsdetails,
+            title: 'Nutsy Healthy Raw Nuts',
+            description: 'Healthy Raw Nuts',
+            image: cashewnuts,
+            detaildes: "Cocktail Nuts",
+            detailsImage: cashewnuts,
+            Weight_gram: '180ml',
+            Packing_Case: '12',
         },
-        {
-            title: 'SAHALE POMEGRANATE VANILLA',
-            description: 'A high energy snack bar',
-            image: nutfive,
-            detaildes:
-                'Unique combinations of premium nuts, dried fruits, and exotic spices, each reflecting a beautiful location, culture or culinary tradition. Gluten Free MSG Free No Artifical Colours No Artificial Flavours No Cholesterol No Preservatives No Trans Fat Non-GMO',
-            detailsImage: nutsdetailsthree,
-        },
-        {
-            title: 'SAHALE HONEY ALMONDS',
-            description: 'A high energy snack bar',
-            image: nutsix,
-            detaildes:
-                'Unique combinations of premium nuts, dried fruits, and exotic spices, each reflecting a beautiful location, culture or culinary tradition. Gluten Free MSG Free No Artifical Colours No Artificial Flavours No Cholesterol No Preservatives No Trans Fat Non-GMO',
-            detailsImage: nutsdetailstwo,
-        },
+
     ];
 
     return (
         <div className="shop-container">
             {cards.map((card, index) => (
-                <Card key={index} className="mt-3 All_shop_card_class" data-aos="fade-up" data-aos-duration="1000" onClick={() => handleShow(card)}>
+                <Card key={index} className=" nuts_seperate_class All_shop_card_class" data-aos="fade-up" data-aos-duration="1000" onClick={() => handleShow(card)}>
                     <div className="card-content">
                         <div className="image_bars">
-                            <Image src={card.image} alt={card.title} />
+                            <Image src={card.image} alt={card.title} className='image_drink' />
                         </div>
                         <Card.Body className="text-center card-body">
                             <h1 className="bars_title">{card.title}</h1>
@@ -115,25 +91,32 @@ const YallaShopNuts = () => {
             ))}
 
             {selectedProduct && (
-                <Popup open={show} closeOnDocumentClick onClose={handleClose}>
-                    <div className="modal-content">
-
-                        <div className='close_btn' >
-                            <ImCross onClick={handleClose} style={{ cursor: 'pointer', color: 'red' }} />
+                <Modal show={show} onHide={handleClose} centered size='lg'>
+                    <Modal.Header closeButton>
+                        <Modal.Title>{selectedProduct.title}</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body className="text-center">
+                        <div className="detailsImage_selected_container">
+                            <Image src={selectedProduct.detailsImage} alt={selectedProduct.title} className="detailsImage_selected" />
                         </div>
-                        <div className="text-center">
-                            <div className='detailsImage_selected_container' >
-                                <Image src={selectedProduct.detailsImage} alt={selectedProduct.title} className='detailsImage_selected' />
-                            </div>
-
-                            <h2 className='selected_title' >{selectedProduct.title}</h2>
-
-                            <div className='selected_des_container' >
-                                <p className='selected_des' >{selectedProduct.detaildes}</p>
-                            </div>
-                        </div>
-                    </div>
-                </Popup>
+                        <Table striped bordered hover responsive>
+                            <thead>
+                                <tr>
+                                    <th style={{ backgroundColor: '#abe6f6' }}>Brand</th>
+                                    <th style={{ backgroundColor: '#abe6f6' }}>Weight (grams)</th>
+                                    <th style={{ backgroundColor: '#abe6f6' }}>Packing / Case</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>{selectedProduct.description}</td>
+                                    <td>{selectedProduct.Weight_gram}</td>
+                                    <td>{selectedProduct.Packing_Case}</td>
+                                </tr>
+                            </tbody>
+                        </Table>
+                    </Modal.Body>
+                </Modal>
             )}
         </div>
     );

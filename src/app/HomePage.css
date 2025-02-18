@@ -17,6 +17,11 @@ body {
     font-weight: 500px;
 }
 
+.rcw-message > .rcw-response {
+    background-color: black !important;
+    color: black !important;
+  }
+
 .LinkClass:focus,
 .LinkClass:active,
 .LinkClass:hover {
@@ -25,16 +30,8 @@ body {
     border-radius: 15px;
 }
 
-.HomePageContainer {
-    /* background: linear-gradient(to right, white, #83daf3); */
-}
-
-
 .navHeadClass {
-    /* background: radial-gradient(circle, #4BC6DA, white); */
-    /* background: linear-gradient(to right, white, rgba(75, 198, 218, 0.5)); */
     width: 100%;
-
 }
 
 .cardBlog {
@@ -63,10 +60,6 @@ body {
     height: 60vh;
 }
 
-
-
-
-
 .imageClasslogo {
     width: 100%;
     height: auto;
@@ -74,7 +67,6 @@ body {
     display: flex;
     justify-content: end;
     align-items: end;
-
 }
 
 .dotClass {
@@ -104,16 +96,12 @@ body {
     padding: 20px;
 }
 
-
 @keyframes fadeInUp {
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
-
-
-
 
 .machineInsllated {
     color: #61C5D4;
@@ -126,19 +114,12 @@ body {
     letter-spacing: 4.38px;
 }
 
-
-
-
-
-
-
 .twoCol {
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: start;
-
 }
 
 .numbrcountclass {
@@ -150,8 +131,6 @@ body {
     /* width: 100%;
     max-width: 650px; */
 }
-
-
 .productTag {
     color: rgba(50, 50, 50, 0.43);
     font-family: 'poppins sans-serif';
@@ -161,9 +140,6 @@ body {
     line-height: 100%;
     letter-spacing: 0.18px;
 }
-
-
-
 
 .yallaproduct {
     color: #000;
@@ -185,8 +161,6 @@ body {
     letter-spacing: 0.34px;
 }
 
-
-
 .producttext {
     color: #000;
     text-align: center;
@@ -197,10 +171,6 @@ body {
     line-height: 100%;
     letter-spacing: 0.12px;
 }
-
-
-
-
 
 .viewAllproducts {
     display: flex;
@@ -450,8 +420,8 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 20%;
-    max-width: 200px;
+    width: 30%;
+    max-width: 100px;
 }
 
 .adnocyasContainer {
@@ -1027,11 +997,9 @@ body {
 }
 
 
-
-
-
-
-
+.rcw-message-text {
+    color: black !important;
+}
 
 
 @keyframes fadeIn {

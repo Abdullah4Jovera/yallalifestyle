@@ -21,7 +21,7 @@ const Page = () => {
 
     return (
         <>
-              <HomePageNav />
+            <HomePageNav />
             <div className='machineConatiner_parameter'>
                 <Container >
                     <Link href='/machines'><MdOutlineKeyboardBackspace data-aos="fade-up" className='mt-4' style={{ color: 'black', fontSize: '40px' }} /></Link>

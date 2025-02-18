@@ -8,7 +8,7 @@ import productfour from './Assets/HomePageAssets/productfour.png';
 import Image from 'next/image';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { Container } from 'react-bootstrap';
+import { Container, Card } from 'react-bootstrap';
 import Link from 'next/link';
 
 // Sample JSON data
@@ -54,14 +54,16 @@ function Page() {
             <div className="card_container_product">
                 {jsonData.map((item, index) => (
                     <Link href={item.link} key={index} style={{ textDecoration: 'none' }} >
-                        <div
+                        <Card
                             className={`product_card_yalla ${isLoaded ? 'show' : ''}`}
                             data-aos="fade-up"
                             data-aos-delay={index * 200}
                         >
-                            <Image src={item.image} alt={`product ${index + 1}`} className='yalla_product_image' width={250} height={180} />
-                            <h3 className='product_product_name'>{item.title}</h3>
-                        </div>
+                            <Card.Body>
+                                <Image src={item.image} alt={`product ${index + 1}`} className='yalla_product_image' width={280} height={250} />
+                                <h3 className='product_product_name text-center'>{item.title}</h3>
+                            </Card.Body>
+                        </Card>
                     </Link>
                 ))}
             </div>

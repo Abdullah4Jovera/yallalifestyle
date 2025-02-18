@@ -76,6 +76,51 @@
     transform: scale(1.4) translateY(0) translateZ(0);
 }
 
+/* styles.css */
+.ios-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #25b7cf;
+    /* iOS-style blue */
+    color: white;
+    border-radius: 10px;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.ios-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: #25b7cf;
+    transition: all 0.3s ease;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    z-index: 0;
+    color: #000;
+}
+
+.ios-button:hover {
+    color: #000;
+}
+
+.ios-button:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+    color: #000;
+}
+
+.ios-button:active {
+    background-color: #25b7cf;
+}
+
 /* Responsive Styles */
 
 @media (max-width: 1024px) and (min-width:768px) {
@@ -95,6 +140,7 @@
     .c-button {
         width: 300px;
     }
+
     .yalla_shop_class {
         margin-top: 0.5em;
     }

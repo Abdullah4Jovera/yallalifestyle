@@ -1,244 +1,506 @@
 'use client';
-import React, { useState, useEffect, useMemo } from 'react';
-import Modal from 'react-bootstrap/Modal';
-import Card from 'react-bootstrap/Card';
+import React, { useState, useEffect } from 'react';
+import { Card, Table, Modal, Button } from 'react-bootstrap';
 import Image from 'next/image';
 import AOS from 'aos';
-import barsone from '../../Assets/HomePageAssets/shopsAssets/barsone.png';
-import barstwo from '../../Assets/HomePageAssets/shopsAssets/barstwo.png';
-import barsthree from '../../Assets/HomePageAssets/shopsAssets/barsthree.png';
-import barsfour from '../../Assets/HomePageAssets/shopsAssets/barsfour.png';
-import barsfive from '../../Assets/HomePageAssets/shopsAssets/barsfive.png';
-import barssix from '../../Assets/HomePageAssets/shopsAssets/barssix.png';
-import barsseven from '../../Assets/HomePageAssets/shopsAssets/barsseven.png';
-import barseight from '../../Assets/HomePageAssets/shopsAssets/barseight.png';
-import barnine from '../../Assets/HomePageAssets/shopsAssets/barnine.png';
-import barten from '../../Assets/HomePageAssets/shopsAssets/barten.png';
-import bareleven from '../../Assets/HomePageAssets/shopsAssets/bareleven.png';
-import bartwelve from '../../Assets/HomePageAssets/shopsAssets/bartwelve.png';
-import bartirteen from '../../Assets/HomePageAssets/shopsAssets/bartirteen.png';
-import barfourteen from '../../Assets/HomePageAssets/shopsAssets/barfourteen.png';
-import barfifteen from '../../Assets/HomePageAssets/shopsAssets/barfifteen.png';
-import bars from '../../Assets/HomePageAssets/shopsAssets/bars.png';
-import detailsImageBar from '../../Assets/HomePageAssets/shopsAssets/detailsImageBar.png';
-import barstwodetails from '../../Assets/HomePageAssets/shopsAssets/barstwodetails.png';
-import barsfivedetails from '../../Assets/HomePageAssets/shopsAssets/barsfivedetails.png';
-import barsfourdetails from '../../Assets/HomePageAssets/shopsAssets/barsfourdetails.png';
-import barssixdetails from '../../Assets/HomePageAssets/shopsAssets/barssixdetails.png';
-import barssevendetails from '../../Assets/HomePageAssets/shopsAssets/barssevendetails.png';
-import barelevendetals from '../../Assets/HomePageAssets/shopsAssets/barelevendetals.png'
-import bartwelvedetails from '../../Assets/HomePageAssets/shopsAssets/bartwelvedetails.png'
-import bartenbartendetails from '../../Assets/HomePageAssets/shopsAssets/bartenbartendetails.png'
-import barninedetails from '../../Assets/HomePageAssets/shopsAssets/barninedetails.png'
-import bartirteendetails from '../../Assets/HomePageAssets/shopsAssets/bartirteendetails.png'
-import barfourteendetails from '../../Assets/HomePageAssets/shopsAssets/barfourteendetails.png'
-import barfifteendetails from '../../Assets/HomePageAssets/shopsAssets/barfifteendetails.png'
-import barssisteendetails from '../../Assets/HomePageAssets/shopsAssets/barssisteendetails.png'
+import RaspberryJam from '../../Assets/YallaBars/RaspberryJam.png';
+import PancakeCaramel from '../../Assets/YallaBars/PancakeCaramel.png';
+import ChocolateCream from '../../Assets/YallaBars/ChocolateCream.png';
+import RipVANLowSugarWafeldutchcaramelvanilla from '../../Assets/YallaBars/RipVANLowSugarWafeldutchcaramelvanilla.png';
+import RipVANLowSugarWafelsnickerdoodle from '../../Assets/YallaBars/RipVANLowSugarWafelsnickerdoodle.png';
+import RipVANLowSugarWafelhoneyoats from '../../Assets/YallaBars/RipVANLowSugarWafelhoneyoats.png';
+import RipVANWafelcookiescream from '../../Assets/YallaBars/RipVANWafelcookies&cream.png';
+import RipVANPROTENWafelcookiescream from '../../Assets/YallaBars/RipVANPROTENWafelcookies&cream.png';
+import RipVANPROTEINWafelsnickerdoodle from '../../Assets/YallaBars/RipVANPROTEINWafelsnickerdoodle.png';
+import RipVANPROTEINWafelhoneyoats from '../../Assets/YallaBars/RipVANPROTEINWafelhoney&oats.png';
+import WarriorCrunchsaltedcaramel from '../../Assets/YallaBars/WarriorCrunchsaltedcaramel.png';
+import WarriorCrunchraspberrylemoncheesecake from '../../Assets/YallaBars/WarriorCrunchraspberrylemoncheesecake.png';
+import WarriorCrunchmilkchocococonut from '../../Assets/YallaBars/WarriorCrunchmilkchocococonut.png';
+import WarriorCrunchkeylimepie from '../../Assets/YallaBars/WarriorCrunchkeylimepie.png';
+import WarriorCrunchdarkchocolatepeanut from '../../Assets/YallaBars/WarriorCrunchdarkchocolatepeanut.png';
+import WarriorCrunchchocolatechipcookie from '../../Assets/YallaBars/WarriorCrunchchocolatechipcookie.png';
+import Kitkat from '../../Assets/YallaBars/Kitkat.png';
+import MMChoco from '../../Assets/YallaBars/MMChoco.png'
+import MatesserChoco from '../../Assets/YallaBars/MatesserChoco.png'
+import TwixMultipackChocoBig from '../../Assets/YallaBars/TwixMultipackChocoBig.png'
+import KinderBueno from '../../Assets/YallaBars/KinderBueno.png'
+import SnickersChocoBig from '../../Assets/YallaBars/SnickersChocoBig.png'
+
+import chocolatebrownie from '../../Assets/YallaBars/chocolatebrownie.png'
+import chocolatepeanutbutter from '../../Assets/YallaBars/chocolatepeanutbutter.png'
+import chocochipcookiedough from '../../Assets/YallaBars/chocochipcookiedough.png'
+import cookiescream from '../../Assets/YallaBars/cookiescream.png'
+import doublEchocochunk from '../../Assets/YallaBars/doublEchocochunk.png'
+
+import chocolatebrownieflavour from '../../Assets/YallaBars/chocolatebrownieflavour.png'
+import chocolatehazelnutwhip from '../../Assets/YallaBars/chocolatehazelnutwhip.png'
+import peanutcaramel from '../../Assets/YallaBars/peanutcaramel.png'
+import chocolatechoccaramelcookiedough from '../../Assets/YallaBars/chocolatechoccaramelcookiedough.png'
+import whitechoccookiedough from '../../Assets/YallaBars/whitechoccookiedough.png'
+import chocolatesaltedcaramel from '../../Assets/YallaBars/chocolatesaltedcaramel.png'
+
 import '../shopStyle.css';
-import { Button, Col, Container, Row } from 'react-bootstrap';
-import { IoMdArrowRoundBack } from 'react-icons/io';
-import Popup from 'reactjs-popup';
 import '../shopButton.css';
 import 'reactjs-popup/dist/index.css';
-import { ImCross } from "react-icons/im";
 
 const YallaShopBar = () => {
   const [show, setShow] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
-  const values = [true, 'sm-down', 'md-down', 'lg-down', 'xl-down', 'xxl-down'];
-  const [fullscreen, setFullscreen] = useState(true);
+  const [category, setCategory] = useState('All');
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
 
   const handleClose = () => setShow(false);
-
-  function handleShow(product) {
+  const handleShow = (product) => {
     setSelectedProduct(product);
     setShow(true);
-  }
+  };
 
   const cards = [
     {
-      title: 'TOSI ALMOND SUPER BITES',
-      description: 'A high energy snack bar',
-      image: barsone,
+      title: 'Snaq Fabriq Pancake Raspberry Jam',
+      description: 'Snaq Fabriq Pancake',
+      image: RaspberryJam,
       detaildes:
-        'That is an excellent source of protein, omega 3s and fiber. Contains chia seeds and flax',
-      detailsImage: detailsImageBar,
+        'Snaq Fabriq Pancake',
+      detailsImage: RaspberryJam,
+      Weight_gram: '45g',
+      Packing_Case: '10',
+      Category: 'Protein Barebells',
     },
     {
-      title: 'TOSI CASHEW SUPER BITES',
-      description: 'A high energy snack bar',
-      image: barstwo,
+      title: 'Snaq Fabriq Pancake Caramel',
+      description: 'Snaq Fabriq Pancake',
+      image: PancakeCaramel,
       detaildes:
-        'A high energy snack bar that is an excellent source of protein, omega 3s and fiber. Contains chia seeds and flax seeds',
-      detailsImage: barstwodetails,
+        'Snaq Fabriq Pancake',
+      detailsImage: PancakeCaramel,
+      Weight_gram: '45g',
+      Packing_Case: '10',
+      Category: 'Protein Barebells',
     },
     {
-      title: 'TOSI CAPPUCCINO ALMOND',
-      description: 'A high energy snack bar',
-      image: barsfive,
+      title: 'Snaq Fabriq Pancake Chocolate Cream',
+      description: 'Snaq Fabriq Pancake',
+      image: ChocolateCream,
       detaildes:
-        'A high energy snack bar that is an excellent source of protein, omega 3s and fiber. Contains chia seeds and flax seeds',
-      detailsImage: barsfivedetails,
+        'Snaq Fabriq Pancake',
+      detailsImage: ChocolateCream,
+      Weight_gram: '45g',
+      Packing_Case: '10',
+      Category: 'Protein Barebells',
     },
+
+
     {
-      title: 'BE-KIND ALMOND & COCONUT',
-      description: 'A high energy snack bar',
-      image: barsfour,
+      title: 'Rip VAN Low Sugar Wafel - Dutch Caramel & Vanilla',
+      description: 'RIP VAN WAFELS',
+      image: RipVANLowSugarWafeldutchcaramelvanilla,
       detaildes:
-        'A high energy snack bar that is an excellent source of protein, omega 3s and fiber. Contains chia seeds and flax seeds',
-      detailsImage: barssevendetails,
+        'RIP VAN WAFELS',
+      detailsImage: RipVANLowSugarWafeldutchcaramelvanilla,
+      Weight_gram: '33g',
+      Packing_Case: '12',
+      Category: 'Rip Van Wafels',
     },
     {
-      title: 'BE-KIND DARK CHOCOLATE NUTS',
-      description: 'A high energy snack bar',
-      image: barsthree,
+      title: 'Rip VAN PROTEIN Wafel - Snickerdoodle',
+      description: 'RIP VAN WAFELS',
+      image: RipVANLowSugarWafelsnickerdoodle,
       detaildes:
-        'A high energy snack bar that is an excellent source of protein, omega 3s and fiber. Contains chia seeds and flax seeds',
-      detailsImage: barsfourdetails,
+        'RIP VAN WAFELS',
+      detailsImage: RipVANLowSugarWafelsnickerdoodle,
+      Weight_gram: '33g',
+      Packing_Case: '12',
+      Category: 'Rip Van Wafels',
     },
     {
-      title: 'BE-KIND NUT DELIGHT',
-      description: 'A high energy snack bar',
-      image: barssix,
+      title: 'Rip VAN Low Sugar Wafel-honey & oats',
+      description: 'RIP VAN WAFELS',
+      image: RipVANLowSugarWafelhoneyoats,
       detaildes:
-        'A high energy snack bar that is an excellent source of protein, omega 3s and fiber. Contains chia seeds and flax seeds',
-      detailsImage: barssixdetails,
+        'RIP VAN WAFELS',
+      detailsImage: RipVANLowSugarWafelhoneyoats,
+      Weight_gram: '33g',
+      Packing_Case: '12',
+      Category: 'Rip Van Wafels',
     },
     {
-      title: 'Nestle Fitness strawberry',
-      description: 'A high energy snack bar',
-      image: barsseven,
-    },
-    {
-      title: 'Nestle Fitness Chocolate',
-      description: 'A high energy snack bar',
-      image: barseight,
-    },
-    {
-      title: 'Barebells BIRTHDAY CAKE',
-      description: 'A high energy snack bar',
-      image: barnine,
+      title: 'Rip VAN PROTEIN Wafel-cookies & cream',
+      description: 'RIP VAN WAFELS',
+      image: RipVANWafelcookiescream,
       detaildes:
-        'Barebells Birthday Cake offers the classic sponge cake, colorful sprinkles, and buttercream flavor of your favorite birthday cake, all covered in silky white chocolate to give you the perfect snack.',
-      detailsImage: barninedetails,
+        'RIP VAN WAFELS',
+      detailsImage: RipVANWafelcookiescream,
+      Weight_gram: '33g',
+      Packing_Case: '12',
+      Category: 'Rip Van Wafels',
     },
     {
-      title: 'Barebells cookies & CARAMEL',
-      description: 'A high energy snack bar',
-      image: barten,
+      title: 'Rip VAN PROTEIN Wafel -snickerdoodle',
+      description: 'RIP VAN WAFELS',
+      image: RipVANPROTENWafelcookiescream,
       detaildes:
-        'Barebells Cookies and Caramel features a cookie and chocolate-flavored center and a slightly salted layer of caramel, all deliciously coated with silky milk chocolate and topped with crisps.',
-      detailsImage: bartenbartendetails,
+        'RIP VAN WAFELS',
+      detailsImage: RipVANPROTENWafelcookiescream,
+      Weight_gram: '33g',
+      Packing_Case: '12',
+      Category: 'Rip Van Wafels',
     },
     {
-      title: 'Barebells cookies & CARAMEL',
-      description: 'A high energy snack bar',
-      image: bareleven,
+      title: 'Rip VAN Low Sugar Wafel -snickerdoodle',
+      description: 'RIP VAN WAFELS',
+      image: RipVANPROTEINWafelsnickerdoodle,
       detaildes:
-        'Smooth milk chocolate laced with crunchy, golden peanuts – a match made in heaven!',
-      detailsImage: barelevendetals,
+        'RIP VAN WAFELS',
+      detailsImage: RipVANPROTEINWafelsnickerdoodle,
+      Weight_gram: '33g',
+      Packing_Case: '12',
+      Category: 'Rip Van Wafels',
     },
     {
-      title: 'Barebells CARAMEL CHOCO',
-      description: 'A high energy snack bar',
-      image: bartwelve,
+      title: 'Rip VAN PROTEIN Wafel -honey & oats',
+      description: 'RIP VAN WAFELS',
+      image: RipVANPROTEINWafelhoneyoats,
       detaildes:
-        'Super soft and fluffy chocolate core, topped with sweet caramel layer and silky soft chocolate shell. Our soft protein bars have 16 grams of protein and no added sugar*.',
-      detailsImage: bartwelvedetails,
+        'RIP VAN WAFELS',
+      detailsImage: RipVANPROTEINWafelhoneyoats,
+      Weight_gram: '33g',
+      Packing_Case: '12',
+      Category: 'Rip Van Wafels',
+    },
+
+
+    {
+      title: 'Warrior Crunch -salted caramel',
+      description: 'WARRIOR PROTEIN BARS',
+      image: WarriorCrunchsaltedcaramel,
+      detaildes:
+        'WARRIOR PROTEIN BARS',
+      detailsImage: WarriorCrunchsaltedcaramel,
+      Weight_gram: '64g',
+      Packing_Case: '12',
+      Category: 'Warrior Protein Bars',
     },
     {
-      title: 'Barebells cookies & cream',
-      description: 'A high energy snack bar',
-      image: bartirteen,
+      title: 'Warrior Crunch -raspberry lemon cheesecake',
+      description: 'WARRIOR PROTEIN BARS',
+      image: WarriorCrunchraspberrylemoncheesecake,
       detaildes:
-        'Soft and creamy cookie-dough core covered in sweet milk chocolate and crunchy cookie crispies.',
-      detailsImage: bartirteendetails,
+        'WARRIOR PROTEIN BARS',
+      detailsImage: WarriorCrunchraspberrylemoncheesecake,
+      Weight_gram: '64g',
+      Packing_Case: '12',
+      Category: 'Warrior Protein Bars',
     },
     {
-      title: 'Quest dipped chocolate peanut butter',
-      description: 'A high energy snack bar',
-      image: barfourteen,
+      title: 'Warrior Crunch -milk chocococonut',
+      description: 'WARRIOR PROTEIN BARS',
+      image: WarriorCrunchmilkchocococonut,
       detaildes:
-        'Enjoy the deliciously satisfying taste of peanut butter protein bar dipped and drizzled with a sweet chocolatey coating.',
-      detailsImage: barfourteendetails,
+        'WARRIOR PROTEIN BARS',
+      detailsImage: WarriorCrunchmilkchocococonut,
+      Weight_gram: '64g',
+      Packing_Case: '12',
+      Category: 'Warrior Protein Bars',
     },
     {
-      title: 'Quest dipped cookies & cream',
-      description: 'A high energy snack bar',
-      image: barfifteen,
+      title: 'Warrior Crunch -key lime pie',
+      description: 'WARRIOR PROTEIN BARS',
+      image: WarriorCrunchkeylimepie,
       detaildes:
-        'Enjoy the delicious taste of classic cookies & cream protein bar dipped and drizzled with a sweet chocolatey coating.',
-      detailsImage: barfifteendetails,
+        'WARRIOR PROTEIN BARS',
+      detailsImage: WarriorCrunchkeylimepie,
+      Weight_gram: '64g',
+      Packing_Case: '12',
+      Category: 'Warrior Protein Bars',
     },
     {
-      title: 'Quest WHITE CHOCOLATE RASPBERRY',
-      description: 'A high energy snack bar',
-      image: bars,
+      title: 'Warrior Crunch -dark chocolate peanut',
+      description: 'WARRIOR PROTEIN BARS',
+      image: WarriorCrunchdarkchocolatepeanut,
       detaildes:
-        'Indulge your taste buds with the White Chocolate Raspberry Quest Bar. The sweet and tart flavor of white chocolate and real dried raspberries',
-      detailsImage: barssisteendetails,
+        'WARRIOR PROTEIN BARS',
+      detailsImage: WarriorCrunchdarkchocolatepeanut,
+      Weight_gram: '64g',
+      Packing_Case: '12',
+      Category: 'Warrior Protein Bars',
+    },
+    {
+      title: 'Warrior Crunch -chocolate chip cookie',
+      description: 'WARRIOR PROTEIN BARS',
+      image: WarriorCrunchchocolatechipcookie,
+      detaildes:
+        'WARRIOR PROTEIN BARS',
+      detailsImage: WarriorCrunchchocolatechipcookie,
+      Weight_gram: '64g',
+      Packing_Case: '12',
+      Category: 'Warrior Protein Bars',
+    },
+
+    {
+      title: 'Kitkat',
+      description: 'Chocolates',
+      image: Kitkat,
+      detaildes:
+        'Chocolates',
+      detailsImage: Kitkat,
+      Weight_gram: '40g',
+      Packing_Case: '24',
+      Category: 'Chocoloates',
+    },
+    {
+      title: 'M&M Choco',
+      description: 'Chocolates',
+      image: MMChoco,
+      detaildes:
+        'Chocolates',
+      detailsImage: MMChoco,
+      Weight_gram: '45g',
+      Packing_Case: '24',
+      Category: 'Chocoloates',
+    },
+    {
+      title: 'Matesser Choco',
+      description: 'Chocolates',
+      image: MatesserChoco,
+      detaildes:
+        'Chocolates',
+      detailsImage: MatesserChoco,
+      Weight_gram: '73g',
+      Packing_Case: '25',
+      Category: 'Chocoloates',
+    },
+    {
+      title: 'Twix Multipack / Choco Big',
+      description: 'Chocolates',
+      image: TwixMultipackChocoBig,
+      detaildes:
+        'Chocolates',
+      detailsImage: TwixMultipackChocoBig,
+      Weight_gram: '50g',
+      Packing_Case: '24',
+      Category: 'Chocoloates',
+    },
+    {
+      title: 'Kinder Bueno',
+      description: 'Chocolates',
+      image: KinderBueno,
+      detaildes:
+        'Chocolates',
+      detailsImage: KinderBueno,
+      Weight_gram: '43g',
+      Packing_Case: '30',
+      Category: 'Chocoloates',
+    },
+    {
+      title: 'Snickers Choco Big',
+      description: 'Chocolates',
+      image: SnickersChocoBig,
+      detaildes:
+        'Chocolates',
+      detailsImage: SnickersChocoBig,
+      Weight_gram: '50g',
+      Packing_Case: '24',
+      Category: 'Chocoloates',
+    },
+
+
+    {
+      title: 'Quest N Bar ( chocolate brownie)',
+      description: 'OAT KING & QUEST BAR',
+      image: chocolatebrownie,
+      detaildes:
+        'OAT KING & QUEST BAR',
+      detailsImage: chocolatebrownie,
+      Weight_gram: '60g',
+      Packing_Case: '12',
+      Category: 'Quest Bars',
+    },
+    {
+      title: 'Quest N Bar ( chocolate peanut butter)',
+      description: 'OAT KING & QUEST BAR',
+      image: chocolatepeanutbutter,
+      detaildes:
+        'OAT KING & QUEST BAR',
+      detailsImage: chocolatepeanutbutter,
+      Weight_gram: '60g',
+      Packing_Case: '12',
+      Category: 'Quest Bars',
+    },
+    {
+      title: 'Quest N Bar ( chocochip cookie dough)',
+      description: 'OAT KING & QUEST BAR',
+      image: chocochipcookiedough,
+      detaildes:
+        'OAT KING & QUEST BAR',
+      detailsImage: chocochipcookiedough,
+      Weight_gram: '60g',
+      Packing_Case: '12',
+      Category: 'Quest Bars',
+    },
+    {
+      title: 'Quest N Bar ( cookies & cream)',
+      description: 'OAT KING & QUEST BAR',
+      image: cookiescream,
+      detaildes:
+        'OAT KING & QUEST BAR',
+      detailsImage: cookiescream,
+      Weight_gram: '60g',
+      Packing_Case: '12',
+      Category: 'Quest Bars',
+    },
+    {
+      title: 'Quest N Bar ( double choco chunk)',
+      description: 'OAT KING & QUEST BAR',
+      image: doublEchocochunk,
+      detaildes:
+        'OAT KING & QUEST BAR',
+      detailsImage: doublEchocochunk,
+      Weight_gram: '60g',
+      Packing_Case: '12',
+      Category: 'Quest Bars',
+    },
+
+
+    {
+      title: 'Fulfill Bar (chocolate brownie flavour)',
+      description: 'Protein Bars',
+      image: chocolatebrownieflavour,
+      detaildes:
+        'Protein Bars',
+      detailsImage: chocolatebrownieflavour,
+      Weight_gram: '55g',
+      Packing_Case: '15',
+      Category: 'Fulfill Bar',
+    },
+    {
+      title: 'Fulfill Bar (chocolate hazelnut whip)',
+      description: 'Protein Bars',
+      image: chocolatehazelnutwhip,
+      detaildes:
+        'Protein Bars',
+      detailsImage: chocolatehazelnutwhip,
+      Weight_gram: '55g',
+      Packing_Case: '15',
+      Category: 'Fulfill Bar',
+    },
+    {
+      title: 'Fulfill Bar (peanut & caramel)',
+      description: 'Protein Bars',
+      image: peanutcaramel,
+      detaildes:
+        'Protein Bars',
+      detailsImage: peanutcaramel,
+      Weight_gram: '55g',
+      Packing_Case: '15',
+      Category: 'Fulfill Bar',
+    },
+    {
+      title: 'Fulfill Bar (chocolate choc & caramel cookie dough)',
+      description: 'Protein Bars',
+      image: chocolatechoccaramelcookiedough,
+      detaildes:
+        'Protein Bars',
+      detailsImage: chocolatechoccaramelcookiedough,
+      Weight_gram: '55g',
+      Packing_Case: '15',
+      Category: 'Fulfill Bar',
+    },
+    {
+      title: 'Fulfill Bar (white choc & cookie dough)',
+      description: 'Protein Bars',
+      image: whitechoccookiedough,
+      detaildes:
+        'Protein Bars',
+      detailsImage: whitechoccookiedough,
+      Weight_gram: '55g',
+      Packing_Case: '15',
+      Category: 'Fulfill Bar',
+    },
+    {
+      title: 'Fulfill Bar (chocolate salted caramel)',
+      description: 'Protein Bars',
+      image: chocolatesaltedcaramel,
+      detaildes:
+        'Protein Bars',
+      detailsImage: chocolatesaltedcaramel,
+      Weight_gram: '55g',
+      Packing_Case: '15',
+      Category: 'Fulfill Bar',
     },
   ];
 
-  const relatedProducts = useMemo(() => {
-    if (!selectedProduct) return [];
-    return cards
-      .filter((product) => product.category === selectedProduct.category)
-      .slice(0, 3);
-  }, [selectedProduct]);
+  const categories = ['All', ...new Set(cards.map(item => item.Category))];
+  const filteredBars = category === 'All' ? cards : cards.filter(item => item.Category === category);
 
   return (
     <div className="shop-container">
-      {cards.map((card, index) => (
-        <Card
-          key={index}
-          className="mt-3 All_shop_card_class"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          onClick={() => handleShow(card)}
-        >
-          <div className="card-content">
-            <div className="image_bars">
-              <Image src={card.image} alt={card.title} className="Yalla_product_images" />
-            </div>
-            <Card.Body className="text-center card-body">
-              <h1 className="bars_title">{card.title}</h1>
-              <p className="bars_des">{card.description}</p>
-              <div className="overlay"></div>
-              <div className="view-details-btn-container">
-                <button className="btn-12" onClick={() => handleShow(card)}>
-                  <span>View Details</span>
-                </button>
+      <div className="category-buttons text-center mt-3">
+        {categories.map((cat, index) => (
+          <button key={index} className="mx-1 btn_subcategory" onClick={() => setCategory(cat)}>
+            <span style={{ fontSize: '14px', fontWeight: '500' }} >{cat}</span>
+          </button>
+        ))}
+      </div>
+      <div className="shop-container">
+
+        {filteredBars.map((card, index) => (
+          <Card
+            key={index}
+            className=" All_shop_card_class"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            onClick={() => handleShow(card)}
+          >
+            <div className="card-content">
+              <div className="image_bars">
+                <Image src={card.image} alt={card.title} className="Yalla_product_images" />
               </div>
-            </Card.Body>
-          </div>
-        </Card>
-      ))}
+              <Card.Body className="text-center card-body">
+                <h1 className="bars_title">{card.title}</h1>
+                <p className="bars_des">{card.description}</p>
+                <div className="overlay"></div>
+                <div className="view-details-btn-container">
+                  <button className="btn-12" onClick={() => handleShow(card)}>
+                    <span>View Details</span>
+                  </button>
+                </div>
+              </Card.Body>
+            </div>
+          </Card>
+        ))}
+      </div>
 
       {selectedProduct && (
-        <Popup open={show} closeOnDocumentClick onClose={handleClose} >
-          <div className="modal-content">
-
-            <div className='close_btn' >
-              <ImCross onClick={handleClose} style={{ cursor: 'pointer', color:'red' }} />
+        <Modal show={show} onHide={handleClose} centered size='lg'>
+          <Modal.Header closeButton>
+            <Modal.Title>{selectedProduct.title}</Modal.Title>
+          </Modal.Header>
+          <Modal.Body className="text-center">
+            <div className="detailsImage_selected_container">
+              <Image src={selectedProduct.detailsImage} alt={selectedProduct.title} className="detailsImage_selected" />
             </div>
-            <div className="text-center">
-              <div className='detailsImage_selected_container' >
-                <Image src={selectedProduct.detailsImage} alt={selectedProduct.title} className='detailsImage_selected' />
-              </div>
-
-              <h2 className='selected_title' >{selectedProduct.title}</h2>
-
-              <div className='selected_des_container' >
-                <p className='selected_des' >{selectedProduct.detaildes}</p>
-              </div>
-            </div>
-          </div>
-        </Popup>
+            <Table striped bordered hover responsive>
+              <thead>
+                <tr>
+                  <th style={{ backgroundColor: '#abe6f6' }}>Brand</th>
+                  <th style={{ backgroundColor: '#abe6f6' }}>Weight (grams)</th>
+                  <th style={{ backgroundColor: '#abe6f6' }}>Packing / Case</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{selectedProduct.description}</td>
+                  <td>{selectedProduct.Weight_gram}</td>
+                  <td>{selectedProduct.Packing_Case}</td>
+                </tr>
+              </tbody>
+            </Table>
+          </Modal.Body>
+        </Modal>
       )}
     </div>
   );

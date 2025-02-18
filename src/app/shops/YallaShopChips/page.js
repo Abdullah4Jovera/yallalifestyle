@@ -18,45 +18,15 @@ const Page = () => {
     <div>
       <HomePageNav />
       <Container fluid className='shopContainer'>
-        <div className='yalla_shop_iamge' >
-          <Image src={yallaShop} alt='yallaShop' />
-        </div>
-
-
-        <div className='main_container_product' >
-
-          <div className='productcategories_container' >
-            <p className='product_categories' style={{ margin: 0 }} >Product Categories</p>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '3px' }}>
-              <Image src={viewproducts} alt='viewproducts' />
-              <p className='shwoing_data' style={{ margin: 0 }} > {`Showing 1-16 of 17`} </p>
-            </div>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '6px', flexWrap: 'wrap' }} >
+          <div className='yalla_shop_iamge' >
+            <Image src={yallaShop} alt='yallaShop' />
           </div>
-
-          {/* <div className="search-container">
-            <input placeholder="Search product" className="input_tag" />
-            <Image src={search_icon} alt="search_icon" className="search-icon" />
-          </div> */}
-
+          <div className='mt-2' >
+            <YallaButton />
+          </div>
         </div>
-
-        <Row>
-          <Col xs={12} md={2} className='categories_main_shop'>
-            <div className='class_categories_all' >
-              
-              <div>
-                <YallaButton />
-              </div>
-
-            </div>
-
-          </Col>
-
-          <Col xs={12} md={10}  >
-            <YallaChipsShops />
-          </Col>
-        </Row>
-
+        <YallaChipsShops />
       </Container>
       <YallaFooter />
     </div>
