@@ -13,7 +13,7 @@ import productone from './Assets/HomePageAssets/productone.png';
 import producttwo from './Assets/HomePageAssets/producttwo.png';
 import productthree from './Assets/HomePageAssets/productthree.png';
 import './HomePage.css';
-
+import { IoLogoWhatsapp } from "react-icons/io";
 
 const YallaFooter = () => {
     const [email, setEmail] = useState('');
@@ -99,6 +99,27 @@ const YallaFooter = () => {
                             <Link href={'https://www.instagram.com/yallaLIFESTYLE/'}><Image src={twitter} alt='twitter' /></Link>
                             <Link href={'https://www.instagram.com/yallaLIFESTYLE/'}><Image src={fb} alt='fb' /></Link>
                             <Link href={'https://www.instagram.com/yallaLIFESTYLE/'}><Image src={insta} alt='insta' /></Link>
+                            <Link href="https://wa.me/503996120" target="_blank" rel="noopener noreferrer">
+                                <div
+                                    style={{
+                                        backgroundColor: "white",
+                                        width: "28px",
+                                        height: "28px",
+                                        borderRadius: "50%",
+                                        display: "flex",
+                                        justifyContent: "center",
+                                        alignItems: "center",
+                                    }}
+                                >
+                                    <IoLogoWhatsapp
+                                        style={{
+                                            fontSize: "18px",
+                                            color: "green",
+                                            cursor: "pointer",
+                                        }}
+                                    />
+                                </div>
+                            </Link>
                         </div>
                     </div>
                 </Col>
@@ -135,7 +156,7 @@ const YallaFooter = () => {
                 <hr />
                 <p className='copyright'>© Copyright {currentYear}, All Rights Reserved by Yalla lifestyle</p>
 
-               
+
             </Row>
 
         </Container>

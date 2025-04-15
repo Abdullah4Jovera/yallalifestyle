@@ -130,14 +130,6 @@ const Page = () => {
                                     <Col xs={12} md={8}>
                                         <CSSTransition in={inProp} timeout={300} classNames="fade">
                                             <div>
-                                                {/* <Form.Label className='labelName'>First Name</Form.Label> */}
-                                                {/* <Form.Control
-                                                    type="text"
-                                                    name="firstName"
-                                                    value={formData.firstName}
-                                                    onChange={handleChange}
-                                                    className='textInputField'
-                                                /> */}
                                                 <input
                                                     type="text"
                                                     name="fullname"
@@ -179,14 +171,6 @@ const Page = () => {
                                     <Col xs={12} md={8}>
                                         <CSSTransition in={inProp} timeout={300} classNames="fade" appear>
                                             <div>
-                                                {/* <Form.Label className='labelName'>Email</Form.Label>
-                                                <Form.Control
-                                                    type="email"
-                                                    name="email"
-                                                    value={formData.email}
-                                                    onChange={handleChange}
-                                                    className='textInputField'
-                                                /> */}
                                                 <input
                                                     type="text"
                                                     name="phone"
@@ -203,17 +187,6 @@ const Page = () => {
                                     <Col xs={12} md={8}>
                                         <CSSTransition in={inProp} timeout={300} classNames="fade" appear>
                                             <div className='textareadiv'>
-                                                {/* <Form.Label className='labelName'>Message</Form.Label>
-                                                <Form.Control
-                                                    as="textarea"
-                                                    rows={4}
-                                                    name="message"
-                                                    value={formData.message}
-                                                    onChange={handleChange}
-                                                    placeholder='Write your message..'
-                                                    className='textareafield'
-                                                /> */}
-
                                                 <textarea 
                                                 className='textareafield '
                                                 rows={4}

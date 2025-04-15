@@ -43,7 +43,7 @@ const YallaServices = () => {
                 </Container>
             </div>
             <AdnocYasCarousal />
-            <HomePageTestmonial />
+            {/* <HomePageTestmonial /> */}
         </>
     );
 };

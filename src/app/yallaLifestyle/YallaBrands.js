@@ -29,6 +29,12 @@ import brandtwentyfive from '../Assets/LifestyleAssets/brandtwentyfive.png';
 import brandtwentysix from '../Assets/LifestyleAssets/brandtwentysix.png';
 import yallabrandone from '../Assets/LifestyleAssets/yallabrandone.png';
 import yallabrand from '../Assets/LifestyleAssets/yallabrand.png';
+import yallabrandtwo from '../Assets/LifestyleAssets/yallabrandtwo.png'
+import yallabrandthree from '../Assets/LifestyleAssets/yallabrandthree.png'
+import yallabrandfour from '../Assets/LifestyleAssets/yallabrandfour.png'
+import yallabrandfive from '../Assets/LifestyleAssets/yallabrandfive.png'
+import yallabrandsix from '../Assets/LifestyleAssets/yallabrandsix.png'
+import yallabrandseven from '../Assets/LifestyleAssets/yallabrandseven.png'
 
 const images = [
     { src: brandone, alt: 'brandone' },
@@ -46,7 +52,7 @@ const images = [
     { src: brandfouteen, alt: 'brandfouteen' },
     { src: brandfifteen, alt: 'brandfifteen' },
     { src: brandsisteen, alt: 'brandsisteen' },
-    { src: brandseventeen, alt: 'brandseventeen' },
+    // { src: brandseventeen, alt: 'brandseventeen' },
     { src: brandeighteen, alt: 'brandeighteen' },
     { src: brandninteen, alt: 'brandninteen' },
     { src: brandtwenty, alt: 'brandtwenty' },
@@ -58,6 +64,12 @@ const images = [
     { src: brandtwentysix, alt: 'brandtwentysix' },
     { src: yallabrandone, alt: 'yallabrandone' },
     { src: yallabrand, alt: 'yallabrand' },
+    { src: yallabrandtwo, alt: 'yallabrandtwo' },
+    { src: yallabrandthree, alt: 'yallabrandthree' },
+    { src: yallabrandfour, alt: 'yallabrandfour' },
+    { src: yallabrandfive, alt: 'yallabrandfive' },
+    { src: yallabrandsix, alt: 'yallabrandsix' },
+    { src: yallabrandseven, alt: 'yallabrandseven' },
 ];
 
 const YallaBrands = () => {

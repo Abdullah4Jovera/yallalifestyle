@@ -18,7 +18,7 @@ const AdnocYasCarousal = () => {
     };
 
     return (
-        <div className="adnocyasContainer" style={{ marginTop: '5%' }} data-aos="fade-up">
+        <div className="adnocyasContainer" style={{ marginTop: '2%' }} data-aos="fade-up">
             <Slider {...settings}>
                 <div className="slide">
                     <div className="image-container">

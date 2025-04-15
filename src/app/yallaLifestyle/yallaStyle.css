@@ -8,7 +8,7 @@
     perspective: 1000px;
 }
 
-.social_mdia_images{
+.social_mdia_images {
     width: 100%;
     max-width: 800px;
     height: 100%;
@@ -18,6 +18,7 @@
 .yallalifestyle_main_image {
     width: 100%;
     height: 100%;
+    max-height: 1000px;
     transform-style: preserve-3d;
     transition: transform 0.6s;
 }
@@ -50,6 +51,8 @@
     margin-top: 7%;
     padding-top: 7%;
 }
+
+
 
 @keyframes rotate3d {
     0% {
@@ -317,8 +320,26 @@
     height: 100%;
 }
 
+
 .yalla_life_style_text_conatiner {
-    /* background: linear-gradient(to right, #badfe9, #e2f2f7, #83daf3); */
+    padding: 1rem;
+    text-align: center;
+}
+
+.yalla_life_style_tag {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.animated-image {
+    overflow: hidden;
+    border-radius: 12px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.animated-image:hover {
+    transform: scale(1.05);
 }
 
 
@@ -349,7 +370,8 @@
     .yalla_look_text {
         font-size: 24px;
     }
-    .yalla_life_style_carousal{
+
+    .yalla_life_style_carousal {
         margin-top: 5% !important;
         margin-bottom: 4% !important;
     }
@@ -363,7 +385,7 @@
         padding-top: 0px;
     }
 
-    .yalla_life_style_carousal{
+    .yalla_life_style_carousal {
         margin-top: 5% !important;
         margin-bottom: 4% !important;
     }
@@ -371,7 +393,7 @@
     .lifestyle_p_tag {
 
         font-size: 14px;
-    
+
     }
 
     .social_media_life_style {

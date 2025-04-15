@@ -2,17 +2,10 @@
 import React, { useState, useEffect } from 'react';
 import HomePageNav from '../HomePageNav'
 import Image from 'next/image';
-import Link from 'next/link';
-import { Container, Row, Col } from 'react-bootstrap';
-import yallaLofestylelogo from '../Assets/LifestyleAssets/yallalifestylelogo.png'
+import { Container } from 'react-bootstrap';
 import inspiringwelbeing from '../Assets/LifestyleAssets/inspiringwelbeing.png'
 import './yallaStyle.css'
-import YallaLifeStyleCarousal from './YallaLifeStyleCarousal';
 import YallaFooter from '../YallaFooter';
-import brandone from '../Assets/LifestyleAssets/brandone.png'
-import brandtwo from '../Assets/LifestyleAssets/brandtwo.png'
-import brandthree from '../Assets/LifestyleAssets/brandthree.png'
-import YallaBrandsCarousal from './YallaBrandsCarousal';
 import yallalifestyle_main_image from '../Assets/LifestyleAssets/yallalifestyle_main_image.png'
 import lifestylechips from '../Assets/LifestyleAssets/lifestylechips.png'
 import lifestyle_chocloate from '../Assets/LifestyleAssets/lifestyle_chocloate.png'
@@ -24,6 +17,7 @@ import YallaBrands from './YallaBrands';
 import YallaSocialMedia from './YallaSocialMedia';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import nutsandchoco from '../Assets/LifestyleAssets/nutsandchoco.png'
 
 
 const styles = {
@@ -47,7 +41,6 @@ const styles = {
 };
 
 const Page = () => {
-
 
     const [oldSlide, setOldSlide] = useState(0);
     const [activeSlide, setActiveSlide] = useState(0);
@@ -78,31 +71,20 @@ const Page = () => {
                     <Image src={yallalifestyle_main_image} alt='yallalifestyle_main_image' className='yallalifestyle_main_image' />
                 </div>
 
-                <div className='yalla_life_style_text_conatiner' >
-
-                    <div className='yalla_life_style_text_div' >
-                        <h1 className='yalla_life_style_tag' data-aos="fade-up"  >
+                <div className='yalla_life_style_text_conatiner'>
+                    <div className='yalla_life_style_text_div'>
+                        <h1 className='yalla_life_style_tag' data-aos="fade-up" data-aos-duration="1000">
                             Yalla Lifestyle is a brand that is focused on inspiring better lifestyle choices by connecting people to real food and exciting,
                             original brands that improve their overall wellbeing and enjoyment.
                         </h1>
                     </div>
-
                 </div>
 
-                <div style={styles.container}>
-                    <div style={styles.imageWrapper}>
-                        <Image src={lifestylechips} alt='lifestylechips' layout='responsive' objectFit='cover' />
-                    </div>
-                    <div style={styles.imageWrapper} data-aos="fade-up">
-                        <Image src={inspiringwelbeing} alt='inspiringwelbeing' layout='responsive' objectFit='cover' />
-                    </div>
-                    <div style={styles.imageWrapper}>
-                        <Image src={lifestyle_chocloate} alt='lifestyle_chocloate' layout='responsive' objectFit='cover' />
-                    </div>
+                <div className='animated-image mt-2' data-aos="zoom-in" data-aos-delay="100">
+                    <Image src={nutsandchoco} alt='lifestylechips' layout='responsive' objectFit='cover' />
                 </div>
 
                 <Container>
-
                     <div className='yalla_life_style_text_div'>
                         <h1 className='yalla_look_text' data-aos="fade-up" >We look to create easy access to products that taste good, look good and make you feel good.</h1>
 

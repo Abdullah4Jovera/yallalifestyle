@@ -31,11 +31,11 @@ const YallaSocialMedia = () => {
                                     <Col>
                                         <div>
                                             <Link href={'https://www.instagram.com/yallaLIFESTYLE/'} style={{ textDecoration: 'none' }} data-aos="fade-up" >
-                                                <Image src={socialbrandone} alt='socialbrandone'className="social_mdia_images" />
+                                                <Image src={socialbrandone} alt='socialbrandone' className="social_mdia_images" />
                                             </Link>
 
                                             <Link href={'https://www.instagram.com/yallaLIFESTYLE/'} style={{ textDecoration: 'none' }}>
-                                                <Image src={eatgoodfeelgoodsocial} alt='eatgoodfeelgoodsocial' className=' mt-2 social_mdia_images'  data-aos="fade-up" />
+                                                <Image src={eatgoodfeelgoodsocial} alt='eatgoodfeelgoodsocial' className=' mt-2 social_mdia_images' data-aos="fade-up" />
                                             </Link>
                                         </div>
                                     </Col>
@@ -48,7 +48,7 @@ const YallaSocialMedia = () => {
                                         </div>
                                         <div>
                                             <Link href={'https://www.instagram.com/yallaLIFESTYLE/'} style={{ textDecoration: 'none' }} data-aos="fade-up">
-                                                <Image src={yallasociallink} alt='yallasociallink' className='mt-2 social_mdia_images'  />
+                                                <Image src={yallasociallink} alt='yallasociallink' className='mt-2 social_mdia_images' />
                                             </Link>
                                         </div>
                                     </Col>
